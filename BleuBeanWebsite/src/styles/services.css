@@ -9,61 +9,6 @@
 
   body {font-family: Arial, Helvetica, sans-serif;}
   
-nav {
-    background: #5DA5B6;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-}
-
-nav .logo {
-    width: 100px; 
-    height: auto; 
-    margin-left: 50px;
-}
-
-nav .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav .nav-links li {
-    margin-right: 30px;
-}
-
-nav .nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav .nav-links li a:hover {
-    text-decoration: underline;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 30px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 
   /* The Modal (background) */
   .modal {
@@ -112,9 +57,10 @@ nav ul li a:hover {
   /* The Close Button */
   .close {
     color: white;
-    float: right;
+    float:left;
     font-size: 28px;
     font-weight: bold;
+
   }
   
   .close:hover,
@@ -127,12 +73,15 @@ nav ul li a:hover {
   .modal-header {
     
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #5DA5B6;
     color: white;
     right: 100px;
   }
   
-  .modal-body {padding: 2px 16px;}
+  .modal-body {
+    padding: 2px 16px;
+    height: 400px;
+    }
    
   .card {
     position: absolute;
@@ -142,6 +91,9 @@ nav ul li a:hover {
     max-width: 300px;
     text-align: center;
     font-family: arial;
+  }
+  .Headertxt{
+    text-align:center;
   }
   #BaristaTraining{
     
@@ -154,4 +106,27 @@ nav ul li a:hover {
     top: 128px;
     left: 690px;
   }
+  
+  .Price{
+    visibility: hidden;
+    position:absolute;
+  }
+  .Info{
+    position:absolute;
+    border: 1px dashed red;
+    width:800px;
+    left:600px;
+  }
+  .bullet{
+    visibility: hidden;
+    position:absolute;
+  }
+
+
+.BaristaImg{
+    /*visibility: hidden;*/
+    position:absolute;
+    height:300px;
+    width: auto;
+}
   
