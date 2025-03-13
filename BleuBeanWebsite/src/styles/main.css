@@ -87,7 +87,7 @@ nav ul li a:hover {
 }
 
 .Hero {
-    background: url('../Images/photo_2025-03-12_16-41-44.jpg') no-repeat center center/cover;
+    background: url('../Images/photo_2025-03-12_16-41-44.jpg') no-repeat center center/cover, fixed;
     height: 650px;
     display: flex;
     flex-direction: column;
@@ -95,4 +95,5 @@ nav ul li a:hover {
     align-items: center; 
     text-align: center;
     color: #ffffff;
+    font-family: cooper black;
 }
