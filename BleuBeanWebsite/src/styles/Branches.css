@@ -96,3 +96,17 @@ nav ul li a:hover {
     text-align: center;
     color: #ffffff;
 }
+.carousel-image {
+    width: 100%; /* Set the width to 100% of the container */
+    height: 0px; /* Set a specific height */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    padding-bottom: 50%; /* Set the aspect ratio */
+}
+.RScontactsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 50px;
+    border: 5px outset red;
+    text-align: left;
+}
