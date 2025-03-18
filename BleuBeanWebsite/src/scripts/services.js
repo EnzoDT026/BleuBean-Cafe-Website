@@ -5,6 +5,8 @@ var modal = document.getElementById("myModal");
 var baristabtn = document.getElementById("BarsitaBtn");
 var CoffeBtn = document.getElementById("CoffeBtn");
 var franchisebtn = document.getElementById("FranchiseBtn");
+var consultationbtn = document.getElementById("Consultationbtn");
+
 
 
 
@@ -33,6 +35,8 @@ baristabtn.onclick = function() {
   document.getElementById("ul6").hidden = false;
   document.getElementById("ul7").hidden = true;
   document.getElementById("ul8").hidden = true;
+  document.getElementById("inquire").hidden = false;
+  document.getElementById("Contact").hidden = true;
   document.getElementById("txt4coffee").hidden = true;  
 
     document.getElementById("inquire").onclick = function() {
@@ -63,6 +67,8 @@ CoffeBtn.onclick = function() {
     document.getElementById("ul6").hidden = false;
     document.getElementById("ul7").hidden = false;
     document.getElementById("ul8").hidden = false;
+    document.getElementById("inquire").hidden = false;
+    document.getElementById("Contact").hidden = true;
     document.getElementById("txt4coffee").hidden = false;  
 
     document.getElementById("inquire").onclick = function() {
@@ -88,14 +94,38 @@ franchisebtn.onclick = function() {
     document.getElementById("ul6").hidden = true;
     document.getElementById("ul7").hidden = true;
     document.getElementById("ul8").hidden = true;
+    document.getElementById("inquire").hidden = false;
+    document.getElementById("Contact").hidden = true;
     document.getElementById("txt4coffee").hidden = true; 
 
     document.getElementById("inquire").onclick = function() {
         this.href = "https://docs.google.com/forms/d/e/1FAIpQLSc76vilyQqROgJVq4cXp8MufGZ3l9EquHtmoq263F6_yMtdaQ/viewform";
         console.log(this.href);
     };
+}
+consultationbtn.onclick = function() {
+    modal.style.display = "block";
+    document.getElementById("NameOfService").innerText = "Coffee Business Consultation";
+    document.getElementById("Info").innerText = "Are you ready to take your coffee business to the next level? Whether you’re launching a new café, struggling with operations, or looking to boost profits, a Coffee Business Consultant can be the game-changer you need!";
+    document.getElementById("Price").innerText = "Starts at ₱5,000";
+    document.getElementById("text4franchise").innerText = "Here are the services that we offer:";
+    document.getElementById("ul1").innerText = "Barista Training";
+    document.getElementById("ul2").innerText = "Coffee menu and recipe based on target market profile taste";
+    document.getElementById("ul3").innerText = "Costing & Pricing";
+    document.getElementById("ul4").innerText = "Supplier and best brand recommendation ( Coffee equipment, accessories and ingredients)";
+    document.getElementById("ul5").innerText = "Grant opening support";
+    document.getElementById("ul6").hidden = false;
+    document.getElementById("ul7").hidden = false;
+    document.getElementById("ul8").hidden = false;
+    document.getElementById("ul6").hidden = true;
+    document.getElementById("ul7").hidden = true;
+    document.getElementById("ul8").hidden = true;
+    document.getElementById("txt4coffee").hidden = true;
+    document.getElementById("Contact").hidden = false;
+    document.getElementById("inquire").hidden = true;
 
 }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
