@@ -1,0 +1,183 @@
+.fas,.fab{
+    font-size: 20px;
+    color: #5DA5B6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF9F6;
+}
+
+header {
+    background: #5DA5B6;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-right: 20px;
+}
+
+header .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('../src/Images/hero.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* Begin Carousel */
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    margin: 70px auto;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mySlidesOuter {
+    display: none;
+    padding: 20px;
+}
+
+.outer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.BranchName{
+    font-size: 40PX; 
+    padding-bottom: 5px;
+}
+
+.BranchInfo p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.BranchInfo{
+    position: relative;
+    left: 80px;
+}
+
+.inner-carousel {
+    flex: 2;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.mySlidesInner {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.map img {
+    position: relative;
+    left: 80px;
+    width: 200px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(2, 2, 2);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: relative;
+    z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: #5DA5B6;
+}
+/* End */
+@media (max-width: 768px) {
+    .carousel-container { width: 95%; }
+    .outer-content {
+        flex-direction: column;
+    }
+    .text-content {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .inner-carousel {
+        height: 300px;
+    }
+}
