@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BleuBean Website</title>
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/home.css">
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -31,6 +32,12 @@
         <h1>BLEU BEAN CAFE</h1>
         <p>Feeling Bleu? kape na lods!</p>
         <a href="#" class="btn">Franchise Now!</a>
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
 
     <main>
@@ -42,7 +49,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Tiramisu Latte">
                 </div>
-                <div class="text-container">
+                <div class="text-container-right">
                     <h3>Barista Choice</h3>
                     <h2>Tiramisu Latte</h2>
                     <p>
@@ -63,7 +70,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Caramel Macchiato">
                 </div>
-                <div class="text-container">
+                <div class="text-container-left">
                     <h3>Barista Choice</h3>
                     <h2>Caramel Macchiato</h2>
                     <p>
@@ -83,7 +90,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Tiramisu Latte">
                 </div>
-                <div class="text-container">
+                <div class="text-container-right">
                     <h3>Barista Choice</h3>
                     <h2>Tiramisu Latte</h2>
                     <p>
@@ -104,7 +111,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Caramel Macchiato">
                 </div>
-                <div class="text-container">
+                <div class="text-container-left">
                     <h3>Barista Choice</h3>
                     <h2>Caramel Macchiato</h2>
                     <p>
@@ -124,7 +131,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Tiramisu Latte">
                 </div>
-                <div class="text-container">
+                <div class="text-container-right">
                     <h3>Barista Choice</h3>
                     <h2>Tiramisu Latte</h2>
                     <p>
@@ -145,7 +152,7 @@
                 <div class="image-container">
                     <img src="Images/white-Mocha.jpg" alt="Caramel Macchiato">
                 </div>
-                <div class="text-container">
+                <div class="text-container-left">
                     <h3>Barista Choice</h3>
                     <h2>Caramel Macchiato</h2>
                     <p>
@@ -159,80 +166,64 @@
                     </blockquote>
                 </div>
             </div>
-
-             <!-- Carousel Section -->
-             <div class="carousel-container">
-                <div class="carousel">
-
-                    <div class="carousel-item active">
-                        <div class="carousel-text">
-                            <h5>First Slide</h5>
-                            <p>Description for the first slide.</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="Images/review1.jpg" alt="First slide">
-                            <img src="Images/review2.jpg" alt="First slide">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-text">
-                            <h5>Second Slide</h5>
-                            <p>Description for the third slide.</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="Images/review1.jpg" alt="Second slide">
-                            <img src="Images/review2.jpg" alt="Second slide">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-text">
-                            <h5>Third Slide</h5>
-                            <p>Description for the third slide.</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-text">
-                            <h5>Fourth Slide</h5>
-                            <p>Description for the third slide.</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="carousel-text">
-                            <h5>Fifth Slide</h5>
-                            <p>Description for the third slide.</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                            <img src="Images/white-Mocha.jpg" alt="Third slide">
-                        </div>
-                    </div>
-
-                </div>
-                <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
-                <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
-            </div>
-
         </div>
-
+                <!--carousel section-->
+                <h2>What Bleuddies say about us!</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <h3>Riverside Branch, Quezon City</h3>
+                            <img src="Images/donfab1.jpg" alt="Branch 1">
+                            <div class="testimonial">
+                                <img src="Images/riverFeedBack1.jpg" alt="Testimonial 1">
+                                <img src="Images/riverFeedBack2.jpg" alt="Testimonial 2">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Don Fabian Branch, Quezon City</h3>
+                            <img src="Images/donfab2.jpg" alt="Branch 2">
+                            <div class="testimonial">
+                                <img src="Images/riverFeedBack1.jpg" alt="Testimonial 3">
+                                <img src="Images/riverFeedBack2.jpg" alt="Testimonial 4">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Mrb Branch, Quezon City</h3>
+                            <img src="Images/mrb1.jpg" alt="Branch 3">
+                            <div class="testimonial">
+                                <img src="Images/riverFeedBack1.jpg" alt="Testimonial 5">
+                                <img src="Images/riverFeedBack2.jpg" alt="Testimonial 6">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Cabuyao Branch, Laguna</h3>
+                            <img src="Images/mrb2.jpg" alt="Branch 4">
+                            <div class="testimonial">
+                                <img src="Images/riverFeedBack1.jpg" alt="Testimonial 5">
+                                <img src="Images/riverFeedBack2.jpg" alt="Testimonial 6">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Santa Rosa Branch, Laguna</h3>
+                            <img src="Images/donfab1.jpg" alt="Branch 5">
+                            <div class="testimonial">
+                                <img src="Images/riverFeedBack1.jpg" alt="Testimonial 5">
+                                <img src="Images/riverFeedBack2.jpg" alt="Testimonial 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button" id="prev">&#10094;</button>
+                        <button class="button" id="next">&#10095;</button>
+                    </div>
+                    <div class="dots"></div>
+                </div>
     </main>
 
     <footer>
         <p>&copy; 2023 BleuBean Cafe. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/main.js"></script>
     <script src="scripts/home.js"></script>
 
 </body>
