@@ -6,8 +6,14 @@
     cursor: pointer;
     display: inline-block;
   }
-
-  body {font-family: Arial, Helvetica, sans-serif;}
+body{
+    overflow: hidden;
+}
+.header{
+    position: relative;
+    text-align: center;
+    top:50px;
+  }
   
 
   /* The Modal (background) */
@@ -27,7 +33,7 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     
   }
-  
+
   /* Modal Content */
   .modal-content {
     position: relative;
@@ -85,25 +91,35 @@
    
   .card {
     position: absolute;
-    top: 400px;
+    top:100px;
     left: 50px;
+    height:450px;
+    width:400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
     text-align: center;
     font-family: arial;
+  }
+  
+  #BaristaTraining{
+
   }
   .Headertxt{
     text-align:center;
   }
 
   #CoffeCart{
-    top: 265px;
-    left: 370px;
+    top: -350px;
+    left: 500px;
   }
   #Franchise{
-    top: 128px;
-    left: 690px;
+    top: -800px;
+    left: 950px;
   }
+  #Consultation{
+    top: -1250px;
+    left: 1400px;
+
+}
   
   .Price{
     /*visibility: hidden;*/
@@ -140,11 +156,7 @@
     width: 400px;
 
 }
-#Consultation{
-    position:absolute;
-    top:461px;
-    left:1010px;
-}
+
 .Contact{
     border: 1px solid black;
     position:absolute;
