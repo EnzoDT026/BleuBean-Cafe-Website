@@ -5,23 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bleu Bean Branches</title>
         <link rel="stylesheet" href="styles/Branches.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="scripts/BranchesScripts.js" defer></script>
     </head>
     <body>
+        <header>
+            <nav>
+                <div>
+                    <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#"><b>Branches</b></a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="Con">Bleu Bean Branches</h1>
+                <h2>Find the nearest Bleu Bean branch near you!</h2>           
+            </div>
+        </section>
+        
         <div class="carousel-container">
             <!-- Outer Slides (Text + Inner Image Carousel) -->
             <div class="mySlidesOuter">
                 <div class="outer-content">
                     <div class="text-content">
-                        <h2>Riverside Branch</h2>
                         <div class="BranchInfo">
-                            <p>Business hours: 9:00 AM - 10:00 PM</p>
-                            <p>Facebook page: Bleu Bean Riverside</p>
-                            <p>Email Address: bleu.bean.riverside@gmail.com</p>
-                            <p>Store Address: 3A Kalayaan C Batasan Hills, Quezon City</p>
+                            <h1 class="BranchName"><u>Riverside Branch</u></h1>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 10:00 PM</p><br>
+                            <p><i class="fab fa-facebook"></i> Bleu Bean Riverside</p><br>
+                            <p><i class="fas fa-envelope"></i> bleu.bean.riverside@gmail.com</p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 3A Kalayaan C Batasan Hills, Quezon City</p><br>
                         </div>
                         <div class="map">
-                            <img src="Images/map.jpg" alt="Map">
+                            <a href="https://www.google.com/maps/place/3A+Kalayaan+C+Batasan+Hills,+Quezon+City" target="_blank">
+                            <img src="Images/RSLocation.jpg" alt="Map"></a>
                         </div>
                     </div>
                     <!-- Inner Carousel for Images -->
@@ -50,11 +74,8 @@
             </div>
         
             <!-- Navigation Buttons for Outer Carousel -->
-             <br>
-             <br>
-             <>
-            <button class="prev" onclick="changeSlide(-1)">❮ Prev</button>
-            <button class="next" onclick="changeSlide(1)">Next ❯</button>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
         </div>
     </body>
 </html>

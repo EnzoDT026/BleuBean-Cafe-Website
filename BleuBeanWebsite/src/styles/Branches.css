@@ -1,22 +1,92 @@
-/* Outer Carousel Container */
+.fas,.fab{
+    font-size: 20px;
+    color: #5DA5B6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF9F6;
+}
+
+header {
+    background: #5DA5B6;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-right: 20px;
+}
+
+header .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('../src/Images/hero.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* Begin Carousel */
+
 .carousel-container {
     position: relative;
-    width: 100%;
-    margin: auto;
+    width: 90%;
+    margin: 70px auto;
     overflow: hidden;
     text-align: center;
-    background-color: #f8f9fa;
-    border-radius: px;
+    background-color: #ffffff;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Outer Slides (Text Box) */
 .mySlidesOuter {
     display: none;
     padding: 20px;
 }
 
-/* Flexbox layout for outer content */
 .outer-content {
     display: flex;
     justify-content: space-between;
@@ -24,69 +94,80 @@
     flex-wrap: wrap;
 }
 
-/* Text content on the left */
 .text-content {
-    flex: 2;
-    padding-right: 50px;
-    text-align: center;
-    padding-bottom: 50px; /* Add padding to avoid overlap with buttons */
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    padding-bottom: 20px;
 }
 
-/* Inner Carousel (Images) */
+.text-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.BranchName{
+    font-size: 40PX; 
+    padding-bottom: 5px;
+}
+
+.BranchInfo p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.BranchInfo{
+    position: relative;
+    left: 80px;
+}
+
 .inner-carousel {
-    flex: 4;
+    flex: 2;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
 }
 
-/* Inner Images */
 .mySlidesInner {
     display: none;
     width: 100%;
     height: 100%;
 }
 
-/* Ensure Images Fit */
 .inner-carousel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    margin-right: 40px;
 }
 
-/* Map styling */
 .map img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+    position: relative;
+    left: 80px;
+    width: 200px;
 }
 
-/* Navigation Buttons */
 .prev, .next {
-    position: bottom, absolute;
+    position: absolute;
     top: 50%;
-    transform: translateY(-100%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: 2px solid white;
+    transform: translateY(-50%);
+    color: rgb(2, 2, 2);
+    border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 18px;
-    border-radius: 30%;
-    z-index: -2; /* Ensure buttons are above other content */
+    border-radius: relative;
+    z-index: 1;
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: #5DA5B6;
 }
-
-/* Responsive */
+/* End */
 @media (max-width: 768px) {
     .carousel-container { width: 95%; }
     .outer-content {
