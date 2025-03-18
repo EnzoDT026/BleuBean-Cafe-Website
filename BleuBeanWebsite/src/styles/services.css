@@ -95,9 +95,7 @@
   .Headertxt{
     text-align:center;
   }
-  #BaristaTraining{
-    
-  }
+
   #CoffeCart{
     top: 265px;
     left: 370px;
@@ -108,8 +106,10 @@
   }
   
   .Price{
-    visibility: hidden;
+    /*visibility: hidden;*/
     position:absolute;
+    top:90px;
+    left:600px;
   }
   .Info{
     position:absolute;
@@ -118,8 +118,10 @@
     left:600px;
   }
   .bullet{
-    visibility: hidden;
+    /*visibility: hidden;*/
     position:absolute;
+    top:120px;
+    left:600px;
   }
 
 
@@ -129,4 +131,25 @@
     height:300px;
     width: auto;
 }
-  
+
+#txt4coffee{
+    border: 1px solid black;
+    position:absolute;
+    top: 150px;
+    left: 1000px;
+    width: 400px;
+
+}
+#Consultation{
+    position:absolute;
+    top:461px;
+    left:1010px;
+}
+.Contact{
+    border: 1px solid black;
+    position:absolute;
+    top: 280px;
+    left: 1000px;
+    width: 500px;
+    z-index: 1;
+}
