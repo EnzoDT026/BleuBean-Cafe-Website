@@ -32,7 +32,7 @@ footer {
     width: 100%;
 }
 
-nav {
+.navigation-bar {
     background: #5DA5B6;
     color: #ffffff;
     display: flex;
@@ -40,49 +40,49 @@ nav {
     align-items: center;
 }
 
-nav .logo {
+.navigation-bar .logo {
     width: 100px; 
     height: auto; 
     margin-left: 50px;
 }
 
-nav .nav-links {
+.navigation-bar .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav .nav-links li {
+.navigation-bar .nav-links li {
     margin-right: 30px;
 }
 
-nav .nav-links li a {
+.navigation-bar .nav-links li a {
     color: #ffffff;
     text-decoration: none;
 }
 
-nav .nav-links li a:hover {
+.navigation-bar .nav-links li a:hover {
     text-decoration: underline;
 }
 
-nav ul {
+.navigation-bar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav ul li {
+.navigation-bar ul li {
     margin-right: 30px;
 }
 
-nav ul li a {
+.navigation-bar ul li a {
     color: #ffffff;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.navigation-bar ul li a:hover {
     text-decoration: underline;
 }
 
