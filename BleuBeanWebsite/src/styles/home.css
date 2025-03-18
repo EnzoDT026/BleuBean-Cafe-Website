@@ -1,3 +1,5 @@
+
+
 /* General Styles */
 * {
     box-sizing: border-box;
@@ -18,7 +20,7 @@ header {
     text-align: center;
 }
 
-footer {
+footer p {
     background: #35424a;
     color: #ffffff;
     text-align: center;
@@ -147,13 +149,6 @@ nav ul li a:hover {
     color: #2f4f4f;
 }
 
-/* Main Section */
-/*.container {
-    position: relative;
-    left:100px; 
-    border:1px solid red;
-    width:1200px;
-}*/
 .layout-left, .layout-right {
     width: 900px;
     margin: 0 auto;
@@ -203,7 +198,6 @@ h1 {
     width: 100%;
     max-width: 350px;
     border-radius: 10px;
-    background-color: coral;
     box-shadow: 10px 10px 5px 1px #b0b0b0 ;
 }
 
@@ -220,27 +214,29 @@ h1 {
     
 .text-container-right h3 {
     font-size: 1.5rem;
-    color: #2f4f4f;
+    color: #328295;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: left;
 }
 .text-container-right h2 {
     font-size: 2rem;
-    color: #2f4f4f;
+    color: #328295;
     text-align: left;
+    font-size: 48px;
 }
 .text-container-left h3 {
     font-size: 1.5rem;
-    color: #2f4f4f;
+    color: #328295;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: right;
 }
 .text-container-left h2 {
     font-size: 2rem;
-    color: #2f4f4f;
+    color: #328295;
     text-align: right;
+    font-size: 48px;
 }
 
 p {
@@ -320,6 +316,7 @@ h2 {
     width: 50%;
     display: flex;
     justify-content: space-around;
+    height: 350px;
 }
 
 .testimonial img {

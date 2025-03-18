@@ -12,17 +12,7 @@ header {
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-footer {
+footer p {
     background: #35424a;
     color: #ffffff;
     text-align: center;
