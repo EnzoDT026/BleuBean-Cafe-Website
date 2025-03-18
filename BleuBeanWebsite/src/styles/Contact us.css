@@ -2,13 +2,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: cooper black;
-    background-color: #FFF7EA;
+    background-color:	#FAF9F6;
 }
 
 .Con {
-    font-size: 50px;
+    font-size: 70px;
     font-family: cooper black;
-    padding-bottom: 5px;
+    position: absolute;
+    top: 150px;
+    left:600px;
+    text-decoration: underline;
+    text-decoration-thickness:3px;
+   
+    padding-bottom: 30px; /* Adjust this value to move the content closer */
 }
 
 p.messageus {
@@ -19,11 +25,11 @@ p.messageus {
     color: #328295;
 }
 
-p.content {
+.Content {
     font-size: 20px;
     font-family: cooper black;
-    text-align: center;
-    color: #328295;
+    color: #ffffff;
+    margin-bottom:-73px; /* Adjust this value to move the content closer */ 
 }
 
 nav {
@@ -89,9 +95,14 @@ body {
 
 .hero-content {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    color: #328295;
+    padding-top: 180px; /* Adjust this value to move the content to the top */
+    padding-bottom: 180px;
+    color: #ffffff;
+    background-image: url('../Images/img1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Adjusts the image to cover the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Prevents the image from scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 main {
@@ -111,32 +122,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 75px; /* Adjust this value to move the form to the right */
-    margin-top: 5px; /* Adjust this value to move the form to the top */
+    margin-top: 40px; /* Adjust this value to move the form to the top */
 }
-.name {
-    font-family: cooper black;
-    font-size: 20px;
-}
-.num {
-    font-family: cooper black;
-    font-size: 20px;
-}
-.mail {
-    font-family: cooper black;
-    font-size: 20px;
-}
-.sub {
-    font-family: cooper black;
-    font-size: 20px;
-}
-.text {
-    font-family: cooper black;
-    font-size: 20px;
-}
-.submit {
-    font-family: 'Cooper black';
-    font-size: 20px;
-}
+
 .contact-form h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -145,6 +133,7 @@ main {
 
 .contact-form label {
     display: block;
+    font-size: 20px;
     margin-bottom: 5px;
     color: #328295;
 }
@@ -160,7 +149,8 @@ main {
 }
 
 .contact-form button {
-    padding: 10px 20px;
+    padding: 15px 20px;
+    font-size: 20px;
     background-color: #5DA5B6;
     color: white;
     border: none;
@@ -180,11 +170,12 @@ footer {
     background-color: #5DA5B6;
     color: white;
 }
+
 .Info {
-    position:absolute;
+    position: absolute;
     font-family: cooper black;
     font-size: 20px;
     color: #328295;
-    top:320px;
-    left:800px;
+    top: 500px;
+    left: 800px;
 }
