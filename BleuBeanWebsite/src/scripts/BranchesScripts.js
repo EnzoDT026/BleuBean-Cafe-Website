@@ -43,3 +43,24 @@ function showInnerSlides() {
 }
 
 showInnerSlides(); // Start rotating inner images
+
+// Function to Search Branch
+function searchBranch() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let outerSlides = document.getElementsByClassName("mySlidesOuter");
+    let found = false;
+
+    for (let i = 0; i < outerSlides.length; i++) {
+        let branchName = outerSlides[i].getElementsByClassName("BranchName")[0].innerText.toLowerCase();
+        if (branchName.includes(input)) {
+            outerIndex = i;
+            showOuterSlide(outerIndex);
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        alert("Branch not found");
+    }
+}
