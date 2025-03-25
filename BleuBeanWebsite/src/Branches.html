@@ -24,55 +24,64 @@
                 </ul>
             </nav>
         </header>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="Con">Bleu Bean Branches</h1>
-                <h2>Find the nearest Bleu Bean branch near you!</h2>           
+        <div class="BHead"> 
+            <h1>Bleubean Branches</h1>
+            <p> Browse Bleubean Cafe near you! </p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search in Branch">
+                <button onclick="searchBranch()">Search</button>
             </div>
-        </section>
-        
+        </div>
         <div class="carousel-container">
             <!-- Outer Slides (Text + Inner Image Carousel) -->
             <div class="mySlidesOuter">
                 <div class="outer-content">
                     <div class="text-content">
                         <div class="BranchInfo">
-                            <h1 class="BranchName"><u>Riverside Branch</u></h1>
-                            <p><i class="fas fa-clock"></i> 9:00 AM - 10:00 PM</p><br>
-                            <p><i class="fab fa-facebook"></i> Bleu Bean Riverside</p><br>
-                            <p><i class="fas fa-envelope"></i> bleu.bean.riverside@gmail.com</p><br>
-                            <p><i class="fas fa-map-marker-alt"></i> 3A Kalayaan C Batasan Hills, Quezon City</p><br>
+                            <h1 class="BranchName"><u>Don Fabian Branch</u></h1>
+                            <p><i class="fas fa-clock"></i> Mon - Sun 10:00 AM - 10:00 PM</p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.ph" target="_blank"> facebook.com/bleubeancafe.ph </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.ph@gmail.com">bleubeancafe.ph@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 213 Don Fabian, Quezon City </p><br>
                         </div>
                         <div class="map">
-                            <a href="https://www.google.com/maps/place/3A+Kalayaan+C+Batasan+Hills,+Quezon+City" target="_blank">
-                            <img src="Images/RSLocation.jpg" alt="Map"></a>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.3999124638144!2d121.08038127484573!3d14.699805874640624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1261948181f%3A0x7d3ab4230fe85d05!2sBleu%20Bean%20Cafe%20PH!5e1!3m2!1sfil!2sph!4v1742797834831!5m2!1sfil!2sph" 
+                            width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <!-- Inner Carousel for Images -->
                     <div class="inner-carousel">
-                        <div class="mySlidesInner"><img src="Images/MRBBranch.jpg" alt="Inner Slide 1A"></div>
-                        <div class="mySlidesInner"><img src="Images/RiversideBranch.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB1.jpg" alt="Inner Slide 1A"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB2.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB3.jpg" alt="Inner Slide 1B"></div>
                     </div>
                 </div>
             </div>
-        
+
             <div class="mySlidesOuter">
                 <div class="outer-content">
                     <div class="text-content">
-                        <h2>Title 2</h2>
-                        <p>Description for Slide 2</p>
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>Riverside Branch</u></h1>
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 10:00 PM</p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.ph" target="_blank"> Bleu Bean Riverside </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleu.bean.riverside@gmail.com">bleu.bean.riverside@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 3A Kalayaan C Batasan Hills, Quezon City</p><br>
+                        </div>
                         <div class="map">
-                            <img src="Images/map2.jpg" alt="Map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.5091039596937!2d121.08513327484559!3d14.693347674799794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb23ae1ac437%3A0xe8576986c7407d89!2sBleu%20Bean%20Cafe%20Riverside!5e1!3m2!1sfil!2sph!4v1742798274942!5m2!1sfil!2sph"
+                             width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <!-- Inner Carousel for Images -->
                     <div class="inner-carousel">
-                        <div class="mySlidesInner"><img src="inner2a.jpg" alt="Inner Slide 2A"></div>
-                        <div class="mySlidesInner"><img src="inner2b.jpg" alt="Inner Slide 2B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS1.jpg" alt="Inner Slide 1A"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS2.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS3.jpg" alt="Inner Slide 1C"></div>
                     </div>
                 </div>
             </div>
-        
+
             <!-- Navigation Buttons for Outer Carousel -->
             <button class="prev" onclick="changeSlide(-1)">❮</button>
             <button class="next" onclick="changeSlide(1)">❯</button>
