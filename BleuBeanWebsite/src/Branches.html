@@ -1,118 +1,169 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"/>
-        <link rel = "stylesheet" href = "../src/styles/Branches.css">
-        <link rel = "stylesheet" href = "../src/styles/main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bleu Bean Branches</title>
+        <link rel="stylesheet" href="styles/Branches.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="scripts/BranchesScripts.js" defer></script>
     </head>
-
     <body>
         <header>
             <nav>
-                <div >
+                <div>
                     <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#"><b>Products</b></a></li>
+                    <li><a href="#">Products</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="#"><b>Branches</b></a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
-        <br>
-        <main>
-            <h1>Bleu Bean Branches </h1>
-            <!-- Outer Carousel -->
-            <div id="outerCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <!-- Inner Carousel -->
-                            <div id="innerCarousel1" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <h2> MRB Branch </h2>
-                                        <img src="../src/Images/MRBBranch.jpg" class="d-block w-100" alt="MRBB">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <h2> Riverside Branch </h2>
-                                        <img src="../src/Images/RiversideBranch.jpg" class="d-block w-100" alt="RSB">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#innerCarousel1" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#innerCarousel1" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
+        <div class="BHead"> 
+            <h1>Bleubean Branches</h1>
+            <p> Browse Bleubean Cafe near you! </p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search in Branch">
+                <button onclick="searchBranch()">Search</button>
+            </div>
+        </div>
+        <div class="carousel-container">
+            <!-- Outer Slides (Text + Inner Image Carousel) -->
+            <div class="mySlidesOuter">
+                <div class="outer-content">
+                    <div class="text-content">
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>Don Fabian Branch </u></h1>
+                            <p><i class="fas fa-clock"></i> Mon - Sun, 08:00 AM - 10:00 PM</p><br>
+                            <p><i class="fas fa-phone"></i> +63 961 516 6680</p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.ph" target="_blank"> facebook.com/bleubeancafe.ph </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.ph@gmail.com">bleubeancafe.ph@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 213 Don Fabian, Quezon City </p><br>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.3999124638144!2d121.08038127484573!3d14.699805874640624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1261948181f%3A0x7d3ab4230fe85d05!2sBleu%20Bean%20Cafe%20PH!5e1!3m2!1sfil!2sph!4v1742797834831!5m2!1sfil!2sph" 
+                            width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <!--<div class="carousel-item">
-                        <div class="container">
-                             Another Inner Carousel 
-                            <div id="innerCarousel2" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="MRB Branch.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="path/to/image4.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#innerCarousel2" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#innerCarousel2" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
+                    <!-- Inner Carousel for Images -->
+                    <div class="inner-carousel">
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB1.jpg" alt="Inner Slide 1A"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB2.jpg" alt="Inner Slide 1A"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB3.jpg" alt="Inner Slide 1A"></div>
                     </div>
                 </div>
+            </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#outerCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#outerCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>-->
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+            <div class="mySlidesOuter">
+                <div class="outer-content">
+                    <div class="text-content">
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>Riverside Branch </u></h1>
+                            <p><i class="fas fa-clock"></i> Mon - Sun, 9:00 AM - 10:00 PM</p><br>
+                            <p><i class="fas fa-phone"></i> +63 927 076 0390 </p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.ph" target="_blank"> facebook.com/bleubeancafe.ph </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleu.bean.riverside@gmail.com">bleu.bean.riverside@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 3A Kalayaan C Batasan Hills, Quezon City</p><br>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.5091039596937!2d121.08513327484559!3d14.693347674799794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb23ae1ac437%3A0xe8576986c7407d89!2sBleu%20Bean%20Cafe%20Riverside!5e1!3m2!1sfil!2sph!4v1742798274942!5m2!1sfil!2sph"
+                             width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- Inner Carousel for Images -->
+                    <div class="inner-carousel">
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS1.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS2.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS3.jpg" alt="Inner Slide 1B"></div>
+                    </div>
+                </div>
+            </div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
+            <div class="mySlidesOuter">
+                <div class="outer-content">
+                    <div class="text-content">
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>Sta.Rosa Branch </u></h1>
+                            <p><i class="fas fa-clock"></i> Mon - sun, 11:30 AM - 10:15 PM</p><br>
+                            <p><i class="fas fa-phone"></i> +63 967 403 4537 </p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafesrl" target="_blank"> www.facebook.com/bleubeancafesrl </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.santarosa@gmail.com">bleubeancafe.santarosa@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> 207, 444 St Francis 2 Subdivision,<br>
+                                                                    Santa Rosa, Laguna </p><br>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.894668731597!2d121.10427607485344!3d14.29617448615491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d90003dd1179%3A0xd7116a418b09312e!2sBleu%20Bean%20Cafe%20-%20Sta%20Rosa%20Laguna!5e1!3m2!1sfil!2sph!4v1742888998116!5m2!1sfil!2sph"
+                             width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- Inner Carousel for Images -->
+                    <div class="inner-carousel">
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/SR1.JPG" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/SR2.JPG" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/SR3.JPG" alt="Inner Slide 1B"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlidesOuter">
+                <div class="outer-content">
+                    <div class="text-content">
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>MRB Branch </u></h1>
+                            <p><i class="fas fa-clock"></i> Mon - sun, 10:00 AM - 9:30 PM</p><br>
+                            <p><i class="fas fa-phone"></i> +63 960 521 0414 </p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafemrb" target="_blank"> facebook.com/bleubeancafemrb </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.mrb@gmail.com">bleubeancafe.mrb@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> Block 1 Lot 2 Pilot Area, Quezon City </p><br>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2571344133107!2d121.07564257486172!3d14.697867885800108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0a06610dd53%3A0xb8c4e888ed778c37!2sBlock%201%20Lot%202%20Pilot%20Area%2C%20Quezon%20City%2C%201121%20Metro%20Manila!5e1!3m2!1sfil!2sph!4v1742891458552!5m2!1sfil!2sph"
+                             width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- Inner Carousel for Images -->
+                    <div class="inner-carousel">
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/MRB1.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/MRB2.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/MRB3.JPG" alt="Inner Slide 1B"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlidesOuter">
+                <div class="outer-content">
+                    <div class="text-content">
+                        <div class="BranchInfo">
+                            <h1 class="BranchName"><u>Cabuyao Branch </u></h1>
+                            <p><i class="fas fa-clock"></i> Tue - sun, 1:00 PM - 12:00 PM</p><br>
+                            <p><i class="fas fa-phone"></i> +63 946 135 1770 </p><br>
+                            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.cabuyao" target="_blank"> facebook.com/bleubeancafe.cabuyao </a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.cabuyao@gmail.com">bleubeancafe.cabuyao@gmail.com</a></p><br>
+                            <p><i class="fas fa-map-marker-alt"></i> Shell Gas Station, Southville Road,<br> Daang Marinig, Cabuyao, Laguna </p><br>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.211922109308!2d121.12788527801811!3d14.27669785051803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d900189a8329%3A0xc0d07b4caa14f0ab!2sBleu%20Bean%20Caf%C3%A9%20-%20Cabuyao!5e1!3m2!1sfil!2sph!4v1742892535766!5m2!1sfil!2sph"
+                             width="350" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <!-- Inner Carousel for Images -->
+                    <div class="inner-carousel">
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/CB1.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/CB2.jpg" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/BranchesPics/CB3.JPG" alt="Inner Slide 1B"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Navigation Buttons for Outer Carousel -->
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
     </body>
 </html>

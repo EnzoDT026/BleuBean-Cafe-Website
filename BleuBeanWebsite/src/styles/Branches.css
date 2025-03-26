@@ -1,8 +1,12 @@
+.fas,.fab{
+    font-size: 20px;
+    color: #5DA5B6;
+}
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF9F6;
 }
 
 header {
@@ -12,87 +16,207 @@ header {
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-footer {
-    background: #35424a;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-nav {
-    background: #5DA5B6;
-    color: #ffffff;
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
-nav .logo {
-    width: 100px; 
-    height: auto; 
-    margin-left: 50px;
+header .logo {
+    width: 100px;
+    height: auto;
 }
 
-nav .nav-links {
+header .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav .nav-links li {
-    margin-right: 30px;
+header .nav-links li {
+    margin-right: 20px;
 }
 
-nav .nav-links li a {
+header .nav-links li a {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-nav .nav-links li a:hover {
+header .nav-links li a:hover {
     text-decoration: underline;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5BA6B3;
+    border-radius: 5px;
+    width: 300px;
 }
 
-nav ul li {
-    margin-right: 30px;
+/* Search bar button styling */
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #5BA6B3;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.Hero {
-    background: url('../Images/hero-img.avif') no-repeat center center/cover;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+/* Begin Carousel */
+.BHead{
+    font-size: 40px;
+    color: #5DA5B6;
     text-align: center;
-    color: #ffffff;
+    padding: 0px;
+    text-spacing-trim: 0px;
+    margin: 0px;
+}
+
+.BHead h1 {
+    margin-bottom: 0px; /* Adjust this value to control the spacing */
+}
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    margin: 70px auto;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.BranchName{
+    font-size: 40PX; 
+    padding-bottom: 5px;
+}
+
+.mySlidesOuter {
+    display: none;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.outer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 30px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.BranchName{
+    font-size: 40PX; 
+    padding-bottom: 5px;
+    color: #5DA5B6;
+    padding-bottom: 7px;
+}
+
+.BranchInfo p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #5DA5B6;
+}
+.BranchInfo{
+    position: relative;
+    left: 80px;
+}
+
+.inner-carousel {
+    flex: 2;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.mySlidesInner {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+
+.map{
+    position: relative;
+    left: 80px;
+    width: 200px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(2, 2, 2);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: relative;
+    z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: #5DA5B6;
+}
+
+/* End */
+@media (max-width: 768px) {
+    .carousel-container { width: 95%; }
+    .outer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-content {
+        padding-right: 0;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .BranchInfo {
+        left: 0;
+    }
+    .map {
+        left: 0;
+        width: 100%;
+    }
+    .inner-carousel {
+        height: 300px;
+    }
+    .prev, .next {
+        top: auto;
+        bottom: 10px;
+        transform: translateY(0);
+    }
+    .prev { left: 50%; transform: translateX(-150%); }
+    .next { right: 50%; transform: translateX(150%); }
 }
