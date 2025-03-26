@@ -49,20 +49,34 @@
     background: #35424a;
 }
 
-.merchandise {
-    background: #e0f7fa;
+.merchandise{
     padding: 50px 0;
     text-align: center;
+    max-width: 100%;
+    height: 100vh;
+    
 }
 
+
 .merchandise h2 {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    font-size: 7vh;
+    font-weight: 700;
+    color: rgb(37, 155, 170);
 }
 
 .merchandise-items {
     display: flex;
     justify-content: center;
     gap: 20px;
+    max-width: 80%;
+    margin: 15vh auto 20vh auto;
+ 
+}
+.merchandise hr{
+    width: 40%;
+    margin: 0 auto 20px auto;
+    border: 1px solid #5DA5B6;
 }
 
 .merchandise .item {
@@ -70,10 +84,12 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
 }
 
 .merchandise .item img {
-    width: 35vh;
+    width: 40vh;
     height: auto;
     margin-bottom: 10px;
 }
@@ -105,7 +121,14 @@
 .promo-content p {
     margin-bottom: 20px;
 }
-
+.Sliders .promo-cont{
+    max-width: 100%;
+    text-align: center;
+    background-color: pink;
+    padding-bottom: 50vh;
+    padding-top: 5vh;
+    color: white;
+}
 .promo .btn {
     background: #5DA5B6;
     color: #ffffff;
@@ -132,19 +155,32 @@
     width: 100%;
 }
 footer{
-    margin-top: 30vh;
+    margin-top: 0vh;
 }
 
     .Sliders{
         display: flex;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/img1.jpg);
+       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/img1.jpg); 
         background-size: cover;
         background-position: center;
         color: white;
         height: 80vh;
+        width: 100%;
         padding-top: 10vh;
         
 
+    }
+    .promo-cont{
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        width: 100%;
+        padding-top: 10vh;
+    }
+    .item .S1{
+        background-color: pink;
+        color: white;
     }
     .content{
       /*  background-color: rgb(255, 255, 255);*/
@@ -203,4 +239,13 @@ footer{
     }
     .container-carousel{
         width: 100%;
+    }
+    .merch-pics{
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        width:40vh;
+        height: 40vh;
+        overflow: hidden;
+        background-color: #5DA5B6;
     }
