@@ -90,7 +90,7 @@
 .promo-content {
     max-width: 100%;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/img1.jpg);
+
     padding-bottom: 50vh;
     padding-top: 5vh;
     color: white;
@@ -137,13 +137,8 @@ footer{
 
     .Sliders{
         display: flex;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/img1.jpg);
-        background-size: cover;
-        background-position: center;
-        color: white;
         height: 80vh;
         padding-top: 10vh;
-        
 
     }
     .content{
@@ -203,4 +198,18 @@ footer{
     }
     .container-carousel{
         width: 100%;
+    }
+    .promo-img{
+        border: 2px solid white;
+        border-radius: 13;
+    }
+    .promo-cont{
+        background-color: rgb(229, 173, 182);
+        color: white;
+    }
+    .featured{
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/img1.jpg);
+        background-size: cover;
+        background-position: center;
+        color: white;
     }
