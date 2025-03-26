@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: #FAF9F6;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.50)), url(../Images/BGBranch1.jpg);
 }
 
 header {
@@ -49,30 +50,42 @@ header .nav-links li a:hover {
     text-decoration: underline;
 }
 
-.search-bar input {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #5BA6B3;
-    border-radius: 5px;
-    width: 300px;
+.search-bar {
+    display: flex; /* Use flexbox to align input and button horizontally */
+    justify-content: center; /* Center the search bar */
+    align-items: center; /* Align items vertically */
+    gap: 0; /* Remove gap between input and button */
 }
 
-/* Search bar button styling */
+.search-bar input {
+    padding: 10px; /* Adjust padding for a consistent size */
+    font-size: 16px;
+    border: 2px solid #5BA6B3;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    width: 400px;
+    margin: 0; /* Remove extra margin */
+    height: 40px; /* Set a fixed height to match the button */
+    box-sizing: border-box; /* Ensure padding doesn't affect the height */
+}
+
 .search-bar button {
-    padding: 10px 20px;
+    padding: 0 15px; /* Adjust padding for consistent height */
     font-size: 16px;
     border: none;
     background-color: #5BA6B3;
     color: white;
-    border-radius: 5px;
-    margin-left: 10px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    margin: 0; /* Remove extra margin */
     cursor: pointer;
+    height: 40px; /* Match the height of the input */
+    box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
-
 /* Begin Carousel */
 .BHead{
     font-size: 40px;
-    color: #5DA5B6;
+    color: #e4f2f5;
     text-align: center;
     padding: 0px;
     text-spacing-trim: 0px;
@@ -82,16 +95,27 @@ header .nav-links li a:hover {
 .BHead h1 {
     margin-bottom: 0px; /* Adjust this value to control the spacing */
 }
+.BHead p {
+    margin-top: 0px; /* Adjust this value to control the spacing */
+    font-size: large;
+}
+.BHead hr {
+    width: var(--hr-width, 500px); /* Default width is 100px, but can be customized */
+    height: var(--hr-height, 3px); /* Default height is 2px, but can be customized */
+    background-color: var(--hr-color, #e4f2f5); /* Default color is #5DA5B6, but can be customized */
+    border: none;
+    margin: 20px auto;
+}
 
 .carousel-container {
     position: relative;
-    width: 90%;
-    margin: 70px auto;
+    width: 100%;
+    margin: 70px auto 0 auto;
     overflow: hidden;
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 }
 
 .BranchName{
