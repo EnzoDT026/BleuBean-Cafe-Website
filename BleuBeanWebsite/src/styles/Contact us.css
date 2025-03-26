@@ -2,18 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: cooper black;
-    background-color:	#FAF9F6;
+    background-color: #FAF9F6;
 }
 
 .Con {
     font-size: 70px;
     font-family: cooper black;
     position: absolute;
-    top: 150px;
-    left:600px;
-    text-decoration: underline;
-    text-decoration-thickness:3px;
-   
+    top: 100px;
+    left: 600px;
     padding-bottom: 30px; /* Adjust this value to move the content closer */
 }
 
@@ -28,8 +25,9 @@ p.messageus {
 .Content {
     font-size: 20px;
     font-family: cooper black;
-    color: #ffffff;
-    margin-bottom:-73px; /* Adjust this value to move the content closer */ 
+    color: #5DA5B6;
+    padding-top: 100px;
+    margin-bottom: -73px; /* Adjust this value to move the content closer */
 }
 
 nav {
@@ -93,16 +91,18 @@ body {
     margin: 0;
 }
 
+
 .hero-content {
     text-align: center;
-    padding-top: 180px; /* Adjust this value to move the content to the top */
-    padding-bottom: 180px;
-    color: #ffffff;
-    background-image: url('../Images/img1.jpg'); /* Replace with your image path */
-    background-size: cover; /* Adjusts the image to cover the entire section */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Prevents the image from scrolling */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding-top: 0px; /* Adjust this value to move the content to the top */
+    padding-bottom: 100px;
+    color: #5DA5B6;
+}
+.ContactUs {
+    font-size: 50px;
+    margin-top: 100px;
+    font-family: cooper black;
+    color: #328295;
 }
 
 main {
@@ -122,13 +122,13 @@ main {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 75px; /* Adjust this value to move the form to the right */
-    margin-top: 40px; /* Adjust this value to move the form to the top */
+    margin-top: 50px; /* Adjust this value to move the form to the top */
 }
 
 .contact-form h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #328295;
+    margin-bottom: 40px;
+    color: #1cb1d6;
 }
 
 .contact-form label {
@@ -174,8 +174,50 @@ footer {
 .Info {
     position: absolute;
     font-family: cooper black;
+    font-size: 25px;
+    color: #2a7386;
+    top: 350px;
+    left: 800px;
+}
+
+.EmailInfo,
+.PhoneInfo,
+.AddressInfo {
+    margin-top: 20px;
+    font-family: cooper black;
+    font-size: 25px;
+    color: #2a7386;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;   
+}
+
+.EmailInfo i,
+.PhoneInfo i,
+.AddressInfo i {
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.EmailInfo div,
+.PhoneInfo div,
+.AddressInfo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.EmailInfo a,
+.PhoneInfo a,
+.AddressInfo a {
+    margin-left: 10px;
     font-size: 20px;
     color: #328295;
-    top: 500px;
-    left: 800px;
+    text-decoration: none;
+}
+
+.EmailInfo a:hover,
+.PhoneInfo a:hover,
+.AddressInfo a:hover {
+    text-decoration: underline;
 }
