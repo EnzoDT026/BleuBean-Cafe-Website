@@ -51,7 +51,7 @@ function searchBranch() {
     let found = false;
 
     for (let i = 0; i < outerSlides.length; i++) {
-        let branchName = outerSlides[i].getElementsByClassName("BranchName")[0].innerText.toLowerCase();
+        let branchName = outerSlides[i].getElementsByClassName("BranchInfo")[0].innerText.toLowerCase();
         if (branchName.includes(input)) {
             outerIndex = i;
             showOuterSlide(outerIndex);
