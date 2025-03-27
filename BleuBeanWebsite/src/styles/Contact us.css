@@ -90,6 +90,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 .hero {
     background-image: url('../Images/img1.jpg'); /* Replace with your image path */
     background-size: cover; /* Adjusts the image to cover the entire section */
