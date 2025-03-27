@@ -9,7 +9,7 @@ body {
     font-size: 70px;
     font-family: cooper black;
     position: absolute;
-    top: 100px;
+    top: 170px;
     left: 600px;
     padding-bottom: 30px; /* Adjust this value to move the content closer */
 }
@@ -19,14 +19,14 @@ p.messageus {
     font-family: cooper black;
     font-weight: bold;
     text-align: center;
-    color: #328295;
+    color:#5DA5B6;
 }
 
 .Content {
     font-size: 20px;
     font-family: cooper black;
-    color: #5DA5B6;
-    padding-top: 100px;
+    color: #ffffff;
+    padding-top: 0px;
     margin-bottom: -73px; /* Adjust this value to move the content closer */
 }
 
@@ -90,19 +90,34 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
+.hero {
+    background-image: url('../Images/img1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Adjusts the image to cover the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: black; /* Fallback color */
+    background-blend-mode: overlay; /* Adds a color overlay to the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Sets the color overlay */
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
 
 .hero-content {
     text-align: center;
     padding-top: 0px; /* Adjust this value to move the content to the top */
     padding-bottom: 100px;
-    color: #5DA5B6;
+    color: #ffffff;
 }
 .ContactUs {
     font-size: 50px;
     margin-top: 100px;
     font-family: cooper black;
-    color: #328295;
+    color: #ffffff;
 }
 
 main {
@@ -176,7 +191,7 @@ footer {
     font-family: cooper black;
     font-size: 25px;
     color: #328295;
-    top: 350px;
+    top: 650px;
     left: 800px;
 }
 
