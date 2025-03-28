@@ -45,6 +45,7 @@ function showInnerSlides() {
 showInnerSlides(); // Start rotating inner images
 
 // Function to Search Branch
+// Function to Search Branch
 function searchBranch() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let outerSlides = document.getElementsByClassName("mySlidesOuter");
@@ -52,11 +53,13 @@ function searchBranch() {
 
     for (let i = 0; i < outerSlides.length; i++) {
         let branchName = outerSlides[i].getElementsByClassName("BranchInfo")[0].innerText.toLowerCase();
+        
+        // Check if the branch name includes the search input
         if (branchName.includes(input)) {
-            outerIndex = i;
-            showOuterSlide(outerIndex);
+            outerSlides[i].style.display = "block"; // Show the matching slide
             found = true;
-            break;
+        } else {
+            outerSlides[i].style.display = "none"; // Hide non-matching slides
         }
     }
 
@@ -64,3 +67,29 @@ function searchBranch() {
         alert("Branch not found");
     }
 }
+
+// Populate the autocomplete options for the search bar
+function populateAutocomplete() {
+    let outerSlides = document.getElementsByClassName("mySlidesOuter");
+    let datalist = document.getElementById("branchNames");
+    datalist.innerHTML = ""; // Clear any existing options
+
+    for (let i = 0; i < outerSlides.length; i++) {
+        let branchName = outerSlides[i].getElementsByClassName("BranchName")[0].innerText;
+
+        // Create an option element for each branch name
+        let option = document.createElement("option");
+        option.value = branchName;
+        datalist.appendChild(option); // Add the option to the datalist
+    }
+}
+
+// Ensure autocomplete is always available
+document.getElementById("searchInput").addEventListener("input", function () {
+    populateAutocomplete(); // Repopulate the datalist as the user types
+});
+
+// Call the function to populate the autocomplete options on page load
+window.onload = function () {
+    populateAutocomplete();
+};

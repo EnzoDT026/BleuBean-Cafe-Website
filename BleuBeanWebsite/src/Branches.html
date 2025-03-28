@@ -12,7 +12,7 @@
         <header>
             <nav>
                 <div>
-                    <img class="logo" src="../Images/Logo2.png" alt="BleuBean Cafe Logo">
+                    <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -29,9 +29,11 @@
             <p> Browse Bleubean Cafe near you! </p>
             <hr>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Browse Branches">
+                <input type="text" id="searchInput" placeholder="Browse Branches" list="branchNames">
+                <datalist id="branchNames"></datalist> <!-- Autocomplete options -->
                 <button onclick="searchBranch()">Browse</button>
             </div>
+            <div id="branchList" style="display: none;"></div> <!-- Container for the list -->
         </div>
         <div class="carousel-container">
             <!-- Outer Slides (Text + Inner Image Carousel) -->
