@@ -114,6 +114,7 @@ nav ul li a:hover {
     color: #ffffff;
     font-weight: bold;
     margin-bottom: 20px;
+    border: #2f4f4f 3px dashed;
 }
 
 .Hero p {
@@ -195,12 +196,23 @@ nav ul li a:hover {
     left:60px;
 }
 
+/* eto yung buong section ng header na nakalagay try our best sellers*/
 h1 {
     font-size: 2.5rem;
     color: #2f4f4f;
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 30px;
+    border: red 1px solid;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #2f4f4f;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: rgb(176, 224, 17) 1px solid;
 }
 
 .image-container img {
@@ -284,14 +296,32 @@ blockquote {
 }
 
 /* Carousel Styles */
+/* nasasama lahat ng h2 pero eto sana para sa part lang ng what bleudies say about us*/
 h2 {
     font-size: 2em;
     font-weight: bold;
     color: #2c3e50;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: purple 2px solid;
+}
+.carousel-container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: rgb(7, 226, 36) 2px dashed;
 }
 
+.bg-black-70 .text-4xl {
+    color: #BAE6FD;
+    font-size: 2.25rem;
+    text-align: center;
+    border: black 2px dashed;
+}
+
+/* Eto yung buong section ng carousel para magkaron ng maayos na spacing*/
 .carousel-container {
     position: relative;
     width: calc(100% - 40px);
@@ -299,6 +329,8 @@ h2 {
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 15px;
+    border: #38BDF8 2px solid;
 }
 
 .carousel {
@@ -369,6 +401,11 @@ h2 {
 
 .active {
     background-color: black;
+}
+
+/* eto yung buong container ng about us page sa baba para sa adjustments*/
+.bg-black-70 {
+    border: rgb(211, 13, 46) 2px dashed;
 }
 
 /* Footer */
