@@ -1,3 +1,8 @@
+p,h1,h2,h3,h4,h5,h6,li,ul,ol,a,span,div{
+    font-family: 'montserrat', sans-serif;
+
+}
+
 #hero-content h1{
 
   display: flex;
@@ -54,6 +59,7 @@
     text-align: center;
     max-width: 100%;
     height: 100vh;
+    margin-bottom: 12vh;
     
 }
 
@@ -73,7 +79,7 @@
     margin: 15vh auto 20vh auto;
  
 }
-.merchandise hr{
+.merchandise hr,.PromoTitle hr{
     width: 40%;
     margin: 0 auto 20px auto;
     border: 1px solid #5DA5B6;
@@ -141,13 +147,14 @@
     background: #35424a;
 }
 
-.promo-image img {
+.promo-img {
     width: 60vh;
     height: auto;
-    border-radius: 10px;
-    margin-top: -10vh;
-    margin: -40vh auto 2vh auto;
+    border-radius: 13px;
+    margin: -3vh auto 2vh auto;
     display: block;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border:2px solid white;
 }
  
 .bgpromo{
@@ -179,7 +186,7 @@ footer{
         padding-top: 10vh;
     }
     .item .S1{
-        background-color: pink;
+        background-color: rgb(58, 186, 190);
         color: white;
     }
     .content{
@@ -187,6 +194,7 @@ footer{
         width: 500vh;
         margin-left: 30vh;
         padding-top: 50px;
+
 
         
         
@@ -239,7 +247,10 @@ footer{
     }
     .container-carousel{
         width: 100%;
+        
+     
     }
+
     .merch-pics{
         margin-left: auto;
         margin-right: auto;
@@ -249,3 +260,25 @@ footer{
         overflow: hidden;
         background-color: #5DA5B6;
     }
+    .S1 h1{
+        font-size: 90px;
+        margin-bottom: 20px;
+    }
+    .PromoTitle{
+        width: 100%;
+        text-align: center;
+        color:  #277c8f;
+    }
+    .PromoTitle h1{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+.MerchTitle h1{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.MerchTitle{
+    color:  #277c8f;
+}

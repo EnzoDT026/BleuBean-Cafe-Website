@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -55,6 +55,7 @@ nav .nav-links li a:hover {
     width: 20%;
     padding-right: 20px;
     border-right: 1px solid #ddd;
+    margin-top: 5vh;
 }
 
 .menu-sidebar h3 {
@@ -88,17 +89,20 @@ nav .nav-links li a:hover {
 
 .menu-item {
     background: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: calc(33.333% - 20px);
+    width: calc(20% - 20px);
+    text-align: center;
+
 }
 
 .menu-item img {
-    width: 100px;
+    width: 20vh;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 13px;
 }
 
 .menu-item p {
@@ -114,4 +118,32 @@ nav .nav-links li a:hover {
 .rating span {
     color: #5DA5B6;
     font-size: 20px;
+}
+.menu{
+    height: 100vh;
+}
+footer{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+footer p{
+    margin-bottom: 0px;
+}
+.Item-Name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.Item-Type{
+    font-size: 12px;
+    font-weight: 600;
+}
+.Item-Desc{
+    font-size: 12px;
+
+}
+hr{
+    width: 80%;
+}
+.Item-Desc, .Item-Name, .Item-Type, hr{
+    color: #285c68;
 }
