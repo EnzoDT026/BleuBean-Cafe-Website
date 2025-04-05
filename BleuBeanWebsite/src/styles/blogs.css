@@ -1,0 +1,128 @@
+.BlogTitle{
+    height:100px;
+    width:100%;
+    border: 1px dashed red;
+    top:100px;
+    background-color: #5DA5B6;
+}
+.BlogTitleTxt{
+    position:relative;
+    color:white;
+    top:20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+p{
+    position: relative;
+    width:160px;
+}
+.FrancisingBlogs:onclick {
+
+}
+.GoGreenBlogs{
+    top:-15px;
+}
+.CofeeCartBlogs{
+    top:-30px;
+}
+.BaristaTrainingBlogs{
+    top:-45px;
+}
+.OtherBlogs{
+    top:-60px;
+}
+
+.red{
+    height:100px;
+    width:100px;
+    position:absolute;
+    background-color: red;
+    top:200px;
+    left:200px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+.red clicked{
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none; /* Prevent interaction while hidden */
+}
+.green{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:green;
+    top:300px;
+    left:200px;
+
+
+}
+.blue{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:blue;
+    top:400px;
+    left:200px;
+}
+.yellow{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:yellow;
+    top:500px;
+    left:200px;
+}
+.purple{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:purple;
+    top:600px;
+    left:200px;
+}
+.pink{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:pink;
+    top:700px;
+    left:200px;
+}
+.brown{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:brown;
+    top:800px;
+    left:200px;
+}
+.black{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:black;
+    top:900px;
+    left:200px;
+}
+.orange{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:orange;
+    top:1000px;
+    left:200px;
+}
+.teal{
+    position:absolute;
+    height:100px;
+    width:100px;
+    background-color:teal;
+    top:1100px;
+    left:200px;
+}
+
