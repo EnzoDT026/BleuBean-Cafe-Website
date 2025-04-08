@@ -4,51 +4,13 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+main{}
 
-header {
-    background: #5DA5B6;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav {
-    background: #5DA5B6;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo {
-    width: 50px;
-    height: auto;
-    margin-left: 50px;
-}
-
-nav .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav .nav-links li {
-    margin-right: 30px;
-}
-
-nav .nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav .nav-links li a:hover {
-    text-decoration: underline;
-}
 
 .menu {
     display: flex;
     padding: 20px;
+    margin-bottom: 0;
 }
 
 .menu-sidebar {
@@ -75,6 +37,8 @@ nav .nav-links li a:hover {
 .menu-content {
     width: 80%;
     padding-left: 20px;
+    height: 100%;
+
 }
 
 .menu-content h2 {
@@ -85,16 +49,22 @@ nav .nav-links li a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    height: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 30px;
+
 }
 
 .menu-item {
-    background: #ffffff;
+    background: #fff6e5;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: calc(20% - 20px);
     text-align: center;
+    margin-bottom: 10px;
 
 }
 
@@ -124,7 +94,8 @@ nav .nav-links li a:hover {
 }
 footer{
     margin-bottom: 0px;
-    padding-bottom: 0px;
+    position: relative;
+    bottom: -15px;
 }
 footer p{
     margin-bottom: 0px;
@@ -147,3 +118,68 @@ hr{
 .Item-Desc, .Item-Name, .Item-Type, hr{
     color: #285c68;
 }
+
+/*  For the Slider hero */
+.Sliders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f4f4f4;
+}
+
+.content{
+      width: 40%;
+      margin-left: 15%;
+      padding-top: 50px;
+
+
+      
+      
+  }
+  .image .Slider_Image{
+      width: 40%;
+      float: right;
+      margin-right: 30%;
+      border-radius: 13px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      
+    
+  }
+  .content h1{
+   
+      font-weight: 900;
+      line-height: 80%;
+      margin-top: 0;
+  }
+  .content h6{
+      font-size: 2vh;
+      font-weight: 100;
+      line-height: 80%;
+      margin-bottom: 20px;
+  }
+  .content h5{
+      font-size: 2vh;
+      font-weight: 600;
+      line-height: 80%;
+      margin-bottom: 70px;
+      margin-top: 10px;
+  }
+  .content p{
+      width: 60%;
+      margin-bottom: 20px;
+  }
+  .MediaIcons .btn{
+      background-color: #5DA5B6;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+  }
+  .fab {
+      color: #5DA5B6;
+      font-size: 3vh;
+      margin-left: 10px;
+      margin-top: 20px;
+  }
