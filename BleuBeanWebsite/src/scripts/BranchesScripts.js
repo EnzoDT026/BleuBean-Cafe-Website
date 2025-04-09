@@ -84,7 +84,6 @@ function populateAutocomplete() {
     }
 }
 
-<<<<<<< Updated upstream
 // Ensure autocomplete is always available
 document.getElementById("searchInput").addEventListener("input", function () {
     populateAutocomplete(); // Repopulate the datalist as the user types
@@ -94,9 +93,3 @@ document.getElementById("searchInput").addEventListener("input", function () {
 window.onload = function () {
     populateAutocomplete();
 };
-=======
-// Call the function to populate the autocomplete options on page load
-window.onload = function () {
-    populateAutocomplete();
-};
->>>>>>> Stashed changes

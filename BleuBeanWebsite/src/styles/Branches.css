@@ -212,6 +212,12 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 10px;
     margin-right: 50px;
+    filter: brightness(1); /* Ensures equal brightness for all images */
+    transition: filter 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.inner-carousel img:hover {
+    filter: brightness(1.1); /* Optional: Slightly brighten on hover */
 }
 
 .map{
