@@ -11,6 +11,7 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed during scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -249,7 +250,7 @@ nav ul li a:hover {
 
 /* End */
 @media (max-width: 768px) {
-    .carousel-container { width: 95%; }
+    .carousel-container { width: 90%; }
     .outer-content {
         flex-direction: column;
         align-items: center;
@@ -261,6 +262,7 @@ nav ul li a:hover {
     }
     .BranchInfo {
         left: 0;
+        align-items: center;
     }
     .map {
         left: 0;
