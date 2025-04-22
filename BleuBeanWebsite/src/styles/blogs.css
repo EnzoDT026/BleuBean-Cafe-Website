@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .BlogTitle{
     height:100px;
     width:100%;
@@ -19,9 +22,7 @@ p{
     position: relative;
     width:160px;
 }
-.FrancisingBlogs:onclick {
 
-}
 .GoGreenBlogs{
     top:-15px;
 }
@@ -35,94 +36,221 @@ p{
     top:-60px;
 }
 
-.red{
-    height:100px;
-    width:100px;
+.CarouselBlog{
     position:absolute;
-    background-color: red;
     top:200px;
-    left:200px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 1;
-    transform: translateY(0);
-}
-.red clicked{
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none; /* Prevent interaction while hidden */
-}
-.green{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:green;
-    top:300px;
-    left:200px;
-
-
-}
-.blue{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:blue;
-    top:400px;
-    left:200px;
-}
-.yellow{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:yellow;
-    top:500px;
-    left:200px;
-}
-.purple{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:purple;
-    top:600px;
-    left:200px;
-}
-.pink{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:pink;
-    top:700px;
-    left:200px;
-}
-.brown{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:brown;
-    top:800px;
-    left:200px;
-}
-.black{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:black;
-    top:900px;
-    left:200px;
-}
-.orange{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:orange;
-    top:1000px;
-    left:200px;
-}
-.teal{
-    position:absolute;
-    height:100px;
-    width:100px;
-    background-color:teal;
-    top:1100px;
-    left:200px;
+    left:300px;
+    height:400px;
+    width:1550px;
+    border: 1px solid black;
 }
 
+.FranchiseBlogH1{
+    position:Absolute;
+    top:650px;
+    left:950px;
+}
+
+.FranchiseBlog1{
+    position:absolute;
+    top:750px;
+    left: 300px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.FranchiseBlog2{
+    position:absolute;
+    top:750px;
+    left: 825px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.FranchiseBlog3{
+    position:absolute;
+    top:750px;
+    left: 1350px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.FranchiseBlog4{
+    position:absolute;
+    top:1025px;
+    left: 300px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.FranchiseBlog5{
+    position:absolute;
+    top:1025px;
+    left: 825px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.FranchiseBlog6{
+    position:absolute;
+    top:1025px;
+    left: 1350px;
+    border: 1px double blue;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlogsH1{
+    position:Absolute;
+    top:1300px;
+    left:950px;
+}
+
+.GoGreenBlog1{
+    position:absolute;
+    top:1390px;
+    left: 300px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog2{
+    position:absolute;
+    top:1390px;
+    left: 825px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog3{
+    position:absolute;
+    top:1390px;
+    left: 1350px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog4{
+    position:absolute;
+    top:1670px;
+    left: 300px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog5{
+    position:absolute;
+    top:1670px;
+    left: 825px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog6{
+    position:absolute;
+    top:1670px;
+    left: 1350px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+.GoGreenBlog7{
+    position:absolute;
+    top:1950px;
+    left: 825px;
+    border: 1px double green;
+    height: 250px;
+    width:500px;
+}
+
+.CoffeeCartBlogsH1{
+    position:Absolute;
+    top:2240px;
+    left:915px;
+
+}
+.CoffeecartBlog1{
+    position:absolute;
+    top:2325px;
+    left: 300px;
+    border: 1px double brown;
+    height: 250px;
+    width:500px;
+}
+.CoffeecartBlog2{
+    position:absolute;
+    top:2325px;
+    left: 825px;
+    border: 1px double brown;
+    height: 250px;
+    width:500px;
+}
+.CoffeecartBlog3{
+    position:absolute;
+    top:2325px;
+    left: 1350px;
+    border: 1px double brown;
+    height: 250px;
+    width:500px;
+}
+.BaristaTrainingH1{
+    position:Absolute;
+    top:2600px;
+    left:880px;
+}
+.BaristaTrainingBlog1{
+    position:absolute;
+    top:2680px;
+    left: 300px;
+    border: 1px double orange;
+    height: 250px;
+    width:500px;
+}
+.BaristaTrainingBlog2{
+    position:absolute;
+    top:2680px;
+    left: 825px;
+    border: 1px double orange;
+    height: 250px;
+    width:500px;
+}
+.BaristaTrainingBlog3{
+    position:absolute;
+    top:2680px;
+    left: 1350px;
+    border: 1px double orange;
+    height: 250px;
+    width:500px;
+}
+.OtherBlogsH1{
+    position:Absolute;
+    top:2950px;
+    left:950px;
+}
+.OtherBlog1{
+    position:absolute;
+    top:3030px;
+    left: 300px;
+    border: 1px double purple;
+    height: 250px;
+    width:500px;
+    margin-bottom: 25px;
+}   
+.OtherBlog2{
+    position:absolute;
+    top:3030px;
+    left: 825px;
+    border: 1px double purple;
+    height: 250px;
+    width:500px;
+}
+.OtherBlog3{
+    position:absolute;
+    top:3030px;
+    left: 1350px;
+    border: 1px double purple;
+    height: 250px;
+    width:500px;
+}
+body{
+    height:3050px;
+}
