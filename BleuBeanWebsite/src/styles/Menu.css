@@ -124,10 +124,20 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 600px;
     background-color: #f4f4f4;
-}
 
+}
+.menu-img{
+    background: url(../Images/Menu_Images/donut-bg.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .content{
       width: 40%;
       margin-left: 15%;
