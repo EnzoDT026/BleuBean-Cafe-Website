@@ -19,8 +19,7 @@ a{
     cursor: pointer;
 }
 p{
-    position: relative;
-    width:160px;
+
 }
 
 .GoGreenBlogs{
@@ -56,7 +55,7 @@ p{
     top:750px;
     left: 300px;
     border: 1px double blue;
-    height: 250px;
+    height: 350px;
     width:500px;
 }
 .FranchiseBlog2{
@@ -64,7 +63,7 @@ p{
     top:750px;
     left: 825px;
     border: 1px double blue;
-    height: 250px;
+    height: 350px;
     width:500px;
 }
 .FranchiseBlog3{
@@ -72,42 +71,42 @@ p{
     top:750px;
     left: 1350px;
     border: 1px double blue;
-    height: 250px;
+    height: 350px;
     width:500px;
 }
 .FranchiseBlog4{
     position:absolute;
-    top:1025px;
+    top:1125px;
     left: 300px;
     border: 1px double blue;
-    height: 250px;
+    height: 350px;
     width:500px;
 }
 .FranchiseBlog5{
     position:absolute;
-    top:1025px;
+    top:1125px;
     left: 825px;
     border: 1px double blue;
-    height: 250px;
+    height:350px;
     width:500px;
 }
 .FranchiseBlog6{
     position:absolute;
-    top:1025px;
+    top:1125px;
     left: 1350px;
     border: 1px double blue;
-    height: 250px;
+    height: 350px;
     width:500px;
 }
 .GoGreenBlogsH1{
     position:Absolute;
-    top:1300px;
+    top:1500px;
     left:950px;
 }
 
 .GoGreenBlog1{
     position:absolute;
-    top:1390px;
+    top:1590px;
     left: 300px;
     border: 1px double green;
     height: 250px;
@@ -115,7 +114,7 @@ p{
 }
 .GoGreenBlog2{
     position:absolute;
-    top:1390px;
+    top:1590px;
     left: 825px;
     border: 1px double green;
     height: 250px;
@@ -123,7 +122,7 @@ p{
 }
 .GoGreenBlog3{
     position:absolute;
-    top:1390px;
+    top:1590px;
     left: 1350px;
     border: 1px double green;
     height: 250px;
@@ -131,7 +130,7 @@ p{
 }
 .GoGreenBlog4{
     position:absolute;
-    top:1670px;
+    top:1870px;
     left: 300px;
     border: 1px double green;
     height: 250px;
@@ -139,7 +138,7 @@ p{
 }
 .GoGreenBlog5{
     position:absolute;
-    top:1670px;
+    top:1870px;
     left: 825px;
     border: 1px double green;
     height: 250px;
@@ -147,7 +146,7 @@ p{
 }
 .GoGreenBlog6{
     position:absolute;
-    top:1670px;
+    top:1870px;
     left: 1350px;
     border: 1px double green;
     height: 250px;
@@ -155,7 +154,7 @@ p{
 }
 .GoGreenBlog7{
     position:absolute;
-    top:1950px;
+    top:2150px;
     left: 825px;
     border: 1px double green;
     height: 250px;
@@ -164,13 +163,13 @@ p{
 
 .CoffeeCartBlogsH1{
     position:Absolute;
-    top:2240px;
+    top:2440px;
     left:915px;
 
 }
 .CoffeecartBlog1{
     position:absolute;
-    top:2325px;
+    top:2525px;
     left: 300px;
     border: 1px double brown;
     height: 250px;
@@ -178,7 +177,7 @@ p{
 }
 .CoffeecartBlog2{
     position:absolute;
-    top:2325px;
+    top:2525px;
     left: 825px;
     border: 1px double brown;
     height: 250px;
@@ -186,7 +185,7 @@ p{
 }
 .CoffeecartBlog3{
     position:absolute;
-    top:2325px;
+    top:2525px;
     left: 1350px;
     border: 1px double brown;
     height: 250px;
@@ -194,12 +193,12 @@ p{
 }
 .BaristaTrainingH1{
     position:Absolute;
-    top:2600px;
+    top:2800px;
     left:880px;
 }
 .BaristaTrainingBlog1{
     position:absolute;
-    top:2680px;
+    top:2880px;
     left: 300px;
     border: 1px double orange;
     height: 250px;
@@ -207,7 +206,7 @@ p{
 }
 .BaristaTrainingBlog2{
     position:absolute;
-    top:2680px;
+    top:2880px;
     left: 825px;
     border: 1px double orange;
     height: 250px;
@@ -215,7 +214,7 @@ p{
 }
 .BaristaTrainingBlog3{
     position:absolute;
-    top:2680px;
+    top:2880px;
     left: 1350px;
     border: 1px double orange;
     height: 250px;
@@ -223,12 +222,12 @@ p{
 }
 .OtherBlogsH1{
     position:Absolute;
-    top:2950px;
+    top:3150px;
     left:950px;
 }
 .OtherBlog1{
     position:absolute;
-    top:3030px;
+    top:3230px;
     left: 300px;
     border: 1px double purple;
     height: 250px;
@@ -237,7 +236,7 @@ p{
 }   
 .OtherBlog2{
     position:absolute;
-    top:3030px;
+    top:3230px;
     left: 825px;
     border: 1px double purple;
     height: 250px;
@@ -245,7 +244,7 @@ p{
 }
 .OtherBlog3{
     position:absolute;
-    top:3030px;
+    top:3230px;
     left: 1350px;
     border: 1px double purple;
     height: 250px;
@@ -253,4 +252,38 @@ p{
 }
 body{
     height:3050px;
+}
+.fb1desc1{  
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc2{
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc3{
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc4{
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc5{
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc6{
+    position:absolute;
+    top:183px;
+    border:1px solid black;
+}
+.fb1desc2 p{
+
+
 }
