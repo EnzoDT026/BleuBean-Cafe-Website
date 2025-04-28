@@ -45,7 +45,6 @@ function showInnerSlides() {
 showInnerSlides(); // Start rotating inner images
 
 // Function to Search Branch
-// Function to Search Branch
 function searchBranch() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let outerSlides = document.getElementsByClassName("mySlidesOuter");
