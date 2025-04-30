@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: #FAF9F6;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.50)), url(../Images/BGBranch1.jpg);
 }
 
 header {
@@ -49,42 +50,84 @@ header .nav-links li a:hover {
     text-decoration: underline;
 }
 
-.hero {
-    background: url('../src/Images/hero.jpg') no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-align: center;
+.search-bar {
+    display: flex; /* Use flexbox to align input and button horizontally */
+    justify-content: center; /* Center the search bar */
+    align-items: center; /* Align items vertically */
+    gap: 0; /* Remove gap between input and button */
 }
 
-.hero-content h1 {
-    font-size: 50px;
-    margin: 0;
+.search-bar input {
+    padding: 10px; /* Adjust padding for a consistent size */
+    font-size: 16px;
+    border: 2px solid #5BA6B3;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    width: 400px;
+    margin: 0; /* Remove extra margin */
+    height: 40px; /* Set a fixed height to match the button */
+    box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
 
-.hero-content h2 {
-    font-size: 24px;
-    margin: 10px 0 0;
+.search-bar button {
+    padding: 0 15px; /* Adjust padding for consistent height */
+    font-size: 16px;
+    border: none;
+    background-color: #5BA6B3;
+    color: white;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    margin: 0; /* Remove extra margin */
+    cursor: pointer;
+    height: 40px; /* Match the height of the input */
+    box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
-
 /* Begin Carousel */
+.BHead{
+    font-size: 40px;
+    color: #e4f2f5;
+    text-align: center;
+    padding: 0px;
+    text-spacing-trim: 0px;
+    margin: 0px;
+}
+
+.BHead h1 {
+    margin-bottom: 0px; /* Adjust this value to control the spacing */
+}
+.BHead p {
+    margin-top: 0px; /* Adjust this value to control the spacing */
+    font-size: large;
+}
+.BHead hr {
+    width: var(--hr-width, 500px); /* Default width is 100px, but can be customized */
+    height: var(--hr-height, 3px); /* Default height is 2px, but can be customized */
+    background-color: var(--hr-color, #e4f2f5); /* Default color is #5DA5B6, but can be customized */
+    border: none;
+    margin: 20px auto;
+}
 
 .carousel-container {
     position: relative;
-    width: 90%;
-    margin: 70px auto;
+    width: 100%;
+    margin: 70px auto 0 auto;
     overflow: hidden;
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.BranchName{
+    font-size: 40PX; 
+    padding-bottom: 5px;
 }
 
 .mySlidesOuter {
     display: none;
     padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .outer-content {
@@ -96,7 +139,7 @@ header .nav-links li a:hover {
 
 .text-content {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 30px;
     text-align: left;
     padding-bottom: 20px;
 }
@@ -109,11 +152,14 @@ header .nav-links li a:hover {
 .BranchName{
     font-size: 40PX; 
     padding-bottom: 5px;
+    color: #5DA5B6;
+    padding-bottom: 7px;
 }
 
 .BranchInfo p {
     margin: 5px 0;
     font-size: 18px;
+    color: #5DA5B6;
 }
 .BranchInfo{
     position: relative;
@@ -124,7 +170,7 @@ header .nav-links li a:hover {
     flex: 2;
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -139,10 +185,10 @@ header .nav-links li a:hover {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 
-.map img {
+.map{
     position: relative;
     left: 80px;
     width: 200px;
@@ -167,17 +213,34 @@ header .nav-links li a:hover {
 .prev:hover, .next:hover {
     background: #5DA5B6;
 }
+
 /* End */
 @media (max-width: 768px) {
     .carousel-container { width: 95%; }
     .outer-content {
         flex-direction: column;
+        align-items: center;
     }
     .text-content {
         padding-right: 0;
         padding-bottom: 20px;
+        text-align: center;
+    }
+    .BranchInfo {
+        left: 0;
+    }
+    .map {
+        left: 0;
+        width: 100%;
     }
     .inner-carousel {
         height: 300px;
     }
+    .prev, .next {
+        top: auto;
+        bottom: 10px;
+        transform: translateY(0);
+    }
+    .prev { left: 50%; transform: translateX(-150%); }
+    .next { right: 50%; transform: translateX(150%); }
 }
