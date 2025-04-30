@@ -57,9 +57,10 @@ main{}
 }
 
 .menu-item {
-    background: #fff6e5;
+    background: #f8f7f5;
     padding: 10px;
     border-radius: 10px;
+    border: 0.5px solid rgb(233, 233, 233);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: calc(20% - 20px);
