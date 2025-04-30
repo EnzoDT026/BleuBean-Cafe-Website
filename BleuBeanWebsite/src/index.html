@@ -19,10 +19,12 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Branches</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="menu-toggle">
@@ -38,18 +40,20 @@
             <h2 class="tagline">Feeling Blue?</h2>
             <h3 class="subtitle">It's time to take your coffee.</h3>
             <p class="description">Experience the perfect blend of comfort and quality at Bleu Bean Cafe.</p>
-            <a href="#menu" class="btn primary-btn">View Our Signature Drinks</a>
+            <a href="#menu" class="btn primary-btn">View Featured Drinks</a>
         </div>
     </section>
 
     <section id="menu" class="menu">
         <div class="container">
-            <h2 class="section-title">Our Signature Drinks</h2>
+            <h2 class="section-title">Featured Drinks</h2>
             <div class="menu-categories">
                 <button class="category-btn active" data-category="all">All</button>
                 <button class="category-btn" data-category="coffee">Coffee</button>
+                <button class="category-btn" data-category="non-Coffee">Non-Coffee</button>
                 <button class="category-btn" data-category="frappe">Frappe</button>
-                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="milktea">Milktea</button>
+
             </div>
             <div class="menu-items">
                 <!-- Coffee Items -->
@@ -71,8 +75,8 @@
                         <p>Perfect balance of espresso, steamed milk, and foam</p>
                     </div>
                 </div>
-                <!-- Frappe Items -->
-                <div class="menu-item" data-category="frappe">
+                <!-- Non-Coffee Items -->
+                <div class="menu-item" data-category="non-Coffee">
                     <div class="menu-img">
                         <img src="https://images.pexels.com/photos/2638019/pexels-photo-2638019.jpeg" alt="Bleu Frappe">
                     </div>
@@ -81,7 +85,7 @@
                         <p>Our signature iced blended coffee with whipped cream</p>
                     </div>
                 </div>
-                <div class="menu-item" data-category="frappe">
+                <div class="menu-item" data-category="non-Coffee">
                     <div class="menu-img">
                         <img src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg" alt="Caramel Frappe">
                     </div>
@@ -90,8 +94,8 @@
                         <p>Blended coffee with caramel and whipped cream</p>
                     </div>
                 </div>
-                <!-- Desserts Items -->
-                <div class="menu-item" data-category="desserts">
+                <!-- Frappe Items -->
+                <div class="menu-item" data-category="frappe">
                     <div class="menu-img">
                         <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Chocolate Croissant">
                     </div>
@@ -100,7 +104,26 @@
                         <p>Buttery croissant filled with rich chocolate</p>
                     </div>
                 </div>
-                <div class="menu-item" data-category="desserts">
+                <div class="menu-item" data-category="frappe">
+                    <div class="menu-img">
+                        <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg" alt="Blueberry Cheesecake">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Blueberry Cheesecake</h3>
+                        <p>Creamy cheesecake topped with blueberry compote</p>
+                    </div>
+                </div>
+                <!-- Milktea Items -->
+                <div class="menu-item" data-category="milktea">
+                    <div class="menu-img">
+                        <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Chocolate Croissant">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Chocolate Croissant</h3>
+                        <p>Buttery croissant filled with rich chocolate</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="milktea">
                     <div class="menu-img">
                         <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg" alt="Blueberry Cheesecake">
                     </div>
@@ -159,17 +182,20 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-links">
                     <h2>Bleu Bean Cafe</h2>
-                    <p>Turning blue moments into warm memories.</p>
+                    <ul>
+                        <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                        <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                        <li><a href="#">+63 961 687 2463</a></li>
+                    </ul>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#menu">Drinks</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
                     </ul>
                 </div>
                 <div class="footer-hours">
@@ -185,8 +211,6 @@
     </footer>
 
     <script src="scripts/Home.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/animations.js"></script>
+
 </body>
 </html>

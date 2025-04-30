@@ -635,14 +635,14 @@ ul {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-links h3, .footer-hours h3 {
+.footer-links h3, .footer-hours h3{
     font-size: 1.2rem;
     margin-bottom: var(--spacing-md);
     position: relative;
     padding-bottom: var(--spacing-xs);
 }
 
-.footer-links h3::after, .footer-hours h3::after {
+.footer-links h3::after, .footer-hours h3::after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -674,6 +674,11 @@ ul {
     text-align: center;
     padding: var(--spacing-md) 0;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 /* Animations */
