@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/blogs.css">
     <link rel="stylesheet" href="../src/styles/main.css">
+    
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     
     <title>Blogs</title>
 </head>
 <body>
+    <script src="../src/scripts/blogs.js"></script>
     <header>
         <nav>
             <div >
@@ -38,10 +42,38 @@
         <a href="#btb" class="BaristaTrainingBlogs" >Barista Training Blogs</a><br>
         <a href="#otb" class="OtherBlogs" >Other Blogs</a>
     </div>
-    <script src="../src/scripts/blogs.js"></script>
-
     <div class="CarouselBlog">
-
+        <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="../src/Images/hero-img.avif" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="../src/Images/MRBBranch.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="../src/Images/STA.Rosa.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
     </div>
     <h1 class="FranchiseBlogH1" id="fran">
         Franchise Blogs
