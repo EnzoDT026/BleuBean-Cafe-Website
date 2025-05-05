@@ -56,6 +56,7 @@ html {
 }
 
 body {
+
   font-family: var(--font-family);
   line-height: var(--body-line-height);
   color: var(--text-dark);
@@ -913,41 +914,3 @@ ul {
   }
 }
 
-@media (max-width: 480px) {
-  .section-title {
-      font-size: 1.8rem;
-  }
-  
-  .hero .tagline {
-      font-size: 2.5rem;
-  }
-  
-  .hero .subtitle {
-      font-size: 1.5rem;
-  }
-  
-  .hero .description {
-      font-size: 1rem;
-  }
-  
-  .hero .btn {
-      font-size: 1rem;
-      padding: 12px 24px;
-  }
-  
-  .btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-  }
-  
-  .menu-categories {
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  .category-btn {
-      width: 100%;
-      max-width: 200px;
-      text-align: center;
-  }
-}
