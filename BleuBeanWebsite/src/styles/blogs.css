@@ -23,6 +23,11 @@ a{
     cursor: pointer;
 }
 
+.Categories{
+    position:fixed;
+}
+
+
 .mySlides {display: none}
 
 
@@ -520,6 +525,9 @@ a{
 .ccbdesc2{
     position:absolute;
     top:183px;
+}
+.ccbdesc2 {
+
 }
 .ccbdesc3{
     position:absolute;
