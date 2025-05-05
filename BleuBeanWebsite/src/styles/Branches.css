@@ -1,22 +1,15 @@
+
 .fas,.fab{
     font-size: 20px;
     color: #5DA5B6;
 }
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/BGBranch1.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensure the image covers the entire viewport */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Keep the background fixed during scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-body .p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
+p {
+    font-family: poppins, sans-serif;
     font-style: normal;
-    font-size: medium;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: caprasimo, sans-serif;
 }
 
 header {
@@ -80,7 +73,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
 .search-bar {
     display: flex; /* Use flexbox to align input and button horizontally */
     justify-content: center; /* Center the search bar */
@@ -113,6 +105,10 @@ nav ul li a:hover {
     height: 40px; /* Match the height of the input */
     box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
+
+body{
+    background-color: #FFF7EA;
+}
 /* Begin Carousel */
 .BHead{
     font-size: 40px;
@@ -125,7 +121,7 @@ nav ul li a:hover {
 
 .BHead h1 {
     margin-bottom: 0px; /* Adjust this value to control the spacing */
-    font-family: "Caprasimo", serif;
+    font-family: "Caprasimo";
 }
 .BHead p {
     margin-top: 0px; /* Adjust this value to control the spacing */
@@ -157,7 +153,8 @@ nav ul li a:hover {
 
 .mySlidesOuter {
     display: none;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     opacity: 5;
     transition: opacity 0.5s ease-in-out; 
     transform: 0.5s ease-in-out;
@@ -183,16 +180,20 @@ nav ul li a:hover {
 }
 
 .BranchName{
-    font-size: 40PX; 
+    font-family: poppins, sans-serif;
+    font-weight: 800;
+    font-size: 28PX; 
     padding-bottom: 5px;
-    color: #5DA5B6;
+    color: #458a99;
     padding-bottom: 7px;
+    text-decoration: none;
 }
 
-.BranchInfo p {
+.BranchInfo p , .BranchInfo a{
     margin: 2px 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #5DA5B6;
+    text-decoration: none;
 }
 .BranchInfo{
     position: relative;

@@ -35,7 +35,7 @@ function showInnerSlides() {
             innerIndex = (innerIndex + 1) % innerSlides.length;
             innerSlides[innerIndex].style.display = "flex";
 
-            setTimeout(cycleInnerSlides, 3000); // Inner images change every 2s
+            setTimeout(cycleInnerSlides, 2000); // Inner images change every 2s
         }
 
         cycleInnerSlides();
