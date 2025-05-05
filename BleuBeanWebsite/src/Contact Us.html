@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../src/styles/main.css">
     <link rel="stylesheet" href="../src/styles/Contact%20Us.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         </style>
@@ -14,21 +15,29 @@
     <!-- <link rel="stylesheet" href="../src/styles/Products.css">--> 
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo"> <!-- Logo -->
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#"><b>Products</b></a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Branches</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+    
+   <header id="header">
+    <div class="container">
+        <div class="logo">
+            <h1>Bleu Bean Cafe</h1>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
     <section class="hero">
         <div class="hero-content">
             <h1 class="Con">Contact Us</h1>
@@ -88,8 +97,35 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2023 BleuBean Cafe. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h2>Bleu Bean Cafe</h2>
+                    <ul>
+                        <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                        <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                        <li><a href="#">+63 961 687 2463</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Hours</h3>
+                    <p>Monday-Friday: 7am-8pm</p>
+                    <p>Weekends: 8am-9pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
     <script src="../src/scripts/main.js"></script>
     <script src="../src/scripts/Products.js"></script>
