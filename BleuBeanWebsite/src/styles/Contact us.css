@@ -1,31 +1,31 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: cooper black;
+    font-family:"Caprasimo","Poppins";
     background-color: #fdfcf8;
 }
 
 .Con {
-    font-size: 70px;
-    font-family: cooper black;
+    font-size:70px;
+    font-family:"Caprasimo","Poppins";
     position: absolute;
-    top: 180px;
+    top: 150px;
     left: 600px;
     padding-bottom: 30px; /* Adjust this value to move the content closer */
     color: #5DA5B6;
 }
 
 p.messageus {
-    font-size: 38px;
-    font-family: cooper black;
-    font-weight: bold;
+    font-size:30px;
+    font-family:"Caprasimo","Poppins";
+    font:bold;
     text-align: center;
     color:#5DA5B6;
 }
 
 .Content {
-    font-size: 18px;
-    font-family: cooper black;
+    font-size:20px;
+    font-family:"Poppins";
     color:#000000;
     padding-top: 185px;
     margin-bottom: -73px; /* Adjust this value to move the content closer */
@@ -105,7 +105,8 @@ body {
 .ContactUs {
     font-size: 50px;
     margin-top: 100px;
-    font-family: cooper black;
+    font-family: "Caprasimo","Poppins";
+    color: #5DA5B6;
     color: #ffffff;
 }
 
@@ -177,7 +178,8 @@ footer {
 
 .Info {
     position: absolute;
-    font-family: cooper black;
+    font-family: "Caprasimo","Poppins";
+    
     font-size: 25px;
     color: #328295;
     top: 400px;
@@ -188,7 +190,8 @@ footer {
 .PhoneInfo,
 .AddressInfo {
     margin-top: 20px;
-    font-family: cooper black;
+    font-family: "Caprasimo","Poppins";
+    font-style: normal;
     font-size: 25px;
     color: #328295;
     display: flex;
@@ -227,7 +230,7 @@ footer {
 }
 .maps{
     position: absolute;
-    top:320px;
+    top:380px;
     padding-left: 50px;
     width: 500px;
     height: 500px;
