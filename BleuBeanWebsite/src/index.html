@@ -3,16 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BleuBean Website</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Bleu Bean Cafe</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="Hero">
-        <h1>Welcome BleuBean</h1>
-
-        <p>This is the index/homepage</p>
-    </div>
-
-    <script src="scripts/main.js"></script>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Bleu Bean Cafe</h1>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="Test.html">Products</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="Blogs.html">Blogs</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <img src="Images/img1.jpg" class="hero-img" alt="Bleu Bean Cafe">
+        <div class="hero-content">
+            <h2 class="tagline">Feeling Blue?</h2>
+            <h3 class="subtitle">It's time to take your coffee.</h3>
+            <p class="description">Experience the perfect blend of comfort and quality at Bleu Bean Cafe.</p>
+            <a href="#menu" class="btn primary-btn">View Featured Drinks</a>
+        </div>
+    </section>
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Featured Drinks</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="coffee">Coffee</button>
+                <button class="category-btn" data-category="non-Coffee">Non-Coffee</button>
+                <button class="category-btn" data-category="frappe">Frappe</button>
+                <button class="category-btn" data-category="milktea">Milktea</button>
+            </div>
+            <div class="menu-items">
+                <!-- Coffee Items -->
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Espresso">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Cappuccino">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <!-- Non-Coffee Items -->
+                <div class="menu-item" data-category="non-Coffee">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Bleu Frappe">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-Coffee">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Caramel Frappe">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <!-- Frappe Items -->
+                <div class="menu-item" data-category="frappe">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="frappe">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <!-- Milktea Items -->
+                <div class="menu-item" data-category="milktea">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="milktea">
+                    <div class="menu-img">
+                        <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
+                    </div>
+                    <div class="menu-details">
+                        <h3>Oreo Frappe</h3>
+                        <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Us</h2>
+                    <p>At Bleu Bean Cafe, we think that each cup of coffee holds a story. Our adventure began with a passion for outstanding coffee and a desire to create a welcoming environment for coffee lovers.</p>
+                    <p>Our tagline, "Feeling Blue? It's time to take your coffee." We understand that some days are tougher than others. That's why we're here: to lift your spirits with a relaxing coffee experience. Let our baristas offer you a reminder that brighter things are just a sip away.</p>
+                    <p>Join Our Story. Bleu Bean Cafe is not only a coffee shop, it is a community. We want you to be a part of our stories, to make memories, and to enjoy the simple pleasures of a well-crafted beverage. At Bleu Bean Cafe, we turn blue moments into warm memories. Step into Bleu Bean Cafe and leave the world behind, one cup at a time.</p>
+                    <a href="#" class="btn secondary-btn">Learn More</a>
+                </div>
+                <div class="about-img">
+                    <img src="Images/CoffeeCart.png" alt="Bleu Bean Cafe Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Branch 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Branch 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Branch 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Branch 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Branch 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/STA.Rosa.jpg" alt="Franchise">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h2>Bleu Bean Cafe</h2>
+                    <ul>
+                        <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                        <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                        <li><a href="#">+63 961 687 2463</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Hours</h3>
+                    <p>Monday-Friday: 7am-8pm</p>
+                    <p>Weekends: 8am-9pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/Home.js"></script>
 </body>
 </html>
