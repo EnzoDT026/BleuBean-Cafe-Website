@@ -3,14 +3,8 @@
     font-size: 20px;
     color: #5DA5B6;
 }
-p {
-    font-family: poppins, sans-serif;
-    font-style: normal;
-    font-size: 16px;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: caprasimo, sans-serif;
-}
+
+
 
 header {
     background: #5DA5B6;
@@ -52,27 +46,6 @@ nav .nav-links li a {
 nav .nav-links li a:hover {
     text-decoration: underline;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 30px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 .search-bar {
     display: flex; /* Use flexbox to align input and button horizontally */
     justify-content: center; /* Center the search bar */
@@ -105,10 +78,6 @@ nav ul li a:hover {
     height: 40px; /* Match the height of the input */
     box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
-
-body{
-    background-color: #FFF7EA;
-}
 /* Begin Carousel */
 .BHead{
     font-size: 40px;
@@ -122,6 +91,17 @@ body{
 .BHead h1 {
     margin-bottom: 0px; /* Adjust this value to control the spacing */
     font-family: "Caprasimo";
+}
+.BHead p {
+    margin-top: 0px; /* Adjust this value to control the spacing */
+    font-size: large;
+}
+.BHead hr {
+    width: var(--hr-width, 500px); /* Default width is 100px, but can be customized */
+    height: var(--hr-height, 3px); /* Default height is 2px, but can be customized */
+    background-color: var(--hr-color, #e4f2f5); /* Default color is #5DA5B6, but can be customized */
+    border: none;
+    margin: 20px auto;
 }
 .BHead p {
     margin-top: 0px; /* Adjust this value to control the spacing */
