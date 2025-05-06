@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/blogs.css">
     <link rel="stylesheet" href="../src/styles/main.css">
-
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
     <title>Blogs</title>
 </head>
 <body>
@@ -40,36 +40,42 @@
         <a href="#otb" class="OtherBlogs" >Other Blogs</a>
     </div>
     <div class="CarouselBlog">
-        <div class="slideshow-container">
-    <div class="mySlides">
-      <div class="numbertext">1 / 3</div>
-      <img src="../src/Images/hero-img.avif" style="width:100%">
-      <div class="text">Caption Text</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">2 / 3</div>
-      <img src="../src/Images/MRBBranch.jpg" style="width:100%">
-      <div class="text">Caption Two</div>
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">3 / 3</div>
-      <img src="../src/Images/STA.Rosa.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                <h4>Franchise VS. Starting your own coffee shop: Which is right for you?</h4>
+                <p>Dreaming of owning a cafe but unsure whether to start from scratch or join an established franchise? This blog breaks down the key differences, advantages, and challenges of both options, helping the readers make an informed decision to whether they start on their own with creative freedom or prefer a proven business model.</p>
+                <a href = "../src/BlogsContent/FranchiseVsStarting.html" class="ReadMore1">Read More</a>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <h4>Brew a better future: How reducing the use of plastic cups can make a big </h4>
+                <p>This blog will explore how reducing plastic consumption can contribute to a more sustainable and eco-friendly future. It can also be an introduction to the Go Green Campaign and encourage everyone to make a conscious choice by switching to reusable alternatives.</p>
+                <a href="../src/BlogsContent/BrewABetterFuture.html" class="ReadMore7">Read More</a>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <h4>The benefits of having a coffee cart at your next party.</h4>
+                <p>A coffee cart adds a unique touch to any event, offering freshly brewed coffee while enhancing the atmosphere and guest experience. It keeps attendees energized, encourages social interaction, and adds a sophisticated element, making your gathering more memorable and enjoyable.</p>
+                <a href="../src/BlogsContent/TheBenefitsOfHaving.html" class="ReadMore14">Read More</a>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <h4>5 Key factors to consider when starting your own coffee shop.</h4>
+                <p> It is exciting to bring passion for coffee to life but building a successful coffee shop requires careful planning and informed decisions. This blog will showcase the five essential factors that need to be considered for a favorable outcome.</p>
+                <a href="../src/BlogsContent/5KeyFactors.html" class="ReadMore20">Read More</a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     
     </div>
     <h1 class="FranchiseBlogH1" id="fran">
