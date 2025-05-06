@@ -11,7 +11,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(27, 106, 158, 0.95);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all var(--transition-medium);
@@ -70,6 +70,38 @@ body{
 #nav ul li a.active {
     color: var(--primary);
 }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+
+
 
 
 .BlogTitle{
@@ -619,6 +651,8 @@ a{
 }
 
 .footer {
+    position: absolute;
+    top:4550px;
     background-color: var(--primary-dark);
     color: var(--text-light);
     padding-top: var(--spacing-xl);
