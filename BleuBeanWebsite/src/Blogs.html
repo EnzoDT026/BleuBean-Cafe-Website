@@ -6,26 +6,39 @@
     <link rel="stylesheet" href="../src/styles/blogs.css">
     <link rel="stylesheet" href="../src/styles/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    
     <title>Blogs</title>
 </head>
 <body>
     <script src="../src/scripts/blogs.js"></script>
-    <header>
-        <nav>
-            <div >
-                <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Bleu Bean Cafe</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Branches</a></li>
-                <li><a href="#"><b>Blog</b></a></li>
-                <li><a href="#">Contact</a></li>
-            </ul> 
-        </nav>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="Blogs.html">Blogs</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
+
 
     <div class="BlogTitle">
         <h1 class="BlogTitleTxt">Blogs</h1>
@@ -319,7 +332,37 @@
             <a href="../src/BlogsContent/ToTheOneFeelingBlue.html" class="ReadMore22">Read More</a>
         </div>
     </div>
-    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h2>Bleu Bean Cafe</h2>
+                    <ul>
+                        <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                        <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                        <li><a href="#">+63 961 687 2463</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Hours</h3>
+                    <p>Monday-Friday: 7am-8pm</p>
+                    <p>Weekends: 8am-9pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
