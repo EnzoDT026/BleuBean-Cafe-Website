@@ -699,8 +699,8 @@ a{
 
 .footer {
     position: absolute;
-    top:4550px;
-    height:100%;
+    top:4630px;
+    height:300px;
     background-color: var(--primary-dark);
     color: var(--text-light);
     padding-top: var(--spacing-xl);
