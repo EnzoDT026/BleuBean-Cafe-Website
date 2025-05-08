@@ -1,77 +1,4 @@
 
-.menu {
-    display: flex;
-    padding: 20px;
-    margin-bottom: 0;
-}
-
-.menu-sidebar {
-    width: 20%;
-    padding-right: 20px;
-    border-right: 1px solid #ddd;
-    margin-top: 5vh;
-}
-
-.menu-sidebar h3 {
-    margin-bottom: 10px;
-}
-
-.menu-sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.menu-content {
-    width: 80%;
-    padding-left: 20px;
-    height: 100%;
-
-}
-
-.menu-content h2 {
-    margin-bottom: 20px;
-}
-
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    height: 95%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-top: 30px;
-
-}
-
-.menu-item {
-    background: #f8f7f5;
-    padding: 10px;
-    border-radius: 10px;
-    border: 0.5px solid rgb(233, 233, 233);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: calc(20% - 20px);
-    text-align: center;
-    margin-bottom: 10px;
-
-}
-
-.menu-item img {
-    width: 20vh;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 13px;
-}
-
-.menu-item p {
-    margin: 10px 0;
-}
-
 .rating {
     display: flex;
     justify-content: center;
@@ -82,9 +9,7 @@
     color: #5DA5B6;
     font-size: 20px;
 }
-.menu{
-    height: 100vh;
-}
+
 footer{
     margin-bottom: 0px;
     position: relative;
@@ -112,33 +37,15 @@ hr{
     color: #285c68;
 }
 
-/*  For the Slider hero */
-.Sliders{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    background-color: #f4f4f4;
+.menu{
+    min-height: 100vh;
+}
 
-}
-.menu-img{
-    background: url(../Images/Menu_Images/donut-bg.png); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+/*  For the Slider hero */
 .content{
       width: 40%;
-      margin-left: 15%;
-      padding-top: 50px;
-
-
-      
-      
+      margin-left: 0;
+      padding-top: 20px; 
   }
   .image .Slider_Image{
       width: 40%;
@@ -185,4 +92,100 @@ hr{
       font-size: 3vh;
       margin-left: 10px;
       margin-top: 20px;
+  }
+  /* For the Slider hero */
+
+  .Hero-Carousel{
+    position: relative;
+}
+.content{
+    display:block;
+    width: 100%;
+}
+.SliderDesc{
+    width: 50%;
+    float: left;
+    margin: 25vh  0  0 20vh;
+}
+ .Slider-image{
+    width: 50vh;
+    height: 78vh;
+    float: right;
+    padding: 0;
+    margin: 15vh 20vh 0 3vh;
+    overflow: hidden;
+    border: 1px solid white;
+}
+.Slider-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+.content h1{
+    font-size: 13vh;
+    font-weight: bolder;
+    line-height: 110%;
+    margin-top: 0;
+}
+.content h6{
+    font-size: 2vh;
+    font-weight: 100;
+    line-height: 80%;
+    margin-bottom: 20px;
+}
+.content h5{
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 80%;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+.content p{
+    width: 60%;
+    margin-bottom: 20px;
+}
+.Hero-Carousel-BG{
+    background-image: url('../Images/photo_2025-03-12_16-41-44.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    color: white;
+  }
+  swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+
+  }
+  /* End of the Slider hero */
+
+  
+  .HotDesc , .ColdDesc{
+    font-size: 0.8rem;
+    color: #0f4c5c;
+    
+  }
+  .menu-details h3{
+    text-align: center;
+  }
+  .menu-details hr{
+    border: 1px solid #eecc35;
+    margin: 0 auto 3vh auto;
+    width: 30%;
+    
+  }
+  .HotDesc{
+    float: left;
+    margin-left: 10%;
+  }
+  .ColdDesc{
+    float: right;
+    margin-right: 10%;
   }
