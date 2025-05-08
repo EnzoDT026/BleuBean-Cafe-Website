@@ -1,3 +1,4 @@
+
 #hero-content h1{
 
   display: flex;
@@ -8,6 +9,7 @@
   width: 100%;
   font-size: 75px;
   background-color: rgba(0, 0, 0, 0.5);
+
 }
 .hero-content{
     border: 1px solid black;
@@ -50,13 +52,13 @@
 }
 
 .merchandise{
-    padding: 50px 0;
+    padding: 50px 0 5px 0;
     text-align: center;
-    max-width: 100%;
+    max-width: 90%;
     height: 100vh;
+    margin: 0 auto 2vh auto;
     
 }
-
 
 .merchandise h2 {
     margin-bottom: 0px;
@@ -64,19 +66,22 @@
     font-weight: 700;
     color: rgb(37, 155, 170);
 }
-
+.merchandise-section{
+    background-color: #f5f5f5;
+}
 .merchandise-items {
     display: flex;
     justify-content: center;
     gap: 20px;
     max-width: 80%;
-    margin: 15vh auto 20vh auto;
+    margin: 8vh auto 2vh auto;
+
  
 }
-.merchandise hr{
-    width: 40%;
-    margin: 0 auto 20px auto;
-    border: 1px solid #5DA5B6;
+.merchandise hr,.PromoTitle hr{
+    width: 10%;
+    margin: 0 auto 10px auto;
+    border: 1px solid #f5d56b;
 }
 
 .merchandise .item {
@@ -86,31 +91,18 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
+    width: calc(25% - 10px);
+
+
 }
 
 .merchandise .item img {
-    width: 40vh;
+    width: 30vh;
     height: auto;
     margin-bottom: 10px;
 }
 
-.promo {
 
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background: #f4f4f4;
-    
-}
-
-.promo-content {
-    max-width: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/img1.jpg);
-    padding-bottom: 50vh;
-    padding-top: 5vh;
-    color: white;
-}
 
 .promo-content h2 {
     margin-bottom: 20px;
@@ -120,14 +112,6 @@
 
 .promo-content p {
     margin-bottom: 20px;
-}
-.Sliders .promo-cont{
-    max-width: 100%;
-    text-align: center;
-    background-color: pink;
-    padding-bottom: 50vh;
-    padding-top: 5vh;
-    color: white;
 }
 .promo .btn {
     background: #5DA5B6;
@@ -141,22 +125,21 @@
     background: #35424a;
 }
 
-.promo-image img {
-    width: 60vh;
+.promo-img {
+    width: 80vh;
     height: auto;
-    border-radius: 10px;
-    margin-top: -10vh;
-    margin: -40vh auto 2vh auto;
+    border-radius: 13px;
+    margin: 6vh auto 0 auto;
     display: block;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border:2px solid white;
 }
  
 .bgpromo{
     background-color: #5DA5B6;
     width: 100%;
 }
-footer{
-    margin-top: 0vh;
-}
+
 
     .Sliders{
         display: flex;
@@ -176,53 +159,13 @@ footer{
         background-position: center;
         height: 80vh;
         width: 100%;
-        padding-top: 10vh;
+        padding: 10vh 10vh 0 10vh;
     }
     .item .S1{
-        background-color: pink;
+        background-color: rgb(58, 186, 190);
         color: white;
     }
-    .content{
-      /*  background-color: rgb(255, 255, 255);*/
-        width: 500vh;
-        margin-left: 30vh;
-        padding-top: 50px;
 
-        
-        
-    }
-    .image .Slider_Image{
-        width: 50vh;
-        float: right;
-        margin-right: 40vh;
-        border-radius: 13px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        
-      
-    }
-    .content h1{
-        font-size: 13vh;
-        font-weight: 900;
-        line-height: 80%;
-        margin-top: 0;
-    }
-    .content h6{
-        font-size: 2vh;
-        font-weight: 100;
-        line-height: 80%;
-        margin-bottom: 20px;
-    }
-    .content h5{
-        font-size: 2vh;
-        font-weight: 600;
-        line-height: 80%;
-        margin-bottom: 70px;
-        margin-top: 10px;
-    }
-    .content p{
-        width: 60%;
-        margin-bottom: 20px;
-    }
     .MediaIcons .btn{
         background-color: #5DA5B6;
         color: white;
@@ -239,13 +182,124 @@ footer{
     }
     .container-carousel{
         width: 100%;
+        
+     
+    }
+    .merch-info p{
+        font-size: 14px;
+        font-weight: 100;
+        margin-bottom: 20px;
+        height: 23vh;
     }
     .merch-pics{
         margin-left: auto;
         margin-right: auto;
         align-items: center;
-        width:40vh;
-        height: 40vh;
+        width:30vh;
+        height: 30vh;
         overflow: hidden;
         background-color: #5DA5B6;
+        margin-bottom: 3vh;
     }
+    .S1 h1{
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+    .PromoTitle{
+        width: 100%;
+        text-align: center;
+        color:  #277c8f;
+    }
+    .PromoTitle h1{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+.MerchTitle h1, .PromoTitle h1{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.MerchTitle{
+    color:  #277c8f;
+}
+.Promo-Carousel{
+    background-color: rgb(241, 241, 241);
+    padding: 5vh 0 10vh 0;
+}
+
+/* additionals */
+    .Hero-Carousel{
+        position: relative;
+    }
+    .content{
+        display:block;
+        width: 100%;
+    }
+    .SliderDesc{
+        width: 50%;
+        float: left;
+        margin: 25vh  0  0 20vh;
+    }
+     .Slider-image{
+        width: 50vh;
+        height: 78vh;
+        float: right;
+        padding: 0;
+        margin: 15vh 20vh 0 3vh;
+        overflow: hidden;
+    }
+    .Slider-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+    .content h1{
+        font-size: 13vh;
+        font-weight: bolder;
+        line-height: 110%;
+        margin-top: 0;
+    }
+    .content h6{
+        font-size: 2vh;
+        font-weight: 100;
+        line-height: 80%;
+        margin-bottom: 20px;
+    }
+    .content h5{
+        font-size: 2vh;
+        font-weight: 400;
+        line-height: 80%;
+        margin-bottom: 70px;
+        margin-top: 10px;
+    }
+    .content p{
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    swiper-container {
+        width: 100%;
+        height: 100vh;
+      }
+  
+      swiper-slide {
+        background-position: center;
+        background-size: cover;
+
+      }
+      .Hero-Carousel-BG{
+        background-image: url('../Images/photo_2025-03-12_16-41-44.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: darken;
+        color: white;
+      }
+      .Promo-Carousel-Cont{
+        width: 80%;
+        margin: 0 auto;
+      }

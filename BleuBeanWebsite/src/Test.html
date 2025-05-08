@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BleuBean Cafe Products</title>
-  
-    <link rel="stylesheet" href="../src/styles/Products.css">
+    <title>Bleu Bean Cafe</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/Products.css">
     <link rel="stylesheet" href="styles/main.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 
 </head>
 <body>
@@ -27,13 +19,13 @@
                 <h1>Bleu Bean Cafe</h1>
             </div>
             <nav id="nav">
-                <ul >
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="Products.html" class="active" >Products</a></li>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="Products.html">Products</a></li>
                     <li><a href="Services.html">Services</a></li>
                     <li><a href="Branches.html">Branches</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="Blogs.html">Blogs</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="menu-toggle">
@@ -43,11 +35,9 @@
             </div>
         </div>
     </header>
-    <!-- Additionals  -->
-
     <section class="Hero-Carousel">
         <swiper-container class="mySwiper Hero-Carousel-BG" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
-        navigation="true">
+        navigation="true" autoscroll="true" autoplay-delay="4000" autoplay-disable-on-interaction="false">
         <swiper-slide>
             <div class="content">
                 <div class="SliderDesc">
@@ -154,144 +144,6 @@
         <swiper-slide>Slide 9</swiper-slide>
       </swiper-container>
     </section>
-    
-
-
-    <!-- End of Additionals -->
-   
-
-  
-    <section class="merchandise">
-        <div class="MerchTitle">
-            <h1>Our Merchandise</h1>
-            <hr>
-        </div>
-
-       
-        <div class="merchandise-items">
-            <div class="item">
-                <div class="merch-pics">
-                    <img src="../src/Images/merch1.webp" alt="Merchandise 1">
-                </div>
-                <div class="merch-info">
-                    <h3>Mouse Pad</h3>
-                    <hr>
-                    <br>
-                    <p>A cloud-inspired mousemat that is designed in a soft sky-blue hue and crafted from smooth fabric. It features a fluffy blue cloud print with a cheerful smiley face, adding a lighthearted and uplifting vibe to your desk. Its non-slip rubber base keeps it securely in place, providing stability for a seamless workflow.</p>
-                    
-                </div>
-                <a href="https://www.tiktok.com/@bleu.bean.cafe"><i class="fab fa-tiktok"></i></a>
-              
-            </div>
-            <div class="item">
-                <div class="merch-pics">
-                    <img src="../src/Images/merch2.png" alt="Merchandise 1">
-                </div>
-                <div class="merch-info">
-                    <h3>Tote Bag</h3>
-                    <hr>
-                    <br>
-                    <p>A sturdy yet stylish bag made from premium, lightweight materials like canvas fabric, featuring both elegance and sustainability. It holds everything from daily essentials to market finds, while its minimalist yet sophisticated design complements any outfit.  
-
-                    </p>
-                 
-                </div>
-                <a href="https://www.tiktok.com/@bleu.bean.cafe"><i class="fab fa-tiktok"></i></a>
-              
-            </div>
-            <div class="item">
-                <div class="merch-pics">
-                    <img src="../src/Images/merch3.png" alt="Merchandise 1">
-                </div>
-                <div class="merch-info">
-                    <h3>Notebook</h3>
-                    <hr>
-                    <br>
-                    <p>A wire-bound notebook made from high-quality, eco-friendly materials, featuring smooth, acid-free pages. Its sturdy yet sleek cover, crafted from premium recycled paper or PU leather, along with its lay-flat binding, ensures durability while maintaining a refined, minimalist appeal.</p>
-                  
-                </div>
-                <a href="https://www.tiktok.com/@bleu.bean.cafe"><i class="fab fa-tiktok"></i></a>
-              
-            </div>
-            <div class="item">
-                <div class="merch-pics">
-                    <img src="../src/Images/merch4.JPG" alt="Merchandise 1">
-                </div>
-                <div class="merch-info">
-                    <h3>Tumbler</h3>
-                    <hr>
-                    <br>
-                    <p>This versatile drinkware features a double-wall, vacuum-insulated design that keeps drinks at the perfect temperature for hours while being 30% lighter. Its sustainable, reusable construction helps reduce single-use plastic waste without sacrificing durability or convenience.</p>
-                  
-                </div>
-                <a href="https://www.tiktok.com/@bleu.bean.cafe"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="Promo-Carousel">
-        <div class="PromoTitle">
-            <h1>Our Promo's</h1>
-            <hr>
-        </div>
-        <swiper-container class="mySwiper Promo-Carousel-Cont" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
-        navigation="true">
-        <swiper-slide>
-            <section class="promo-cont S1">
-                <div class="content">
-                    <h1>Tumbler + <br><span>Group Bundle</span></h1>
-                    <p>Get Bleu Bean Tumbler for just ₱𝟮𝟯𝟵 and save ₱60! You can only grab this exclusive deal when you avail our 𝗚𝗿𝗼𝘂𝗽 𝗕𝘂𝗻𝗱𝗹𝗲 for just ₱549! Super sulit for 3-4 pax! <br> <br>
-
-                        What's included? 
-                        <br>
-
-                        • 4 Spanish Latte (premium coffee) 
-                        <br>
-                        • Choice of pasta • Pork Chao Fan 
-                        <br>
-                        • Nachos (solo) 
-                        <br>
-                        *𝘛𝘩𝘪𝘴 𝘱𝘳𝘰𝘮𝘰 𝘪𝘴 𝘷𝘢𝘭𝘪𝘥 𝘶𝘯𝘵𝘪𝘭 𝘴𝘶𝘱𝘱𝘭𝘪𝘦𝘴 𝘭𝘢𝘴𝘵𝘴. 
-                        </pr>
-                        *𝘛𝘶𝘮𝘣𝘭𝘦𝘳'𝘴 𝘰𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘱𝘳𝘪𝘤𝘦 𝘪𝘴 𝘗299. 
-                        <br><br>
-                        #BleuBeanCafe #PromoBundle #BleuBeanTumbler #GoGreen #SulitDeals #Coffeeshop #Supportlocal #CafePH #Promo #Tumbler</p>
-        
-                </div>
-                <div class="image">
-                    <img class="Slider_Image promo-img" src="../src/Images/Promos/Group-Bundle.webp" alt="image1">
-                </div>
-        
-            </section>
-        </swiper-slide>
-        <swiper-slide>
-            <section class="promo-cont S1">
-                <div class="content">
-                    <h1 >Buy 5 Drinks, <br><span> Get FREE Nachos</span></h1>
-                    <p>Gather your barkada and enjoy a FREE Nachos Solo when you purchase 5 drinks—perfect for your coffee dates and catch-ups!
-                        <br> <br>       
-                        • 10 AM - 2 PM daily 
-                       <br>
-                       • For dine-in only
-                       <br>
-                        • Exclusive at our Riverside, Quezon City Branch 
-                       <br><br>
-                       *𝘛𝘩𝘪𝘴 𝘱𝘳𝘰𝘮𝘰 𝘪𝘴 𝘷𝘢𝘭𝘪𝘥 𝘶𝘯𝘵𝘪𝘭 𝘴𝘶𝘱𝘱𝘭𝘪𝘦𝘴 𝘭𝘢𝘴𝘵𝘴. *𝘕𝘢𝘤𝘩𝘰𝘴' 𝘰𝘳𝘪𝘨𝘪𝘯𝘢𝘭 𝘱𝘳𝘪𝘤𝘦 𝘪𝘴 𝘗69.
-                       
-                        #BleuBeanCafe #PromoTime #FreeNachos #RiversideQC #CoffeeLover​</p>
-        
-                </div>
-                <div class="image">
-                    <img class="Slider_Image promo-img" src="../src/Images/Promos/Nachos-promo.webp" alt="image1">
-                </div>
-        
-            </section>
-           
-        </swiper-slide>
-      </swiper-container>
-    </section>
-  
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -323,8 +175,5 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
-
-
 </body>
 </html>
