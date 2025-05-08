@@ -7,35 +7,62 @@
         <link rel="stylesheet" href="styles/Branches.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="scripts/BranchesScripts.js" defer></script>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght
+        @0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;
+        1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     </head>
     <body>
-        <background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/BGBranches.jpg);></background:>
-        <header>
-            <nav>
-                <div>
-                    <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
+
+        <header id="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Bleu Bean Cafe</h1>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#"><b>Branches</b></a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Branches.html">Branches</a></li>
+                        <li><a href="Blogs.html">Blogs</a></li>
+                        <li><a href="Contact Us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </header>
+    
         <div class="BHead"> 
-            <h1>Bleubean Branches</h1>
-            <p> Browse Bleubean Cafe near you! </p>
+            <h1>Bleu Bean Branches</h1>
             <hr>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Browse Branches">
-                <button onclick="searchBranch()">Browse</button>
+                <input type="text" id="searchInput" placeholder="Browse Branches" list="branchNames">
+                <datalist id="branchNames"></datalist> <!-- Autocomplete options -->
+                <button onclick="searchBranch()"> Browse </button>
             </div>
+
+            <div id="branchList" style="display: none;"></div> <!-- Container for the list -->
         </div>
         <div class="carousel-container">
             <!-- Outer Slides (Text + Inner Image Carousel) -->
+
             <div class="mySlidesOuter">
                 <div class="outer-content">
                     <div class="text-content">
@@ -44,7 +71,7 @@
                             <p><i class="fas fa-clock"></i> Mon - Sun, 08:00 AM - 10:00 PM</p><br>
                             <p><i class="fas fa-phone"></i> +63 961 516 6680</p><br>
                             <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/bleubeancafe.ph" target="_blank"> facebook.com/bleubeancafe.ph </a></p><br>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.ph@gmail.com">bleubeancafe.ph@gmail.com</a></p><br>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:bleubeancafe.ph@gmail.com?Cc=bleubeancafe.ph@gmail.com" target = "_blank">bleubeancafe.ph@gmail.com</a></p><br>
                             <p><i class="fas fa-map-marker-alt"></i> 213 Don Fabian, Quezon City </p><br>
                         </div>
                         <div class="map">
@@ -56,7 +83,6 @@
                     <div class="inner-carousel">
                         <div class="mySlidesInner"><img src="Images/BranchesPics/DFB1.jpg" alt="Inner Slide 1A"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/DFB2.jpg" alt="Inner Slide 1A"></div>
-                        <div class="mySlidesInner"><img src="Images/BranchesPics/DFB3.jpg" alt="Inner Slide 1A"></div>
                     </div>
                 </div>
             </div>
@@ -80,7 +106,6 @@
                     <!-- Inner Carousel for Images -->
                     <div class="inner-carousel">
                         <div class="mySlidesInner"><img src="Images/BranchesPics/RS1.jpg" alt="Inner Slide 1B"></div>
-                        <div class="mySlidesInner"><img src="Images/BranchesPics/RS2.jpg" alt="Inner Slide 1B"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/RS3.jpg" alt="Inner Slide 1B"></div>
                     </div>
                 </div>
@@ -105,7 +130,7 @@
                     </div>
                     <!-- Inner Carousel for Images -->
                     <div class="inner-carousel">
-                        <div class="mySlidesInner"><img src="Images/BranchesPics/SR1.JPG" alt="Inner Slide 1B"></div>
+                        <div class="mySlidesInner"><img src="Images/STA.Rosa.jpg" alt="Inner Slide 1B"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/SR2.JPG" alt="Inner Slide 1B"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/SR3.JPG" alt="Inner Slide 1B"></div>
                     </div>
@@ -132,7 +157,6 @@
                     <div class="inner-carousel">
                         <div class="mySlidesInner"><img src="Images/BranchesPics/MRB1.jpg" alt="Inner Slide 1B"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/MRB2.jpg" alt="Inner Slide 1B"></div>
-                        <div class="mySlidesInner"><img src="Images/MRB3.JPG" alt="Inner Slide 1B"></div>
                     </div>
                 </div>
             </div>
@@ -157,7 +181,6 @@
                     <div class="inner-carousel">
                         <div class="mySlidesInner"><img src="Images/BranchesPics/CB1.jpg" alt="Inner Slide 1B"></div>
                         <div class="mySlidesInner"><img src="Images/BranchesPics/CB2.jpg" alt="Inner Slide 1B"></div>
-                        <div class="mySlidesInner"><img src="Images/BranchesPics/CB3.JPG" alt="Inner Slide 1B"></div>
                     </div>
                 </div>
             </div>
@@ -167,6 +190,37 @@
             <button class="prev" onclick="changeSlide(-1)">❮</button>
             <button class="next" onclick="changeSlide(1)">❯</button>
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <h2>Bleu Bean Cafe</h2>
+                        <ul>
+                            <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                            <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                            <li><a href="#">+63 961 687 2463</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-hours">
+                        <h3>Hours</h3>
+                        <p>Monday-Friday: 7am-8pm</p>
+                        <p>Weekends: 8am-9pm</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
         
     </body>
 </html>
