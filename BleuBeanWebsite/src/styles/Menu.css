@@ -166,26 +166,26 @@ hr{
   }
   /* End of the Slider hero */
 
-  
+
   .HotDesc , .ColdDesc{
     font-size: 0.8rem;
     color: #0f4c5c;
     
   }
-  .menu-details h3{
+  .menu-details{
     text-align: center;
   }
+
   .menu-details hr{
     border: 1px solid #eecc35;
-    margin: 0 auto 3vh auto;
+    margin: 0 auto 2vh auto;
     width: 30%;
     
   }
-  .HotDesc{
-    float: left;
-    margin-left: 10%;
-  }
-  .ColdDesc{
-    float: right;
-    margin-right: 10%;
+  
+
+  .Hot-and-Cold{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 8% 4% 8%;
   }
