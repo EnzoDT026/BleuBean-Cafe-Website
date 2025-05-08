@@ -57,6 +57,9 @@ function searchBranch() {
         if (branchName.includes(input)) {
             outerSlides[i].style.display = "block"; // Show the matching slide
             found = true;
+                        // Scroll to the matching slide
+                        outerSlides[i].scrollIntoView({ behavior: "smooth", block: "start" });
+                        break;
         } else {
             outerSlides[i].style.display = "none"; // Hide non-matching slides
         }
@@ -92,3 +95,51 @@ document.getElementById("searchInput").addEventListener("input", function () {
 window.onload = function () {
     populateAutocomplete();
 };
+
+// Toggle All Branches Visibility
+let allBranchesVisible = false;
+
+function toggleAllBranches() {
+    const outerSlides = document.getElementsByClassName("mySlidesOuter");
+    const showAllButton = document.getElementById("showAllButton");
+
+    if (!allBranchesVisible) {
+        // Show all branches
+        for (let slide of outerSlides) {
+            slide.style.display = "block";
+        }
+        showAllButton.innerText = "Hide All Branches";
+        allBranchesVisible = true;
+
+        // Scroll to the first branch
+        if (outerSlides.length > 0) {
+            outerSlides[0].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    } else {
+        // Hide all branches except the first one
+        for (let i = 0; i < outerSlides.length; i++) {
+            outerSlides[i].style.display = i === 0 ? "block" : "none";
+        }
+        showAllButton.innerText = "Show All Branches";
+        allBranchesVisible = false;
+
+        // Scroll to the first branch
+        if (outerSlides.length > 0) {
+            outerSlides[0].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+}
+
+// Back to Top Button Functionality
+window.onscroll = function () {
+    const backToTopButton = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
