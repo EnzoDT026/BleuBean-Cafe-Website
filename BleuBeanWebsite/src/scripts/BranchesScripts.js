@@ -46,27 +46,38 @@ showInnerSlides(); // Start rotating inner images
 
 // Function to Search Branch
 function searchBranch() {
-    let input = document.getElementById('searchInput').value.toLowerCase();
+    let input = document.getElementById('searchInput').value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+
+    if (input === "") {
+        // If the input is empty, show an alert and do nothing
+        alert("Please enter a branch name to search.");
+        return;
+    }
+
     let outerSlides = document.getElementsByClassName("mySlidesOuter");
     let found = false;
+    let firstMatchIndex = -1;
 
     for (let i = 0; i < outerSlides.length; i++) {
         let branchName = outerSlides[i].getElementsByClassName("BranchInfo")[0].innerText.toLowerCase();
-        
+
         // Check if the branch name includes the search input
         if (branchName.includes(input)) {
-            outerSlides[i].style.display = "block"; // Show the matching slide
+            outerSlides[i].style.display = "block"; // Show matching slides
+            if (firstMatchIndex === -1) {
+                firstMatchIndex = i; // Store the index of the first matching slide
+            }
             found = true;
-                        // Scroll to the matching slide
-                        outerSlides[i].scrollIntoView({ behavior: "smooth", block: "start" });
-                        break;
         } else {
             outerSlides[i].style.display = "none"; // Hide non-matching slides
         }
     }
 
-    if (!found) {
-        alert("Branch not found");
+    if (found) {
+        // Redirect to the first matching slide
+        outerSlides[firstMatchIndex].scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+        alert("No branches found with the given input.");
     }
 }
 
@@ -102,6 +113,7 @@ let allBranchesVisible = false;
 function toggleAllBranches() {
     const outerSlides = document.getElementsByClassName("mySlidesOuter");
     const showAllButton = document.getElementById("showAllButton");
+    const carouselControls = document.getElementsByClassName("carousel-controls"); // Add a class for the controls
 
     if (!allBranchesVisible) {
         // Show all branches
@@ -110,6 +122,11 @@ function toggleAllBranches() {
         }
         showAllButton.innerText = "Hide All Branches";
         allBranchesVisible = true;
+
+        // Hide carousel controls
+        for (let control of carouselControls) {
+            control.style.display = "none";
+        }
 
         // Scroll to the first branch
         if (outerSlides.length > 0) {
@@ -122,6 +139,11 @@ function toggleAllBranches() {
         }
         showAllButton.innerText = "Show All Branches";
         allBranchesVisible = false;
+
+        // Show carousel controls
+        for (let control of carouselControls) {
+            control.style.display = "block";
+        }
 
         // Scroll to the first branch
         if (outerSlides.length > 0) {
