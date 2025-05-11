@@ -136,10 +136,21 @@
 
 .mySlidesOuter {
     display: none;
-    padding: 5px;
     opacity: 5;
     transition: opacity 0.5s ease-in-out; 
     transform: 0.5s ease-in-out;
+    padding: 20px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 5px; /* Add spacing between slides */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+/* Alternating Backgrounds for Carousel Slides */
+.mySlidesOuter:nth-child(odd) {
+    background-color: white; /* Light gray for odd slides */
+}
+
+.mySlidesOuter:nth-child(even) {
+    background-color: whitesmoke; /* Light blue for even slides */
 }
 
 .outer-content {
@@ -279,7 +290,7 @@
         left: 50px;
     }
     .inner-carousel {
-        align-items: center;
+        margin-left: 50px;
         height: 300px;
         left: 50px;
     }
@@ -289,6 +300,8 @@
         transform: translateY(0);
         height: 10%;
     }
+    .prev { left: 50%; transform: translateX(-150%); }
+    .next { right: 38%; transform: translateX(150%); }
 }
 
 @media (max-width: 480px) {
@@ -358,6 +371,9 @@
         bottom: 0px;
         top: 0px;
         margin-bottom: 5px;
+        margin-right: 30px;
+        margin-left: 30px;
+        padding: 0;
     }
     .inner-carousel img {
         height: auto; 
