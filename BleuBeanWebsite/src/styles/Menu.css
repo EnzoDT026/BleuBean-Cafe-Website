@@ -97,6 +97,8 @@ hr{
 
   .Hero-Carousel{
     position: relative;
+    top: 8vh;
+    margin-bottom: 5vh;
 }
 .content{
     display:block;
@@ -114,7 +116,6 @@ hr{
     padding: 0;
     margin: 15vh 20vh 0 3vh;
     overflow: hidden;
-    border: 1px solid white;
 }
 .Slider-image img{
     width: 100%;
@@ -146,7 +147,6 @@ hr{
     margin-bottom: 20px;
 }
 .Hero-Carousel-BG{
-    background-image: url('../Images/photo_2025-03-12_16-41-44.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -156,13 +156,15 @@ hr{
   }
   swiper-container {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
   }
 
   swiper-slide {
+    margin-top: 5px;
+    height: 100%; 
     background-position: center;
+    background-repeat: no-repeat; 
     background-size: cover;
-
   }
   /* End of the Slider hero */
 
@@ -188,4 +190,21 @@ hr{
     display: flex;
     justify-content: space-evenly;
     margin: 0 8% 4% 8%;
+  }
+  .Slider-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: aquamarine;
+  }
+  .Slides-Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: aquamarine;
   }

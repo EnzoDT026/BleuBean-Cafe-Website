@@ -1,171 +1,3 @@
-
-#hero-content h1{
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  font-size: 75px;
-  background-color: rgba(0, 0, 0, 0.5);
-
-}
-.hero-content{
-    border: 1px solid black;
-    background-color: #5DA5B6;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    height: 250px;
-    text-align: center;
-    padding-top: 150px;
-    color: white;
-}
-#hero{
-    border: 1px solid black;
-    height:300px;
-    background-color: aquamarine;
-}
-.hero {
-    background: url('../Images/photo_2025-03-12_16-41-44.jpg') no-repeat center center/cover;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-}
-
-.hero .btn {
-    background: #5DA5B6;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.hero .btn:hover {
-    background: #35424a;
-}
-
-.merchandise{
-    padding: 50px 0 5px 0;
-    text-align: center;
-    max-width: 90%;
-    height: 100vh;
-    margin: 0 auto 2vh auto;
-    
-}
-
-.merchandise h2 {
-    margin-bottom: 0px;
-    font-size: 7vh;
-    font-weight: 700;
-    color: rgb(37, 155, 170);
-}
-.merchandise-section{
-    background-color: #f5f5f5;
-}
-.merchandise-items {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 80%;
-    margin: 8vh auto 2vh auto;
-
- 
-}
-.merchandise hr,.PromoTitle hr{
-    width: 10%;
-    margin: 0 auto 10px auto;
-    border: 1px solid #f5d56b;
-}
-
-.merchandise .item {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: center;
-    width: calc(25% - 10px);
-
-
-}
-
-.merchandise .item img {
-    width: 30vh;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
-
-.promo-content h2 {
-    margin-bottom: 20px;
-    font-size: 7vh;
-    font-weight: 800;
-}
-
-.promo-content p {
-    margin-bottom: 20px;
-}
-.promo .btn {
-    background: #5DA5B6;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.promo .btn:hover {
-    background: #35424a;
-}
-
-.promo-img {
-    width: 80vh;
-    height: auto;
-    border-radius: 13px;
-    margin: 6vh auto 0 auto;
-    display: block;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border:2px solid white;
-}
- 
-.bgpromo{
-    background-color: #5DA5B6;
-    width: 100%;
-}
-
-
-    .Sliders{
-        display: flex;
-       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/img1.jpg); 
-        background-size: cover;
-        background-position: center;
-        color: white;
-        height: 80vh;
-        width: 100%;
-        padding-top: 10vh;
-        
-
-    }
-    .promo-cont{
-        display: flex;
-        background-size: cover;
-        background-position: center;
-        height: 80vh;
-        width: 100%;
-        padding: 10vh 10vh 0 10vh;
-    }
-    .item .S1{
-        background-color: rgb(58, 186, 190);
-        color: white;
-    }
-
     .MediaIcons .btn{
         background-color: #5DA5B6;
         color: white;
@@ -180,56 +12,15 @@
         margin-left: 10px;
         margin-top: 20px;
     }
-    .container-carousel{
+    swiper-container {
         width: 100%;
-        
-     
+        height: 100vh;
     }
-    .merch-info p{
-        font-size: 14px;
-        font-weight: 100;
-        margin-bottom: 20px;
-        height: 23vh;
+    swiper-slide {
+        background-position: center;
+        background-size: cover;
     }
-    .merch-pics{
-        margin-left: auto;
-        margin-right: auto;
-        align-items: center;
-        width:30vh;
-        height: 30vh;
-        overflow: hidden;
-        background-color: #5DA5B6;
-        margin-bottom: 3vh;
-    }
-    .S1 h1{
-        font-size: 80px;
-        margin-bottom: 20px;
-    }
-    .PromoTitle{
-        width: 100%;
-        text-align: center;
-        color:  #277c8f;
-    }
-    .PromoTitle h1{
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-size: 40px;
-    }
-.MerchTitle h1, .PromoTitle h1{
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 50px;
-    font-weight: 600;
-}
-.MerchTitle{
-    color:  #277c8f;
-}
-.Promo-Carousel{
-    background-color: rgb(241, 241, 241);
-    padding: 5vh 0 10vh 0;
-}
-
-/* additionals */
+    /* Hero Section */
     .Hero-Carousel{
         position: relative;
     }
@@ -257,7 +48,7 @@
         border-radius: 13px;
     }
     .content h1{
-        font-size: 13vh;
+        font-size: 12vh;
         font-weight: bolder;
         line-height: 110%;
         margin-top: 0;
@@ -279,18 +70,7 @@
         width: 60%;
         margin-bottom: 20px;
     }
-
-    swiper-container {
-        width: 100%;
-        height: 100vh;
-      }
-  
-      swiper-slide {
-        background-position: center;
-        background-size: cover;
-
-      }
-      .Hero-Carousel-BG{
+    .Hero-Carousel-BG{
         background-image: url('../Images/photo_2025-03-12_16-41-44.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -298,8 +78,641 @@
         background-color: rgba(0, 0, 0, 0.8);
         background-blend-mode: darken;
         color: white;
-      }
-      .Promo-Carousel-Cont{
-        width: 80%;
+    }
+
+    /*Merchandise */
+    .merchandise{
+        padding: 50px 0 5px 0;
+        text-align: center;
+        max-width: 90%;
+        height: 100vh;
+        margin: 0 auto 2vh auto;
+        
+    }
+    .merchandise h2 {
+        margin-bottom: 0px;
+        font-size: 7vh;
+        font-weight: 700;
+        color: rgb(37, 155, 170);
+    }
+    .merchandise-section{
+        background-color: #f5f5f5;
+    }
+    .merchandise-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 100%;
         margin: 0 auto;
-      }
+        height: auto;
+
+    
+    }
+    .merchandise hr,.PromoTitle hr{
+        width: 10%;
+        margin: 0 auto 5vh auto;
+        border: 1px solid #f5d56b;
+
+    }
+    .merch-info hr{
+        margin: 0 auto 1vh auto;
+    }
+    .merchandise .item {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+        width: 40vh;
+
+
+    }
+    .merchandise .item img {
+        width: 30vh;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+    .merch-info p{
+        font-size: 14px;
+        font-weight: 100;
+        height: 23vh;
+    }
+    .merch-pics{
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        width:30vh;
+        height: 30vh;
+        overflow: hidden;
+        background-color: #5DA5B6;
+        margin-bottom: 3vh;
+    }
+    .MerchTitle h1, .PromoTitle h1{
+    font-weight: 600;
+    margin-bottom: 1vh;
+    font-size: 50px;
+    font-weight: 600;
+    }
+    .MerchTitle{
+        color:  #277c8f;
+    }
+/* promo section */
+    .Swiper-Slider{
+        border-radius: 13px; 
+        background-color: rgb(201, 201, 248);
+    }
+    .Promo-Carousel{
+        background-color: #f0f0f0;
+        height: auto;
+        padding: 5vh 0 5vh 0;  
+        
+    }
+    .PromoTitle{
+        width: 100%;
+        text-align: center;
+        color:  #277c8f;
+    }
+    .PromoTitle h1{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+    .Promo-Carousel-Cont{
+        width: 80%;
+        height: 75vh;
+        margin: 0 auto;
+        padding: 0;
+    } 
+    .promo-cont{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        height: auto;
+        width: 80%;
+        padding: 5vh 2vh 5vh 2vh;
+        margin:0 auto;
+    }
+    .promo-cont h1{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 5vh;
+    }
+     .Promo-image{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 13px;
+        border:2px solid white;
+        overflow: hidden;
+        height: auto;
+    }
+    .promo-img {
+        width: 80vh;
+        height: auto;   
+    }  
+    .Promo-desc hr{
+        width: 30%;
+        border: 2px solid #fcda7e;
+    }
+
+/* Media Queries */
+    @media only screen and (max-width: 600px) {
+        /* Hero Section */
+        .content{
+            text-align: center;
+        }
+        .SliderDesc{
+            
+            width: 100%;
+            margin: 5vh 0vh 0vh 0vh;
+            padding: 10vh 5vh 0vh 5vh;
+            text-align: center;
+            overflow: hidden;
+        }   
+        .content h1{
+            width: 100%;
+            font-size: 6vh;
+            font-weight: 1000;
+            line-height: 110%;
+            margin-top: 0;
+            text-align: center;
+        }
+        .content h6{
+            font-size: 1.5vh;
+            font-weight: 100;
+            line-height: 80%;
+            margin-bottom: 0px;
+        }
+        .content h5{
+            font-size: 1.5vh;
+            font-weight: 400;
+            line-height: 80%;
+            margin-bottom: 41vh;
+        }
+        .content p{
+            position:absolute;
+            top:72vh;
+            width: 80%;
+        }
+        .MediaIcons{
+            position:absolute;
+            width: 80%;
+            top: 83vh;
+        }
+        .Slider-image{
+            position:absolute;
+            width: 100%;
+            height: 35vh;
+            padding: 0;
+            overflow: hidden;
+            top: 20%;
+            left: -5%;
+            
+        }
+        .Slider-image img{
+            width: 50%;
+            margin:0 auto;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        /* Merch */
+        .merchandise{
+            height: auto;
+        }
+        .merchandise h2 {
+            margin-bottom: 0px;
+            font-size: 6vh;
+            font-weight: 700;
+        }
+        
+        .merchandise-items {
+            gap: 20px;
+            max-width: 100%;
+        }
+        .merchandise hr,.PromoTitle hr{
+            width: 30%;
+        }
+
+        .merchandise .item {
+            background: #fffdf9;
+            width: 100vh;
+        }
+        .merch-pics{    
+            width: 90%;
+            border-radius: 13px;
+
+        }
+        .merchandise .item img {
+            width: 40vh;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        /* Promo Section */
+        .Promo-Carousel{
+            padding: 5vh 0 0vh 0;  
+            height: auto;
+        }
+        .PromoTitle{
+            width: 100%;
+            text-align: center;
+            color:  #277c8f;
+        }
+        .PromoTitle h1{
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+        .PromoTitle hr{
+            width: 30%;
+            margin: 0 auto 2vh auto;
+            border: 2px solid rgb(255, 174, 0);
+        }
+        .Promo-desc hr{
+            width: 60%;
+            margin: 0 auto 2vh auto;
+            border: .5px solid #e6e5e5;
+        }
+        .Promo-Carousel-Cont{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        } 
+        .promo-cont{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            padding: 0vh 5vh 0 5vh;
+            margin:0;
+        }
+        .Promo-desc{
+            width: 100%;
+        }
+        .Promo-desc p{
+            font-size: 1vh;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .Promo-image{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 13px;
+            border:2px solid white;
+           
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            
+        }
+        .promo-img {
+            width: 50vh;
+            height: auto;   
+        } 
+    }
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+        /* Hero Section */
+        .content{
+            text-align: center;
+        }
+        .SliderDesc{
+            width: 100%;
+            margin: 5vh 0vh 0vh 0vh;
+            padding: 10vh 5vh 0vh 5vh;
+            text-align: center;
+            overflow: hidden;
+        }   
+        .content h1{
+            width: 100%;
+            font-size: 6vh;
+            font-weight: 1000;
+            line-height: 110%;
+            margin-top: 0 auto;
+            text-align: center;
+        }
+        .content h6{
+            font-size: 1.5vh;
+            font-weight: 100;
+            line-height: 80%;
+            margin: 0 auto;
+        }
+        .content h5{
+            font-size: 1.5vh;
+            font-weight: 400;
+            line-height: 80%;
+            margin-bottom: 41vh;
+        }
+        .content p{
+            position:absolute;
+            top:71vh;
+            width: 100%;
+        
+            left: 0%;
+        }
+        .MediaIcons{
+            position:absolute;
+            width: 80%;
+            top: 85vh;
+        }
+        .Slider-image{
+            position:absolute;
+            width: 100%;
+            height: 40vh;
+            padding: 0;
+            overflow: hidden;
+            top: 11%;
+            left: -5%;
+            
+            
+        }
+        .Slider-image img{
+            width: 40%;
+            margin:0 auto;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        /* Merch */
+        .merchandise{
+            height: auto;
+        }
+        .merchandise h2 {
+            margin-bottom: 0px;
+            font-size: 6vh;
+            font-weight: 700;
+        }
+        
+        .merchandise-items {
+            gap: 20px;
+            max-width: 100%;
+        }
+        .merchandise hr,.PromoTitle hr{
+            width: 30%;
+        }
+
+        .merchandise .item {
+            background: #fffdf9;
+            width: 100vh;
+        }
+        .merch-pics{    
+            width: 90%;
+            height: 50vh;
+            border-radius: 13px;
+
+        }
+        .merchandise .item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        /* Promo Section */
+        .Promo-Carousel{
+            padding: 5vh 0 0vh 0;  
+            height: auto;
+        }
+        .PromoTitle{
+            width: 100%;
+            text-align: center;
+            color:  #277c8f;
+        }
+        .PromoTitle h1{
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+        .PromoTitle hr{
+            width: 30%;
+            margin: 0 auto 2vh auto;
+            border: 2px solid rgb(255, 174, 0);
+        }
+        .Promo-desc hr{
+            width: 60%;
+            margin: 0 auto 2vh auto;
+            border: .5px solid #e6e5e5;
+        }
+        .Promo-Carousel-Cont{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        } 
+        .promo-cont{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            padding: 0vh 5vh 0 5vh;
+            margin:0;
+        }
+        .Promo-desc{
+            width: 100%;
+        }
+        .Promo-desc p{
+            font-size: 1vh;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .Promo-image{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 13px;
+            border:2px solid white;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            
+        }
+        .promo-img {
+            width: 100%;
+            height: auto;   
+        } 
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1441px) {
+        /* Hero Section */
+        .content{
+            text-align: center;
+            color: tomato;
+            
+        }
+        .SliderDesc{
+            width: 100%;
+            margin: 5vh 0vh 0vh 0vh;
+            padding: 10vh 5vh 0vh 5vh;
+            text-align: center;
+            overflow: hidden;
+        }   
+        .content h1{
+            width: 100%;
+            font-size: 6vh;
+            font-weight: 1000;
+            line-height: 110%;
+            margin-top: 0 auto;
+            text-align: center;
+        }
+        .content h6{
+            font-size: 1.5vh;
+            font-weight: 100;
+            line-height: 80%;
+            margin: 0 auto;
+        }
+        .content h5{
+            font-size: 1.5vh;
+            font-weight: 400;
+            line-height: 80%;
+            margin-bottom: 41vh;
+        }
+        .content p{
+            position:absolute;
+            top:71vh;
+            width: 100%;
+        
+            left: 0%;
+        }
+        .MediaIcons{
+            position:absolute;
+            width: 100%;
+            top: 85vh;
+            left: 0%;
+        }
+        .Slider-image{
+            position:absolute;
+            width: 100%;
+            height: 40vh;
+            padding: 0;
+            overflow: hidden;
+            top: 11%;
+            left: -2.5%;
+            
+            
+            
+        }
+        .Slider-image img{
+            width: 40%;
+            margin:0 auto;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        /* Merch */
+        .merchandise{
+            height: auto;
+        }
+        .merchandise h2 {
+            margin-bottom: 0px;
+            font-size: 6vh;
+            font-weight: 700;
+        }
+        
+        .merchandise-items {
+            gap: 20px;
+            max-width: 100%;
+        }
+        .merchandise hr,.PromoTitle hr{
+            width: 30%;
+        }
+
+        .merchandise .item {
+            background: #fffdf9;
+            width: 100vh;
+        }
+        .merch-pics{    
+            width: 90%;
+            height: 50vh;
+            border-radius: 13px;
+
+        }
+        .merchandise .item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        /* Promo Section */
+        .Promo-image{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 13px;
+            border:2px solid white;
+            overflow: hidden;
+            margin: 0 auto;
+            height: auto;
+            
+        }
+        .promo-img {
+            width: 100%;
+            height: 100%;   
+        } 
+
+    }
+    @media only screen and (min-width: 1442px) and (max-width: 1500px){
+        /* Hero Section */
+        .Slider-image{
+            position:absolute;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            overflow: hidden;
+            left: -2.5%;
+        }
+        .Slider-image img{
+            width: 35%;
+            float: right;
+            margin-right: 10vh;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        /* Merch */
+        .merchandise{
+            height: auto;
+        }
+        .merchandise h2 {
+            margin-bottom: 0px;
+            font-size: 6vh;
+            font-weight: 700;
+        }
+        
+        .merchandise-items {
+            gap: 20px;
+            flex-wrap: nowrap;
+            max-width: 100%;
+        }
+        .merchandise hr,.PromoTitle hr{
+            width: 30%;
+        }
+
+        .merchandise .item {
+            background: #fffdf9;
+            width: 100vh;
+        }
+        .merch-pics{    
+            width: 90%;
+            height: 50vh;
+            border-radius: 13px;
+
+        }
+        .merchandise .item img {
+            width: auto;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+    }
+
+
+    
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+    @media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) 
+    @media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) 
+    @media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+    @media only screen and (min-width: 1200px) {...}*/
