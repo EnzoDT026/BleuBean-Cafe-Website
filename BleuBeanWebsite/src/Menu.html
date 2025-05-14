@@ -1,869 +1,863 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BleuBean Cafe Menu</title>
-    <link rel="stylesheet" href="../src/styles/main.css">
-    <link rel="stylesheet" href="../src/styles/Menu.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <header id="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Bleu Bean Cafe</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BleuBean Cafe Menu</title>
+        <link rel="stylesheet" href="../src/styles/main.css">
+        <link rel="stylesheet" href="../src/styles/Menu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Bleu Bean Cafe</h1>
+                </div>
+                <nav id="nav">
+                    <ul >
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="Products.html" class="active" >Products</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Branches.html">Branches</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <nav id="nav">
-                <ul >
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="Products.html" class="active" >Products</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="Branches.html">Branches</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    
+        </header>
         <section class="Hero-Carousel">
-            <swiper-container class="mySwiper Hero-Carousel-BG" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
-            navigation="true" autoscroll="true" autoplay-delay="4000" autoplay-disable-on-interaction="false">
-            <swiper-slide style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S1.png);">
-            </swiper-slide>
-            <swiper-slide Class="S2" style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S2.png);">
-            </swiper-slide>
-          </swiper-container>
+                <swiper-container class="mySwiper Hero-Carousel-BG" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
+                navigation="true" autoscroll="true" autoplay-delay="4000" autoplay-disable-on-interaction="false">
+                <swiper-slide style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S1.png);">
+                </swiper-slide>
+                <swiper-slide Class="S2" style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S2.png);">
+                </swiper-slide>
+            </swiper-container>
         </section>
         <section id="menu" class="menu">
-            <div class="container">
-                <h2 class="section-title">Bleu Bean Menu</h2>
-                <div class="menu-categories">
-                    <button class="category-btn active" data-category="all">All</button>
-                    <button class="category-btn" data-category="Barista-Choice">Barista Choice</button>
-                    <button class="category-btn" data-category="Specialty-Coffee">Specialty Coffee</button>
-                    <button class="category-btn" data-category="Premium-Coffee">Premium Coffee</button>
-                    <button class="category-btn" data-category="Non-Coffee">Non Coffee</button>
-                    <button class="category-btn" data-category="Frappe">Frappe</button>
-                    <button class="category-btn" data-category="Sparkling">Sparkling Series</button>
-                    <button class="category-btn" data-category="Milk-Tea">Milk Tea</button>
-                    <button class="category-btn" data-category="Rice-Meals">Rice Meals</button>
-                    <button class="category-btn" data-category="Pasta">Pasta</button>
-                    <button class="category-btn" data-category="Sandwich">Sandwich</button>
-                    <button class="category-btn" data-category="Snacks">Snacks</button>
+                <div class="container">
+                    <h2 class="section-title">Bleu Bean Menu</h2>
+                    <div class="menu-categories">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="Barista-Choice">Barista Choice</button>
+                        <button class="category-btn" data-category="Specialty-Coffee">Specialty Coffee</button>
+                        <button class="category-btn" data-category="Premium-Coffee">Premium Coffee</button>
+                        <button class="category-btn" data-category="Non-Coffee">Non Coffee</button>
+                        <button class="category-btn" data-category="Frappe">Frappe</button>
+                        <button class="category-btn" data-category="Sparkling">Sparkling Series</button>
+                        <button class="category-btn" data-category="Milk-Tea">Milk Tea</button>
+                        <button class="category-btn" data-category="Rice-Meals">Rice Meals</button>
+                        <button class="category-btn" data-category="Pasta">Pasta</button>
+                        <button class="category-btn" data-category="Sandwich">Sandwich</button>
+                        <button class="category-btn" data-category="Snacks">Snacks</button>
+                    </div>
+                    <div class="menu-items">
+                        <!--Barista Choice -->
+                        <div class="menu-item" data-category="Barista-Choice">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Tiramisu Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Tiramisu Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Barista-Choice">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Mocha Lava Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Mocha Lava Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Barista-Choice">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Cocoa Caramel Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Cocoa Caramel Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Barista-Choice">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Dream">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Matcha Dream</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!--Specialty Coffee-->
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Americano">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Americano</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱90.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱90.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Cafe Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Cafe Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱125.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Spanish Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Spanish Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Caramel Macchiato">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Caramel Macchiato</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱140.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="SeaSalt Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>SeaSalt Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱140.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Dark Mocha">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Dark Mocha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱145.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Specialty-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="White Mocha">
+                            </div>
+                            <div class="menu-details">
+                                <h3>White Mocha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱145.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!--Premium Coffee-->
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Cafe Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Cafe Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱59.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Spanish Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Spanish Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱59.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Sea Salt Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Sea Salt Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Caramel Macchiato Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Caramel Macchiato</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="White Mocha">
+                            </div>
+                            <div class="menu-details">
+                                <h3>White Mocha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱79.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Premium-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Dark Mocha">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Dark Mocha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱79.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Non Coffee -->
+                        <div class="menu-item" data-category="Non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Strawberry Cream">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Strawberry Cream</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="BlueBerry Cream">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Blueberry Cream</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Belgian Chocolate">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Belgian Chocolate</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Latte">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Matcha Latte</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
+                                    <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Frappe -->
+                        <div class="menu-item" data-category="Frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Java Chips Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Java Chips</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Hazelnut Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Hazelnut</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Salted Caramel Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Salted Caramel</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Matcha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Oreo And Cream Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo And Cream</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Sparkling Series -->
+                        <div class="menu-item" data-category="Sparkling">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Cucumber Sparkling">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Cucumber</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Sparkling">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Green Apple Sparkling">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Green Apple </h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Sparkling">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="BlueBerry Lychee Sparkling">
+                            </div>
+                            <div class="menu-details">
+                                <h3>BlueBerry Lychee</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!--Milk Tea-->
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Wintermelon Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Wintermelon</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱59.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Okinawa Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Okinawa</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱59.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Taro Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Taro</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Chocolate Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Chocolate</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱69.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Matcha</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱79.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Milk-Tea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Cookies And Cream Milk Tea">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Cookies And Cream</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">ICED: ₱79.00 (22oz)</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Pasta -->
+                        <div class="menu-item" data-category="Pasta">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Carbonara Pasta">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Carbonara</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱120.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Pasta">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Pesto Pasta">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Pesto</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱120.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Pasta">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Alfredo Pasta">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Alfredo</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱120.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Pasta">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Marinara Pasta">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Marinara</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱120.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!--Sandwich-->
+                        <div class="menu-item" data-category="Sandwich">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Egg Sandwich">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Egg</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱59.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Sandwich">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Hungarian Sandwich">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Hungarian</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱79.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Sandwich">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Chickwich Sandwich">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Chickwich</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱69.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Rice Meals -->
+                        <div class="menu-item" data-category="Rice-Meals">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Pork ChaoFan">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Pork ChaoFan</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱89.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Rice-Meals">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Pork Tonkatsu">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Pork Tonkatsu</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱99.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Rice-Meals">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Chicken Katsu">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Chicken Katsu</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱99.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Rice-Meals">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Ala King">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Ala King</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱99.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Rice-Meals">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Chicken Wings">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Chicken Wings</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱99.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Snacks -->
+                        <div class="menu-item" data-category="Snacks">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Flavored Fries">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Flavored Fries</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱69.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Snacks">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Nachos Solo">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Nachos (Solo)</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱69.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Snacks">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Nachos Group">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Nachos (Group)</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱120.00</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="Snacks">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Mini Donuts">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Mini Donuts</h3>
+                                <hr>
+                                <div class="Hot-and-Cold">
+                                    <h4 class="ColdDesc">₱89.00 (Box of 6 )</h4>
+                                    <h4 class="ColdDesc">₱179.00 (Box of 12 )</h4>
+                                </div>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Coffee Items -->
+                        <div class="menu-item" data-category="coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Americano.jpg" alt="Espresso">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Test</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Cappuccino">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Non-Coffee Items -->
+                        <div class="menu-item" data-category="non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Bleu Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="non-Coffee">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Caramel Frappe">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Frappe Items -->
+                        <div class="menu-item" data-category="frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="frappe">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <!-- Milktea Items -->
+                        <div class="menu-item" data-category="milktea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-category="milktea">
+                            <div class="menu-img">
+                                <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
+                            </div>
+                            <div class="menu-details">
+                                <h3>Oreo Frappe</h3>
+                                <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu-items">
-                    <!--Barista Choice -->
-                    <div class="menu-item" data-category="Barista-Choice">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Tiramisu Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Tiramisu Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Barista-Choice">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Mocha Lava Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Mocha Lava Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Barista-Choice">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Cocoa Caramel Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Cocoa Caramel Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Barista-Choice">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Dream">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Matcha Dream</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!--Specialty Coffee-->
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Americano">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Americano</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱90.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱90.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Cafe Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Cafe Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱125.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Spanish Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Spanish Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Caramel Macchiato">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Caramel Macchiato</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱140.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="SeaSalt Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>SeaSalt Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱140.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱119.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Dark Mocha">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Dark Mocha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱145.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Specialty-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="White Mocha">
-                        </div>
-                        <div class="menu-details">
-                            <h3>White Mocha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱145.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱129.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!--Premium Coffee-->
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Cafe Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Cafe Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱59.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Spanish Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Spanish Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱59.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Sea Salt Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Sea Salt Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Caramel Macchiato Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Caramel Macchiato</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="White Mocha">
-                        </div>
-                        <div class="menu-details">
-                            <h3>White Mocha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱79.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Premium-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Dark Mocha">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Dark Mocha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱79.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Non Coffee -->
-                    <div class="menu-item" data-category="Non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Strawberry Cream">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Strawberry Cream</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="BlueBerry Cream">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Blueberry Cream</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Belgian Chocolate">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Belgian Chocolate</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Latte">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Matcha Latte</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="HotDesc">HOT: ₱135.00 (12oz)</h4>
-                                <h4 class="ColdDesc">ICED: ₱99.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Frappe -->
-                    <div class="menu-item" data-category="Frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Java Chips Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Java Chips</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Hazelnut Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Hazelnut</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Salted Caramel Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Salted Caramel</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Matcha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Oreo And Cream Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo And Cream</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱109.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Sparkling Series -->
-                    <div class="menu-item" data-category="Sparkling">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Cucumber Sparkling">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Cucumber</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Sparkling">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Green Apple Sparkling">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Green Apple </h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Sparkling">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="BlueBerry Lychee Sparkling">
-                        </div>
-                        <div class="menu-details">
-                            <h3>BlueBerry Lychee</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (16oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!--Milk Tea-->
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Wintermelon Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Wintermelon</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱59.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Okinawa Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Okinawa</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱59.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Taro Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Taro</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Chocolate Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Chocolate</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱69.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Matcha</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱79.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Milk-Tea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Cookies And Cream Milk Tea">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Cookies And Cream</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">ICED: ₱79.00 (22oz)</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Pasta -->
-                    <div class="menu-item" data-category="Pasta">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Carbonara Pasta">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Carbonara</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱120.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Pasta">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Pesto Pasta">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Pesto</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱120.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Pasta">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Alfredo Pasta">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Alfredo</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱120.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Pasta">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Marinara Pasta">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Marinara</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱120.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!--Sandwich-->
-                    <div class="menu-item" data-category="Sandwich">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Egg Sandwich">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Egg</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱59.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Sandwich">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Hungarian Sandwich">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Hungarian</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱79.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Sandwich">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Chickwich Sandwich">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Chickwich</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱69.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Rice Meals -->
-                    <div class="menu-item" data-category="Rice-Meals">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Pork ChaoFan">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Pork ChaoFan</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱89.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Rice-Meals">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Pork Tonkatsu">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Pork Tonkatsu</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱99.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Rice-Meals">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Chicken Katsu">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Chicken Katsu</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱99.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Rice-Meals">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Ala King">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Ala King</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱99.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Rice-Meals">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Chicken Wings">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Chicken Wings</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱99.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Snacks -->
-                    <div class="menu-item" data-category="Snacks">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Flavored Fries">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Flavored Fries</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱69.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Snacks">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Nachos Solo">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Nachos (Solo)</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱69.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Snacks">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Nachos Group">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Nachos (Group)</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱120.00</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="Snacks">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Mini Donuts">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Mini Donuts</h3>
-                            <hr>
-                            <div class="Hot-and-Cold">
-                                <h4 class="ColdDesc">₱89.00 (Box of 6 )</h4>
-                                <h4 class="ColdDesc">₱179.00 (Box of 12 )</h4>
-                            </div>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Coffee Items -->
-                    <div class="menu-item" data-category="coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Americano.jpg" alt="Espresso">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Test</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Cappuccino">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Non-Coffee Items -->
-                    <div class="menu-item" data-category="non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Bleu Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="non-Coffee">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Caramel Frappe">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Frappe Items -->
-                    <div class="menu-item" data-category="frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="frappe">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <!-- Milktea Items -->
-                    <div class="menu-item" data-category="milktea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Chocolate Croissant">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-item" data-category="milktea">
-                        <div class="menu-img">
-                            <img src="Images/Menu_Images/Oreo & Cream Frappe.jpg" alt="Blueberry Cheesecake">
-                        </div>
-                        <div class="menu-details">
-                            <h3>Oreo Frappe</h3>
-                            <p>It’s the perfect choice for anyone who loves a little extra chocolatey indulgence with their caffeine fix.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section> 
-     
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <h2>Bleu Bean Cafe</h2>
-                    <ul>
-                        <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
-                        <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
-                        <li><a href="#">+63 961 687 2463</a></li>
-                    </ul>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <h2>Bleu Bean Cafe</h2>
+                        <ul>
+                            <li><a href="#">3A Kalayaan C Batasan Hills Quezon City  • Philippines</a></li>
+                            <li><a href="#">bleubeancafe.ph@gmail.com</a></li>
+                            <li><a href="#">+63 961 687 2463</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-hours">
+                        <h3>Hours</h3>
+                        <p>Monday-Friday: 7am-8pm</p>
+                        <p>Weekends: 8am-9pm</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/bleubeancafe.ph">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/bleubeancafe.ph/">Instagram</a></li>
-                        <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
-                    </ul>
-                </div>
-                <div class="footer-hours">
-                    <h3>Hours</h3>
-                    <p>Monday-Friday: 7am-8pm</p>
-                    <p>Weekends: 8am-9pm</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="../src/scripts/main.js"></script>
-    <script src="../src/scripts/Menu.js"></script>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="../src/scripts/main.js"></script>
+        <script src="../src/scripts/Menu.js"></script>
+    </body>
 </html>
