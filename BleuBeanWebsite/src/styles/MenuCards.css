@@ -1,0 +1,22 @@
+.Hot_And_Cold_Price{
+    margin: 40px 0 0 0;
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.HotSection,.ColdSection{
+    display:flex;
+  
+}
+.HotSectionDesc p,.ColdSectionDesc p{
+    margin:0 0 0 5px;
+    padding:0px;
+    font-size: 12px;
+    text-align: left;
+}
+.HotSection img, .ColdSection img{
+    height: auto; 
+    width: 32px; 
+    margin:0; 
+    border-radius: 0;
+}
