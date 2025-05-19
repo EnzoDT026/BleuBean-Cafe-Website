@@ -54,10 +54,14 @@
     margin-top: 5px; /* Adjust this value to control the spacing */
     font-family: "Caprasimo", serif;
 }
+
+/* Logo for information */
 .fas,.fab{
     font-size: 20px;
     color: #5DA5B6;
 }
+
+/* Search Bar */
 .search-bar {
     display: flex; /* Use flexbox to align input and button horizontally */
     justify-content: center; /* Center the search bar */
@@ -77,6 +81,8 @@
     height: 40px; /* Set a fixed height to match the button */
     box-sizing: border-box; /* Ensure padding doesn't affect the height */
 }
+
+/* Show All Button */
 .show-all-Button {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -268,6 +274,8 @@
 
 
 /* End */
+
+/* Responsive Styles */
 
 @media (max-width: 768px) {
     .carousel-container { width: 90%; }
