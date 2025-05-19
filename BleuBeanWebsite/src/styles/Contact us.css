@@ -1,237 +1,444 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
-    font-family:"Caprasimo","Poppins";
-    background-color: #fdfcf8;
+    font-family: "Caprasimo", "Poppins";
+    background-color: #f0f4f8; /* Light background for better contrast */
 }
 
 .Con {
-    font-size:70px;
-    font-family:"Caprasimo","Poppins";
-    position: absolute;
-    top: 150px;
-    left: 600px;
-    padding-bottom: 30px; /* Adjust this value to move the content closer */
-    color: #5DA5B6;
+    font-size: 70px;
+    font-family: "Caprasimo", "Poppins";
+    text-align: center;
+    margin-top: 50px;
+    color: #11cbe3; /* Bright and readable color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+    background-color: transparent; /* Ensures no background transparency for the heading */
+    z-index: 2; /* Ensures it is above the overlay */
+    position: relative; /* Keeps it above the overlay */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+
+}
+.Con:hover {
+    color:#FF9800; /* Changes the text color to white on hover */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); /* Makes the shadow more prominent on hover */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate interactivity */
 }
 
-p.messageus {
-    font-size:30px;
-    font-family:"Caprasimo","Poppins";
-    font:bold;
-    text-align: center;
-    color:#5DA5B6;
+.contact {
+    position: relative;
+    background: url(../Images/img1.jpg) no-repeat center center fixed; /* Background image for contact section */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensures the overlay is above the background image */
 }
 
 .Content {
-    font-size:20px;
-    font-family:"Poppins";
-    color:#000000;
-    padding-top: 185px;
-    margin-bottom: -73px; /* Adjust this value to move the content closer */
-}
-
-nav {
-    background: #5DA5B6;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo {
-    width: 100px;
-    height: auto;
-    margin-left: 50px;
-}
-
-nav .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav .nav-links li {
-    margin-right: 30px;
-}
-
-nav .nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav .nav-links li a:hover {
-    text-decoration: underline;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 30px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
-
-
-
-.hero-content {
+    font-size: 19px;
+    font-family: "Poppins";
+    color: white; /* Adjust text color for better contrast */
     text-align: center;
-    padding-top: 0px; /* Adjust this value to move the content to the top */
-    padding-bottom: 100px;
-    color: #ffffff;
+    margin: 20px auto;
+    padding: 0 20px;
+    line-height: 1.5;
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2; /* Places content above the overlay */
+    max-width: 800px; /* Limits the width for better readability */
 }
 
-.ContactUs {
-    font-size: 50px;
-    margin-top: 100px;
-    font-family: "Caprasimo","Poppins";
-    color: #5DA5B6;
-    color: #ffffff;
-}
-
-main {
-    flex: 1;
+/* Layout for Form and Info Section */
+.main-container {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    align-items: flex-start; /* Align items to the top */
-    padding: 40px;
+    justify-content: space-between; /* Ensures space between the form and info */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Adds spacing around the container */
+    gap: 40px; /* Adds spacing between the form and info sections */
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2; /* Places content above the overlay */
 }
 
-.contact-form {
-    width: 30%;
-    background-color: #f9f9f9;
+.contactForm {
+    width: 55%; /* Adjusts the form width */
     padding: 30px;
-    padding-right: 50px;
-    padding-top: 1px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 75px; /* Adjust this value to move the form to the right */
-    margin-top: 50px; /* Adjust this value to move the form to the top */
+    background-color: #F8F9FA; /* Light background for the form */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Caprasimo", "Poppins";
+    margin-left: 0; /* Aligns the form to the left */
 }
 
-.contact-form h2 {
+.contactForm h2 {
+    font-size: 35px;
+    color: #5DA5B6;
     text-align: center;
-    margin-bottom: 40px;
-    color: #1cb1d6;
+    margin-bottom: 20px;
 }
 
-.contact-form label {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #328295;
+.contactForm .inputBox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 28px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contactForm .inputBox2 {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 28px;
+    color: #5DA5B6;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form button {
-    padding: 15px 20px;
-    font-size: 20px;
-    background-color: #5DA5B6;
-    color: white;
+    font-size: 20px; /* Adjusted font size for better readability */
+    font-family: "Poppins", sans-serif; /* Ensures consistent font style */
+    margin: 10px 0;
     border: none;
-    border-radius: 4px;
+    border-bottom: 2px solid #5DA5B6;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none;
+    color: #000; /* Ensures text is visible */
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 24px; /* Adjusted label font size */
+    font-family: "Poppins", sans-serif; /* Consistent font style for labels */
+    color: #5DA5B6;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    top: -10px;
+    left: 0;
+    color: #5DA5B6;
+    font-size: 14px; /* Adjusted font size for floating label */
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.contactForm .inputBox input:focus,
+.contactForm .inputBox textarea:focus {
+    border-bottom: 2px solid #328295; /* Changes border color on focus */
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 200px; /* Limit the maximum width */
+    background: #5DA5B6;
+    border: none;
+    padding: 12px 20px; /* Adjust padding for better readability */
+    font-size: 18px; /* Ensure the text is readable */
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.contact-form button:hover {
-    background-color: #328295;
-}
-
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #5DA5B6;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     color: white;
+    border-radius: 10px;
+    display: block; /* Ensures the button behaves like a block element */
+    margin: 25px auto; /* Centers the button horizontally */
+    text-align: center;
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background: #328295;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.contactForm .inputBox input[type="submit"]:active {
+    background: #2a6f7c;
+    transform: scale(0.98); /* Slightly shrink the button on click */
+}
+
+.contactForm .inputBox input[type="submit"]:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 .Info {
-    position: absolute;
-    font-family: "Caprasimo","Poppins";
-    
-    font-size: 25px;
-    color: #328295;
-    top: 400px;
-    left: 800px;
+    width: 40%; /* Adjusts the info section width */
+    font-family: "Caprasimo", "Poppins";
+    font-size: 20px;
+    color: #ffffff; /* White text for better readability */
+    text-align: left; /* Aligns text to the left */
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.3); /* Adds a semi-transparent black background */
+    padding: 20px;
+    border-radius: 20px;
+   
+    overflow: hidden; /* Ensures child elements like the map fit inside */
 }
 
-.EmailInfo,
+.EmailInfo {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    justify-content: flex-start; /* Align content to the left */
+    font-size: 22px; /* Consistent font size */
+    color: #11cbe3; /* Brightened color for better readability */
+    margin-top: 20px; /* Match spacing with PhoneInfo and AddressInfo */
+
+    padding: 10px 0; /* Match padding with PhoneInfo and AddressInfo */
+}
+
+.EmailInfo i {
+    font-size: 30px; /* Match icon size with PhoneInfo and AddressInfo */
+    color: #11cbe3; /* Matches the text color for consistency */
+    margin-right: 10px; /* Adds spacing between the icon and text */
+}
+
+.EmailInfo div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.EmailInfo a {
+    font-size: 18px; /* Match font size with PhoneInfo and AddressInfo */
+    font-family: "Poppins", sans-serif; /* Consistent font style */
+    color: #11cbe3;
+    text-decoration: none;
+    word-wrap: break-word; /* Ensures long email addresses wrap properly */
+}
+
+.EmailInfo a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* Changes to white on hover */
+}
+
 .PhoneInfo,
 .AddressInfo {
     margin-top: 20px;
-    font-family: "Caprasimo","Poppins";
-    font-style: normal;
-    font-size: 25px;
-    color: #328295;
+    font-family: "Caprasimo", "Poppins";
+    font-size: 22px; /* Slightly reduced font size for better balance */
+    color: #11cbe3; /* Brightened color for better readability */
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;   
+    justify-content: flex-start;
+    padding: 10px 0;
 }
 
-.EmailInfo i,
 .PhoneInfo i,
 .AddressInfo i {
     margin-right: 10px;
-    font-size: 40px;
+    font-size: 30px;
+    color: #11cbe3; /* Matches the text color for consistency */
 }
 
-.EmailInfo div,
 .PhoneInfo div,
 .AddressInfo div {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
-.EmailInfo a,
 .PhoneInfo a,
 .AddressInfo a {
-    margin-left: 10px;
-    font-size: 20px;
-    color: #328295;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif; /* Ensures consistent font style */
+    color: #11cbe3; /* Brightened color for better readability */
     text-decoration: none;
 }
 
-.EmailInfo a:hover,
 .PhoneInfo a:hover,
 .AddressInfo a:hover {
     text-decoration: underline;
+    color: #ffffff; /* Changes to white on hover for better visibility */
 }
-.maps{
-    position: absolute;
-    top:380px;
-    padding-left: 50px;
-    width: 500px;
-    height: 500px;
+
+/* Map Styles */
+.map-container {
+    width: 100%;
+    margin-top:35px; /* Adds spacing below the map */
+    display: flex;
+    justify-content: center; /* Centers the map horizontally */
+    align-items: center; /* Centers the map vertically */
+    height: 100%; /* Adjust the height as needed */
+    border-radius: 5px; /* Matches the border radius of the .Info box */
+    border: 1px solid   #040404; /* Optional border for the map container */
+    position: relative; /* Ensures the map is positioned correctly */
+    overflow: hidden; /* Prevents overflow of map content */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column; /* Stack form and info vertically */
+        align-items: center;
+    }
+
+    .contactForm,
+    .Info {
+        width: 80%; /* Adjust width for tablets */
+    }
+
+    .map-container {
+        height: 250px; /* Adjust map height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stacks form and info vertically */
+        align-items: center;
+    }
+
+    .contactForm,
+    .Info {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .EmailInfo {
+        flex-direction: row; /* Keep icon and text in a row */
+        align-items: center; /* Center-align content vertically */
+        text-align: left; /* Align text to the left */
+       
+    }
+
+    .EmailInfo i {
+        font-size: 24px; /* Adjust icon size for smaller screens */
+    }
+
+    .EmailInfo a {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .EmailInfo i,
+    .PhoneInfo i,
+    .AddressInfo i {
+        font-size: 22px;
+    }
+
+    .maps {
+        height: 200px;
+        width: 100%;
+        margin: 0 auto; /* Centers the map on smaller screens */
+       
+    }
+
+    .contactForm .inputBox input[type="submit"] {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        max-width: 180px; /* Reduce max width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .Con {
+        font-size: 40px;
+    }
+
+    .Content {
+        font-size: 16px;
+    }
+
+    .contactForm {
+        padding: 15px;
+    }
+
+    .Info {
+        font-size: 16px;
+    }
+
+    .EmailInfo {
+        flex-direction: row; /* Keep icon and text in a row */
+        align-items: center; /* Center-align content vertically */
+        text-align: left; /* Align text to the left */
+        gap: 10px; /* Maintain spacing between icon and text */
+    }
+
+    .EmailInfo i {
+        font-size: 20px; /* Smaller icon size for mobile devices */
+    }
+
+    .EmailInfo a {
+        font-size: 18px; /* Smaller font size for mobile devices */
+        word-wrap: break-word; /* Ensure long email addresses wrap properly */
+    }
+
+    .EmailInfo i,
+    .PhoneInfo i,
+    .AddressInfo i {
+        font-size: 20px;
+    }
+
+    .maps {
+        height: 600px;
+        width: 100%;
+        margin: 0 auto; /* Centers the map on smaller screens */
+    }
+
+    .contactForm .inputBox input[type="submit"] {
+        font-size: 14px; /* Smaller font size for mobile devices */
+        padding: 8px 12px; /* Compact padding for mobile */
+        max-width: 150px; /* Reduce max width for mobile devices */
+    }
 }
