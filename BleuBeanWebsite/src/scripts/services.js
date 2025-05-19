@@ -6,13 +6,11 @@ var baristabtn = document.getElementById("BarsitaBtn");
 var CoffeBtn = document.getElementById("CoffeBtn");
 var franchisebtn = document.getElementById("FranchiseBtn");
 var consultationbtn = document.getElementById("Consultationbtn");
-
-
-
+var image = document.getElementById("image");
 
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementById("close")[0];
 
 // When the user clicks the button, open the modal 
 baristabtn.onclick = function() {
@@ -71,6 +69,9 @@ CoffeBtn.onclick = function() {
     document.getElementById("Contact").hidden = true;
     document.getElementById("txt4coffee").hidden = false;  
 
+
+    image.src = "../src/images/BaristaTraining.jpg";
+
     document.getElementById("inquire").onclick = function() {
         this.href = "https://docs.google.com/forms/d/e/1FAIpQLSe7C-00seXA_nZE89eibPbVJZQTkyfX5BAQmLrAf450XR3cUQ/viewform";
         console.log(this.href);
@@ -97,6 +98,10 @@ franchisebtn.onclick = function() {
     document.getElementById("inquire").hidden = false;
     document.getElementById("Contact").hidden = true;
     document.getElementById("txt4coffee").hidden = true; 
+
+
+    image.src = "../src/images/CoffeeCart.png";
+
 
     document.getElementById("inquire").onclick = function() {
         this.href = "https://docs.google.com/forms/d/e/1FAIpQLSc76vilyQqROgJVq4cXp8MufGZ3l9EquHtmoq263F6_yMtdaQ/viewform";

@@ -1,0 +1,308 @@
+.hero-section {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/photo_2025-03-12_16-41-44.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.hero img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-family: "Caprasimo", serif;
+    margin-bottom: 10px;
+}
+
+/* Franchise Page Container */
+.franchise-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Left Section */
+.franchise-left {
+    flex: 1;
+    max-width: 60%;
+    margin-left: 100px;
+}
+
+.franchise-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.franchise-left p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.franchise-left ol {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.franchise-left ol li {
+    margin-bottom: 10px;
+}
+
+.franchise-left ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.franchise-left ul li {
+    margin-bottom: 5px;
+}
+
+/* Right Section */
+.franchise-right {
+    flex: 1;
+    max-width: 35%;
+    padding: 0px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+.franchise-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.franchise-right ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.franchise-right ul li {
+    margin-bottom: 5px;
+}
+
+.franchise-right p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.franchise-right .download-btn,
+.franchise-right .apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5BA6B3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.franchise-right .download-btn:hover,
+.franchise-right .apply-btn:hover {
+    background-color: #3A7A8C;
+}
+
+/* Free Items Section */
+.free-items-section {
+    background-color: #d9edf7; /* Light blue background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.free-items-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Caprasimo', serif;
+}
+
+.free-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid layout */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.free-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.free-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.free-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #5BA6B3; /* Blue border at the bottom of the image */
+}
+
+.free-item h3 {
+    font-size: 1.8rem;
+    color: #5BA6B3;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.free-item p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* General Responsive Design */
+@media (max-width: 768px) {
+    /* Franchise Container */
+    .franchise-container {
+        flex-direction: column; /* Stack left and right sections vertically */
+        align-items: center;
+        gap: 20px; /* Reduce spacing between sections */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .franchise-left,
+    .franchise-right {
+        max-width: 100%; /* Full width for both sections */
+        margin: 0; /* Remove side margins */
+    }
+
+    .franchise-left h2 {
+        font-size: 1.2rem; /* Reduce font size */
+        text-align: center; /* Center-align text */
+    }
+
+    .franchise-left p,
+    .franchise-left ol li,
+    .franchise-left ul li {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .franchise-right {
+        margin-top: 20px; /* Add spacing between sections */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .franchise-right h3 {
+        font-size: 1rem; /* Reduce font size */
+        text-align: center; /* Center-align text */
+    }
+
+    .franchise-right ul li {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .franchise-right .download-btn,
+    .franchise-right .apply-btn {
+        font-size: 0.9rem; /* Reduce button font size */
+        padding: 8px 15px; /* Adjust button padding */
+        width: 100%; /* Full width buttons */
+    }
+
+    /* Free Items Section */
+    .free-items-section {
+        padding: 20px 10px; /* Reduce padding */
+    }
+
+    .free-items-section h2 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .free-items-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid layout for smaller screens */
+        gap: 15px; /* Reduce gap between items */
+    }
+
+    .free-item {
+        padding: 15px; /* Reduce padding inside items */
+    }
+
+    .free-item img {
+        width: 100%; /* Reduce image size */
+        margin-bottom: 10px; /* Adjust spacing below image */
+    }
+
+    .free-item h3 {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    .free-item p {
+        font-size: 0.8rem; /* Reduce font size */
+    }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .franchise-container {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .franchise-left h2,
+    .franchise-right h3 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    .franchise-left p,
+    .franchise-left ol li,
+    .franchise-left ul li,
+    .franchise-right ul li {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .free-items-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .free-item img {
+        width: 100%; /* Further reduce image size */
+    }
+
+    .free-item h3 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    .free-item p {
+        font-size: 0.7rem; /* Further reduce font size */
+    }
+}
