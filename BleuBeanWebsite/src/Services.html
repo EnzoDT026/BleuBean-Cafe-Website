@@ -4,55 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/services.css">
-    <link rel="stylesheet" href="../src/styles/main.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
     <title>Services</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div >
-                <img class="logo" src="../src/Images/Logo2.png" alt="BleuBean Cafe Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#"><b>Services</b></a></li>
-                <li><a href="#">Branches</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
 <div>
-    <h1 class="header"><b> Services </b></h1>
+    <h1 class="h1top"><b> Services </b></h1>
 </div>
 
     <div class="card" id ="BaristaTraining">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
+        <img src="../src/Images/BaristaTraining.png" class="bt-img-top" alt="...">
+        <div class="bt-card-body">
           <p class="card-text">Barista Training</p>
           <button class="btn" id="BarsitaBtn">See More</button>
         </div>
       </div>
       <div class="card" id ="CoffeCart">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
+        <img src="../src/Images/CoffeeCart.png" class="cc-img-top" alt="...">
+        <div class="cc-card-body">
           <p class="card-text">Coffee Cart</p>
           <button class="btn" id="CoffeBtn">See More</button>
         </div>
       </div>
-      <div class="card" id ="Franchise" >
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Franchise</p>
-          <button class="btn" id="FranchiseBtn">See More</button>
-        </div>
-      </div>
+
       <div class="card" id ="Consultation" >
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
+        <img src="../src/Images/Consulatant.png" class="C-img-top" alt="...">
+        <div class="C-card-body">
           <p class="card-text">Coffee Business Consultation</p>
           <button class="btn" id="Consultationbtn">See More</button>
         </div>
@@ -61,7 +63,7 @@
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <span class="close">&times;</span>
+            <span class="close" id="close">&times;</span>
             <h2 id="NameOfService" class="Headertxt">Modal Header</h2>
           </div>
           <div class="modal-body">
@@ -98,6 +100,6 @@
       
       </div>
       <script src="../src/scripts/services.js"></script>
-      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
