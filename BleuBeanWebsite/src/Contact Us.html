@@ -1,105 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BleuBean Cafe</title>
+    <!-- Main and Contact Us CSS stylesheets -->
     <link rel="stylesheet" href="../src/styles/main.css">
     <link rel="stylesheet" href="../src/styles/Contact%20Us.css">
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    
+    <!-- Google Fonts import -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        </style>
+    </style>
+    <!-- JavaScript for contact form and emailjs -->
     <script src="scripts/ContactUs.js"></script>
+    <script src="emailjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <!-- <link rel="stylesheet" href="../src/styles/Products.css">--> 
 </head>
 <body>
-    
-   <header id="header">
-    <div class="container">
-        <div class="logo">
-            <h1>Bleu Bean Cafe</h1>
+    <!-- Header with navigation and logo -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Bleu Bean Cafe</h1>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="Blogs.html">Blogs</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger menu for mobile -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="Products.html">Products</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Branches.html">Branches</a></li>
-                <li><a href="Blogs.html">Blogs</a></li>
-                <li><a href="Contact Us.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header>
-    <section class="hero">
-        <div class="hero-content">
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <!-- Content header and description -->
+        <div class="content">
             <h1 class="Con">Contact Us</h1>
-            <p  class="Content"> We'd love to hear from you! If you have any questions, feedback, or need assistance, please feel free to reach out to us using<br>
-            the contact details provided. Our team is here to help and will respond as soon as possible.Thank you for getting in touch!</p>             
+            <p class="Content">
+                If you have any questions, feedback, or need assistance, please feel free to <br>
+                reach out to us using the contact details provided. Thank you for getting in touch!
+            </p>             
+        </div>
+        <!-- Main container for form and info -->
+        <div class="main-container">
+            <!-- Contact Form -->
+            <form class="contactForm" onsubmit="return sendEmail(event)" action="https://emailjs.js.com/send" method="POST">
+                <h2>Send Us a Message</h2>
+                <div class="inputBox">
+                    <input type="text" id="name" name="name" required>
+                    <span>Name</span>
+                </div>
+                <div class="inputBox">
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value="+63"                      
+                        oninput="ensurePhoneNumberStartsWithCountryCode(this)"
+                        required
+                    />
+                    <span>Phone</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="email" name="email" required>
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="subject" name="subject" required>
+                    <span>Subject</span>
+                </div>
+                <div class="inputBox">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span>Message</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send Message">               
+                </div>
+            </form>
+
+            <!-- Contact Info Section -->
+            <div class="Info">
+                <!-- Email Info -->
+                <div class="EmailInfo">
+                    <i class="bi bi-envelope-fill"></i>
+                    <div>
+                        <span>Email</span>
+                        <a href="mailto:bleubeancafe.ph@gmail.com">bleubeancafe.ph@gmail.com</a>
+                    </div>
+                </div>
+                <!-- Phone Info -->
+                <div class="PhoneInfo">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                        <span>Phone</span>
+                        <a href="tel:+6393434847">+63-961-687-2463</a>
+                    </div>
+                </div>
+                <!-- Address Info -->
+                <div class="AddressInfo">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div>
+                        <span>Address</span>
+                        <a href="#">3A Kalayaan C, Quezon City, 1128 Metro Manila</a>
+                    </div>
+                </div>
+                <!-- Google Map Embed -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5223.420107466413!2d121.08551952076968!3d14.692952786731748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb23ae1ac437%3A0xe8576986c7407d89!2sBleu%20Bean%20Cafe%20Riverside!5e1!3m2!1sen!2sph!4v1746580738830!5m2!1sen!2sph" 
+                        width="600" height="400" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
     </section>
-    <main>
-        <form class="contact-form" onsubmit="handleFormSubmit(event)">
-            <h2 class = "mess"></h2>
-            <p class = "messageus">Send us a message</p>
-            <label for = "name" class ="name">Name:</label>
-            <input type = "text" id ="name" name="name" required>
-            
-            <label for = "Phone" class="num">Phone #:</label>
-            <input type = "tel" id="phone" name = "phone" required>
 
-            <label for = "email" class="mail">Your Email:</label>
-            <input type = "email" id="email" name = "email" required>
-
-            <label for = "subject" class ="sub">Subject:</label>
-            <input type = "text" id ="subject" name = "subject" required>
-            
-            <label for = "message" class = "text">Message</label>
-            <textarea id = "message" name = "message" rows ="5" required></textarea>
-            
-            <button onclick type = "submit" class = "submit">Send Message</button>
-        </form>
-    </main>
-    <div class ="Info"> 
-        <div class ="EmailInfo">
-            <i class ="bi bi-envelope-fill"></i>
-            <div>
-                <span>Email</span>
-                <a href ="mailto:sygrapes@gmail.com">sygrapes@gmail.com</a>
-            </div>
-        </div>
-
-        <div class="PhoneInfo">
-            <i class="bi bi-telephone-fill"></i>
-            <div>
-                <span>Phone</span>
-                <a href="tel:+6393434847">+6393434847</a>
-            </div>
-        </div>
-
-        <div class="AddressInfo">
-            <i class="bi bi-geo-alt-fill"></i>
-            <div>
-                <span>Address</span>
-                <a href="#">3A Kalayaan C, Quezon City, 1128 Metro Manila</a>
-            </div>
-        </div>
-            <div class="maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.509103959694!2d121.08513327484559!3d14.693347674799782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb23ae1ac437%3A0xe8576986c7407d89!2sBleu%20Bean%20Cafe%20Riverside!5e1!3m2!1sen!2sph!4v1746432329967!5m2!1sen!2sph" 
-                width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+    <!-- Success Modal for form submission -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>Your message has been sent successfully! Thank you for reaching out to us.</p>
         </div>
     </div>
+
+    <!-- Main content placeholder (not used) -->
+    <main>
+    </main>
+
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <!-- Footer address and contact -->
                 <div class="footer-links">
                     <h2>Bleu Bean Cafe</h2>
                     <ul>
@@ -108,6 +153,7 @@
                         <li><a href="#">+63 961 687 2463</a></li>
                     </ul>
                 </div>
+                <!-- Footer quick links -->
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -116,17 +162,20 @@
                         <li><a href="https://www.tiktok.com/@bleu.bean.cafe">Tiktok</a></li>
                     </ul>
                 </div>
+                <!-- Footer hours -->
                 <div class="footer-hours">
                     <h3>Hours</h3>
                     <p>Monday-Friday: 7am-8pm</p>
                     <p>Weekends: 8am-9pm</p>
                 </div>
             </div>
+            <!-- Footer bottom copyright -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Bleu Bean Cafe. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <!-- Main JS scripts -->
     <script src="../src/scripts/main.js"></script>
     <script src="../src/scripts/Products.js"></script>
 </body>
