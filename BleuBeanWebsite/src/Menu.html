@@ -23,12 +23,14 @@
                     <ul >
                         <li><a href="index.html" >Home</a></li>
                         <li><a href="Products.html" class="active" >Products</a></li>
+                        <li><a href="Franchise.html">Franchise</a></li>
                         <li><a href="Services.html">Services</a></li>
                         <li><a href="Branches.html">Branches</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="Blogs.html">Blogs</a></li>
+                        <li><a href="Contact Us.html">Contact Us</a></li>
                     </ul>
                 </nav>
+                <!-- Mobile UI Burger style Button -->
                 <div class="menu-toggle" id="menu-toggle">
                     <span></span>
                     <span></span>
@@ -37,17 +39,20 @@
             </div>
         </header>
         <section class="Hero-Carousel">
-                <swiper-container class="mySwiper Hero-Carousel-BG" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
-                navigation="true" autoscroll="true" autoplay-delay="4000" autoplay-disable-on-interaction="false">
-                <swiper-slide style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S1.png);">
-                </swiper-slide>
-                <swiper-slide Class="S2" style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S2.png);">
-                </swiper-slide>
+            <!-- Promotional Carousel Controls -->
+            <swiper-container class="mySwiper Hero-Carousel-BG" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
+            navigation="true" autoscroll="true" autoplay-delay="4000" autoplay-disable-on-interaction="false">
+                <!-- Slide 1 (Change Background image for new promotional items )-->
+                <swiper-slide style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S1.png);"></swiper-slide>
+                <!-- Slide 2 (Change Background image for new promotional items )-->
+                <swiper-slide Class="S2" style="background-image:url(../src/Images/Menu_Images/Menu-Hero-BG/S2.png);"></swiper-slide>
             </swiper-container>
         </section>
         <section id="menu" class="menu">
                 <div class="container">
+                    <!--Section Title -->
                     <h2 class="section-title">Bleu Bean Menu</h2>
+                    <!-- Menu Category Buttons -->
                     <div class="menu-categories">
                         <button class="category-btn active" data-category="all">All</button>
                         <button class="category-btn" data-category="Barista-Choice">Barista Choice</button>
@@ -62,12 +67,15 @@
                         <button class="category-btn" data-category="Sandwich">Sandwich</button>
                         <button class="category-btn" data-category="Snacks">Snacks</button>
                     </div>
+                    <!-- Menu Items (Cards)-->
                     <div class="menu-items">
                         <!--Barista Choice -->
                         <div class="menu-item" data-category="Barista-Choice">
+                            <!-- Card Image -->
                             <div class="menu-img">
                                 <img src="Images/Menu_Images/Americano.jpg" alt="Tiramisu Latte">
                             </div>
+                            <!-- Card Details -->
                             <div class="menu-details">
                                 <h3>Tiramisu Latte</h3>
                                 <hr>
@@ -78,9 +86,11 @@
                             </div>
                         </div>
                         <div class="menu-item" data-category="Barista-Choice">
+                            <!-- Card Image -->
                             <div class="menu-img">
                                 <img src="Images/Menu_Images/Americano.jpg" alt="Mocha Lava Latte">
                             </div>
+                            <!-- Card Details -->
                             <div class="menu-details">
                                 <h3>Mocha Lava Latte</h3>
                                 <hr>
@@ -91,9 +101,11 @@
                             </div>
                         </div>
                         <div class="menu-item" data-category="Barista-Choice">
+                            <!-- Card Image -->
                             <div class="menu-img">
                                 <img src="Images/Menu_Images/Americano.jpg" alt="Cocoa Caramel Latte">
                             </div>
+                            <!-- Card Details -->
                             <div class="menu-details">
                                 <h3>Cocoa Caramel Latte</h3>
                                 <hr>
@@ -104,9 +116,11 @@
                             </div>
                         </div>
                         <div class="menu-item" data-category="Barista-Choice">
+                            <!-- Card Image -->
                             <div class="menu-img">
                                 <img src="Images/Menu_Images/Americano.jpg" alt="Matcha Dream">
                             </div>
+                            <!-- Card Details -->
                             <div class="menu-details">
                                 <h3>Matcha Dream</h3>
                                 <hr>
@@ -118,9 +132,11 @@
                         </div>
                         <!--Specialty Coffee-->
                         <div class="menu-item" data-category="Specialty-Coffee">
+                            <!-- Card Image -->
                             <div class="menu-img">
                                 <img src="Images/Menu_Images/Americano.jpg" alt="Americano">
                             </div>
+                            <!-- Card Details -->
                             <div class="menu-details">
                                 <h3>Americano</h3>
                                 <hr>
