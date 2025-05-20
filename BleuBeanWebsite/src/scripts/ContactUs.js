@@ -147,7 +147,6 @@ function ensurePhoneNumberStartsWithCountryCode(input) {
 
     // Reapply the "+63" prefix
     input.value = "+63-" + number;
-
     // Limit the total length to "+63-XXX-XXX-XXXX" (16 characters)
     if (input.value.length > 16) {
         input.value = input.value.slice(0, 16);
