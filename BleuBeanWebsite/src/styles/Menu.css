@@ -21,6 +21,10 @@ swiper-slide {
     background-size: cover;
 }
 /*  Menu */
+
+.menu-img{
+    height: width * 2;
+  }
   .HotDesc , .ColdDesc{
     font-size: 0.8rem;
     color: #0f4c5c;    
