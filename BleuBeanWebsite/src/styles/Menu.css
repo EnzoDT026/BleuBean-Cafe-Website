@@ -1,191 +1,38 @@
+/* All CSS Elements are grouped by section indicated a comment on each sections */
 
-.rating {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-.rating span {
-    color: #5DA5B6;
-    font-size: 20px;
-}
-
-footer{
-    margin-bottom: 0px;
-    position: relative;
-    bottom: -15px;
-}
-footer p{
-    margin-bottom: 0px;
-}
-.Item-Name{
-    font-size: 20px;
-    font-weight: 600;
-}
-.Item-Type{
-    font-size: 12px;
-    font-weight: 600;
-}
-.Item-Desc{
-    font-size: 12px;
-
-}
-hr{
-    width: 80%;
-}
-.Item-Desc, .Item-Name, .Item-Type, hr{
-    color: #285c68;
-}
-
+/*  Carousel */
 .menu{
     min-height: 100vh;
 }
-
-/*  For the Slider hero */
-.content{
-      width: 40%;
-      margin-left: 0;
-      padding-top: 20px; 
-  }
-  .image .Slider_Image{
-      width: 40%;
-      float: right;
-      margin-right: 30%;
-      border-radius: 13px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      
-    
-  }
-  .content h1{
-   
-      font-weight: 900;
-      line-height: 80%;
-      margin-top: 0;
-  }
-  .content h6{
-      font-size: 2vh;
-      font-weight: 100;
-      line-height: 80%;
-      margin-bottom: 20px;
-  }
-  .content h5{
-      font-size: 2vh;
-      font-weight: 600;
-      line-height: 80%;
-      margin-bottom: 70px;
-      margin-top: 10px;
-  }
-  .content p{
-      width: 60%;
-      margin-bottom: 20px;
-  }
-  .MediaIcons .btn{
-      background-color: #5DA5B6;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-  }
-  .fab {
-      color: #5DA5B6;
-      font-size: 3vh;
-      margin-left: 10px;
-      margin-top: 20px;
-  }
-  /* For the Slider hero */
-
-  .Hero-Carousel{
+.Hero-Carousel{
     position: relative;
     top: 8vh;
     margin-bottom: 5vh;
 }
-.content{
-    display:block;
-    width: 100%;
-}
-.SliderDesc{
-    width: 50%;
-    float: left;
-    margin: 25vh  0  0 20vh;
-}
- .Slider-image{
-    width: 50vh;
-    height: 78vh;
-    float: right;
-    padding: 0;
-    margin: 15vh 20vh 0 3vh;
-    overflow: hidden;
-}
-.Slider-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 13px;
-}
-.content h1{
-    font-size: 13vh;
-    font-weight: bolder;
-    line-height: 110%;
-    margin-top: 0;
-}
-.content h6{
-    font-size: 2vh;
-    font-weight: 100;
-    line-height: 80%;
-    margin-bottom: 20px;
-}
-.content h5{
-    font-size: 2vh;
-    font-weight: 400;
-    line-height: 80%;
-    margin-bottom: 70px;
-    margin-top: 10px;
-}
-.content p{
-    width: 60%;
-    margin-bottom: 20px;
-}
-.Hero-Carousel-BG{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    background-blend-mode: darken;
-    color: white;
-  }
-  swiper-container {
+swiper-container {
     width: 100%;
     height: 70vh;
-  }
-
-  swiper-slide {
+}
+swiper-slide {
     margin-top: 5px;
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
-  }
-  /* End of the Slider hero */
-
-
+}
+/*  Menu */
   .HotDesc , .ColdDesc{
     font-size: 0.8rem;
-    color: #0f4c5c;
-    
+    color: #0f4c5c;    
   }
   .menu-details{
     text-align: center;
   }
-
   .menu-details hr{
     border: 1px solid #eecc35;
     margin: 0 auto 2vh auto;
-    width: 30%;
-    
+    width: 30%;  
   }
-  
-
   .Hot-and-Cold{
     display: flex;
     justify-content: space-evenly;
