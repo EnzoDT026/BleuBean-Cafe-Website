@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Brew a better future: How reducing the use of plastic cups can make a big</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,475 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+}#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p4{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p5{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:450px;
+                width:1000px;
+            }
+            .p6{
+                position:relative;
+                text-align: center;
+                top:10px;
+                left:-100px;
+                width:1000px;
+            }
+            .th1
+            {
+                position:relative;
+                text-align: center;
+                top:0px;
+                left:100px;
+                width:1000px;
+            }
+            .th2{
+                position:relative;
+                text-align: center;
+                top:0px;
+                left:100px;
+                width:1000px;
+            }
+            .bh1{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .bh2{
+                position:relative;
+                text-align: center;
+                top:150px;
+                left:100px;
+                width:1000px;
+            }
+            .bh2 ul{
+                position:relative;
+                top:150px;
+                left:500px;
+                width:1400px;
+            }
+            .b1{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .b2{
+                position:relative;
+                top:150px;
+                left:500px;
+                width:1400px;
+            }
+            .th3{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:100px;
+                width:1000px;
+            }
+            .th4{
+                position:relative;
+                text-align: center;
+                top:200px;
+                left:100px;
+                width:1000px;
+            }
+            .p7{
+                position:relative;
+                text-align: center;
+                top:200px;
+                left:100px;
+                width:1000px;
+            }
+            .b3{
+                position:relative;
+                top:200px;
+                left:500px;
+                width:1400px;
+            }
+            .conclu{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:-100px;
+                width:1000px;
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>Brew a better future: How reducing the use of plastic cups can make a big</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">For many of us, grabbing a cup of coffee is an essential part of our day. However, with billions of plastic cups discarded annually, this habit has a major environmental cost. The good news? Small changes like switching to reusable tumblers can make a big difference in reducing plastic waste. That’s why Ble Bean Cafe is leading the charge with its Go Green Campaign, which is changing the typical plastic cups to a sustainable choice, encouraging customers to ditch single-use cups and embrace sustainability.</p>
+                <h3 class="th1">The Environmental Toll of Plastic Cups </h3>
+                <p class="p2">Each year, the U.S. discards 120 billion disposable coffee cups, most of which contain plastic linings that make them difficult to recycle. Over time, these cups degrade into microplastics, polluting oceans, harming wildlife, and even entering the human food chain.</p>
+                <p class="p3">Beyond waste, the production of plastic cups consumes massive amounts of energy and water, further contributing to <b>carbon emissions and climate change.</b> This highlights the urgent need for alternatives—like <b>reusable tumblers.</b></p>
+                <h3 class="th2">Tumblers: The Sustainable Alternative</h3>
+                <p class="p4">A <b>reusable tumbler</b> is one of the simplest yet most effective ways to cut down on plastic waste. Tumblers, typically made from <b>stainless steel, glass, or BPA-free plastic,</b> are designed for long-term use, offering both <b>eco-friendliness</b> and <b>functionality.</b></p>
+                <h5 class="bh1">Why Switch to a Tumbler?</h5>
+                <ul class = "b1">
+                    <li><b>Reduces Plastic Waste -</b> A single tumbler can replace <b>hundreds of plastic cups</b> each year.</li>
+                    <li><b>Keep Drinks Hot or Cold Longer -</b> Insulated tumblers maintain your beverage’s temperature for hours.</li>
+                    <li><b>Saves Money -</b> Many coffee shops, including <b>Bleu Bean Cafe</b>, offer <b>discounts</b> when you drink your own tumbler.</li>
+                    <li><b>Supports a Greener Future -</b> Using a tumbler minimizes your carbon footprint and promotes sustainable habits. </li>
+                </ul>
+                <h3 class="th3">Bleu Bean Cafe’s Go Green Campaign</h3>
+                <p class="p5">To further its commitment to sustainability, Bleu Bean Cafe has launched an exclusive customized tumbler as part of its Go Green Campaign. This initiative encourages customers to reduce plastic waste while enjoying their favorite drinks in a stylish, eco-friendly tumbler.</p>
+                <h5 class="bh2">Why Get a Bleu Bean Cafe Tumbler?</h5>
+                <ul class="b2">
+                    <li><b>Eco-friendly & Durable -</b> Made from high-quality, reusable materials.</li>
+                    <li><b>Exclusive Discounts -</b> Customers who use their Bleu Bean Cafe tumbler receive special discounts on their coffee orders.</li>
+                    <li><b>Sleek & Personalized Design -</b> A unique, stylish tumbler you’ll love carrying everywhere.</li>
+                    <p class="p6">By making the switch, Bleu Bean Cafe customers become part of a community that values sustainability, one coffee at a time.</p>
+                    </ul>
+                <h3 class="th4">How You Can Join The Movement</h3>
+                <p class="p7">Switching to a reusable tumbler is easy! Here’s how you can start:</p>
+                    <ul class="b3">
+                    <li><b>Get Your Own Tumbler -</b> Invest in a high-quality, insulated tumbler or grab the <b>exclusive Bleu Bean Cafe Tumbler.</b></li>
+                    <li><b>Bring it to the store -</b> Use it every time you order to cut down on plastic waste.</li>
+                    <li><b>Encourage Others -</b> Share your eco-friendly choice and inspire friends and family to do the same.</li>
+                    <li><b>Support Sustainable Businesses -</b> Choose coffee shops that prioritize sustainability, like Bleu Bean Cafe. </li>
+                    </ul>
+            </div>
+            <div class="conclu">
+                <p>By swapping plastic cups for reusable tumblers, we can brew a better future, one sip at a time. Whether you’re a coffee lover or just passionate about sustainability, your choice to go green makes a real impact. </p>            
+            </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
