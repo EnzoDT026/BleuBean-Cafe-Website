@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Everything You Need to Know About Renting a Coffee Cart for Your Event</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,490 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+}#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p4{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p6{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p7{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p8{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p9{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p10{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p11{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p12{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p13{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .desc h3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .desc ol{
+                position:relative;
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>DO YOU KNOW WHAT YOUR EVENT’S NEEDS?</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">Stop guessing. Stop hoping. Start knowing. Planning a successful event isn't about luck; it's about understanding the specific needs of your gathering. This is also about creating an experience that resonates with your guests and leaves a lasting impression. Before we dive into exploring renting a coffee cart for your event, let's uncover the secrets to planning it that exceeds expectations.</p>
+                <h3 class="th1">Why Hire a Coffee Cart?</h3>
+                <p class="p2">The surge in popularity of coffee carts at events is well-earned, given their many benefits. The capacity to personalize a coffee cart with your company logo, color scheme, and marketing messages makes it a perfect vehicle for brand promotion and corporate gatherings, guaranteeing strong brand recognition. Moreover, the simple act of enjoying coffee together naturally forms a social gathering point, stimulating interaction and brand engagement among participants.</p>
+                <h3 class="th2">Planning Your Coffee Cart Rental</h3>      
+                <p class="p3"><b>Assess Your Event's Requirements:</b> Before beginning your search, take time to determine your needs from a coffee cart service. Consider the event's scale, schedule, and preferred beverage selections.<br><br>
+                            <b>Select the Ideal Coffee Cart Provider:</b> Not all coffee cart services are alike; finding the perfect fit for your event is key. Look for a provider that offers skilled baristas, premium coffee, and customization choices. <br><br>
+                            <b>Ask Pertinent Questions:</b> When contacting potential coffee cart services, these questions are crucial:</p>
+                <ul>
+                    <li>Can you incorporate custom branding on the cart or cups?</li>
+                    <li>Do you cater to dietary needs, such as offering non-dairy milk alternatives?</li>
+                    <li>What is your setup and dismantling procedure?</li>
+                    <li>Are there specific power or space needs for the cart?</li>
+                    <li>Is your pricing per beverage or a fixed fee for the event?</li>
+                </ul>
+                <p class="p4"><b>Capitalize on Branding Opportunities:</b> Using a coffee cart for brand activations or corporate events provides a significant branding advantage. Many coffee cart companies allow you to add your logo to coffee cups or sleeves; integrate your brand's colors into the cart's design; and use the cart as a backdrop for social media pictures or branded moments.</p>
+                <h3 class="th4">RENTING A COFFEE CART</h3>
+                <p class="p5">It is a straightforward process that involves several key steps to ensure you get the perfect coffee experience for your event.</p>
+                <ol>
+                    <li><b>Get a Quote:</b> The first step is to contact a coffee cart rental company and provide them with details about your event, such as the date, time, location, and estimated number of guests. They will then provide you with a quote based on the duration of the rental, the type of coffee cart, and the menu you choose.</li>
+                    <li><b>Customize Your Experience:</b> Once you receive a quote, you can work with the company to customize your coffee cart experience. This might include selecting from a variety of coffee beverages, choosing from different cart designs, and adding branding elements like your logo or event colors.</li>
+                    <li><b>Enjoy Professional Service:</b> On the day of your event, the coffee cart rental company will handle everything, including setup, brewing, and serving. All you need to do is provide a standard power outlet.</li>
+                </ol>
+                <h3 class="th5">For Considerations:</h3>
+                <ul>
+                    <li><b>Budget -</b> Coffee cart rentals typically have hourly rates, with prices varying depending on the size of the cart, the menu, and the number of baristas needed.</li>
+                    <li><b>Menu Options -</b> Choose from a wide range of coffee beverages, including classic espresso, lattes, cappuccinos, and specialty drinks. Some companies offer additional options like pastries or snacks.</li>
+                    <li><b>Branding -</b> Many companies offer customization options, allowing you to add your brand logo or colors to the cart and cups, creating a cohesive brand experience for your guests.</li>
+                </ul>
+                <h3 class="th6">Pricing Factors for Coffee Cart Catering</h3>
+                <p class="p7">The cost of renting a coffee cart depends significantly on several elements: how long you need the service, the number of attendees, the level of service desired, and the event's location. Event planners should carefully consider these factors to create a realistic budget and get the most for their money.</p>
+                <ul>
+                    <li><b>Base Package Pricing:</b> Coffee cart caterers typically offer core packages tailored to various event needs. Standard pricing generally includes:</li>
+                    <li><b>Basic Package:</b> One barista with essential equipment and a standard drink menu.</li>
+                    <li><b>Standard Package:</b> Two baristas, full setup, and a broader drink selection.</li>
+                    <li><b>Premium Package:</b> Multiple baristas, custom menus, and enhanced services.</li>
+                    <li>Minimum booking usually starts at 2-3 hours to ensure sufficient time for setup, service, and breakdown. Providers may also have minimum guest counts or spending requirements. Pricing often decreases for longer events, with staffing recommendations of one barista for every 75-100 guests.</li>
+                </ul>
+                <p class="p8"><b>Additional Cost Factors:</b> Premium drink options, such as specialty beans and seasonal specials, can raise prices. Alternative milk options, including oat and almond milk, may incur extra costs. Custom branding, like branded cups and staff uniforms, can enhance your coffee service. Travel fees apply for events outside the provider's standard service area.</p>
+                <p class="p9"><b>Package Comparison:</b> Basic packages are ideal for smaller events, offering essential coffee drinks and good value. Premium packages include more staff and specialty drinks, creating a comprehensive coffee experience. Luxury services can include multiple stations and tastings.</p>
+                <p class="p10"><b>Hidden Costs to Consider:</b> Setup and breakdown times may affect total costs, with most vendors needing 1-2 hours for setup and around an hour for breakdown. Generator rentals for outdoor events typically range from $100-300 per day. Insurance and special event licenses may also be required.</p>
+                <p class="p11"><b>Cost-Saving Strategies:</b> Off-peak pricing can lead to significant savings, particularly for weekday events or shorter service lengths. Package bundling can offer better value, and regional price variations often see urban areas charging more due to higher operational costs.</p>
+                <p class="p12"><b>ROI Analysis:</b> Specialty coffee services generally cost between $5-11 per guest, offering better value than traditional coffee options. The investment provides benefits like professional barista service, quality control, and enhanced guest experiences, leading to higher attendee satisfaction and event success.</p>
+                <h3 class="th7">What to Expect:</h3>
+                <ul>
+                    <li><b>Unforgettable Coffee -</b> Our skilled baristas create each cup to perfection, using only the finest beans and freshest ingredients.</li>
+                    <li><b>Seamless Service -</b> Our professional and friendly staff ensures a smooth and efficient service, leaving your guests feeling pampered and refreshed.</li>
+                    <li><b>Customizable Experience -</b> We offer various packages to suit different budgets and guest counts, with options for custom branding and unique beverage creations.</li>
+                    <li><b>A Touch of Elegance -</b> Our stylish coffee carts add a touch of sophistication to any gathering, creating a visually appealing focal point that guests will love to gather around.</li>
+                </ul>
+                <p class="p13">Perfect for: Weddings, Birthdays, Baptisms, Meetings, Formal Events, and more!<br>
+                                Don't just serve coffee; create a memory. Contact Bleu Bean Cafe today to book your premium coffee cart and let us elevate your next event.
+                </p>
+        </div>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

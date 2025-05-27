@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>The benefits of having a coffee cart at your next party.</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,419 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+}#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p4{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p6{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p7{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p8{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .desc h3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>The benefits of having a coffee cart at your next party.</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">Coffee carts are becoming increasingly popular at events, workplaces, and public areas, providing an easy and premium coffee experience. These mobile units offer freshly brewed coffee, espresso, and other specialty drinks, serving as a convenient alternative to traditional coffee shops.</p>
+                <h3 class="th1">Enhancing Guest Experience at Events</h3>
+                <p class="p2">At events like weddings, corporate functions, and festivals, coffee carts enhance the guest experience by delivering high-quality beverages while acting as a social hub. Their customizable designs allow them to blend seamlessly with event themes, creating a visually appealing setup. Beyond serving beverages, coffee carts offer an interactive experience, featuring skilled baristas who customize drinks to suit every preference, from classic lattes to elaborate, Instagram-worthy creations. Some even provide personalized touches like latte art featuring company logos, adding a branded flair. These mobile stations create ideal gathering spots that encourage conversations and make networking more enjoyable. When mid-event fatigue hits, these carts provide a much-needed caffeine boost to keep attendees energized and engaged. Additionally, many services source locally roasted beans, supporting small businesses while offering guests a taste of the region’s best brews. Ultimately, incorporating a coffee cart at an event brings a memorable and engaging experience that leaves a lasting impression.</p>
+                <h3 class="th2">Providing Easy Access to Refreshments</h3>      
+                <p class="p3">With a coffee cart on-site, attendees no longer need to step out for a caffeine fix. Freshly brewed coffee is right at their fingertips, allowing them to grab a cup without missing any part of the event. It’s like having a mini café within arm’s reach.</p>
+                <h3 class="th3">A Hub for Socializing</h3>
+                <p class="p4">These carts do more than serve coffee — they spark conversations. As guests wait for their orders, casual chats often lead to meaningful connections. In this way, coffee carts double as natural gathering spots and icebreakers. Long events can take a toll, but a steady supply of coffee keeps attendees awake and engaged, demonstrating care for guests’ comfort and ensuring they remain refreshed and attentive throughout the occasion.</p>
+                <h3 class="th4">Advantages of Renting a Mobile Coffee Cart</h3>
+                <p class="p5">Hiring a mobile coffee cart is a creative and enjoyable way to provide your guests with an amazing experience. Some advantages include:</p>
+                <ul>
+                    <li><b>Enhanced Guest Comfort</b> - Mobile coffee carts offer convenient, freshly made beverages on-site, eliminating the need for attendees to leave the event.</li>
+                    <li><b>Sustainability</b> - Many coffee cart companies use eco-friendly materials like biodegradable cups and ethically sourced beans, reducing environmental impact.</li>
+                    <li><b>Unique Experience</b> - Guests enjoy an interactive experience with skilled baristas, adding an engaging element to the event.</li>
+                    <li><b>Versatility</b> - Suitable for various events, from large corporate conferences to intimate gatherings, due to their compact size and flexibility.</li>
+                    <li><b>Community Building</b> - Coffee carts create social hubs, encouraging conversations and fostering a sense of connection among guests.</li>
+                </ul>
+                <h3 class="th5">The Business Benefits of Coffee Carts</h3>
+                <p class="p6">Investing in a coffee cart for events is a smart move for businesses. Unlike a traditional coffee shop that requires a significant commitment, mobile coffee carts present a profitable alternative. They offer versatility, affordability, and significant growth potential compared to traditional cafes.</p>
+                <h3 class="th6">Lower Costs and Flexibility</h3>
+                <p class="p7">Mobile coffee carts require a far smaller initial financial outlay, presenting a more cost-effective approach to entrepreneurship. The costs associated with operating from a physical building can be substantial. A mobile coffee cart allows businesses to expand without the considerable expense of leasing or purchasing a building, undertaking renovations, or employing a large workforce. The key benefit of a mobile coffee cart is its mobility, offering the freedom to operate from various locations. This flexibility allows for serving more people at festivals, markets, and celebrations, increasing visibility and ultimately boosting sales.</p>
+                <h3 class="th7">Bring people closer together at your event with Bleu Bean Cafe!</h3>
+                <p class="p8">Imagine this: your guests, mingling happily, sipping on expertly crafted lattes and perfectly pulled espressos, all thanks to Bleu Bean Cafe's mobile coffee bar. Forget the ordinary – elevate your next Metro Manila event (wedding, birthday bash, corporate gathering, or intimate celebration) with the unparalleled coffee experience Bleu Bean Cafe offers. Our curated menu of premium coffee delights, expertly prepared by our professional baristas, will leave a lasting impression on your guests. And the best part? It's surprisingly affordable, with packages ranging from ₱10,000 to ₱15,000. Not only will you delight your attendees, but you'll also be supporting a local business passionate about creating truly memorable moments. Book Bleu Bean Cafe today and let the aroma of exceptional coffee enhance your special occasion.</p>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
