@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Love Coffee, Hate Waste—Let’s Fix That!</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,409 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+}#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+        
+            .p4{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }  
+            .p5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .th1{
+                position:relative;
+                text-align: center;
+                top:0px;
+                left:100px;
+                width:1000px;
+            }
+            .th2{
+                position:relative;
+                
+                top:50px;
+                left:350px;
+                width:1000px;
+            }
+            .th3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>Love Coffee, Hate Waste—Let’s Fix That!</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">For many of us, coffee is much more than just a drink; it’s a cherished ritual. Whether it’s that comforting morning cup, an afternoon boost, or a moment to catch up with friends, coffee holds a special place in our lives. But as much as we adore our daily brew, the environmental impact of our coffee habits can’t be ignored. From single-use cups and lids to plastic straws and packaging, coffee consumption often contributes to unnecessary waste. <br><br>
+                The <b>good news?</b> You don’t have to give up your love for coffee to make a positive change. By making small, thoughtful adjustments, we can create a cleaner, greener coffee culture. Whether you enjoy your coffee at a local café or brew it at home, there are simple swaps you can make to reduce waste and enjoy your cup of joe guilt-free.</p>
+                <h3 class="th1">The Problem with Coffee Waste</h3>
+                <p class="p2">Each year in the U.S., 16 billion disposable coffee cups are used. Unfortunately, most of these cups, despite looking recyclable, are lined with plastic, making them unsuitable for recycling. As a result, they end up in landfills, contributing to unnecessary waste. Add to this the plastic straws, stirrers, and packaging commonly associated with coffee, and you can see the significant environmental impact our coffee habits can have.</p>
+                <h5>Small Changes, Big Impact</h5>
+                <p class="p3">While the situation might seem daunting, there’s hope. Here are a few simple yet effective ways to reduce waste while still savoring your coffee:</p>
+                <ul>
+                    <li><b> Use a Reusable Tumbler -</b> A great way to cut down on waste is to skip disposable cups. Many coffee shops even offer discounts for bringing your own cup. By investing in a quality reusable tumbler, you can enjoy your coffee without contributing to the waste problem.</li>
+                    <li><b>Skip the Plastic Straws -</b> Plastic straws are commonly offered with iced coffee drinks, but many places now offer alternatives such as paper or metal straws. Better yet, bring your own reusable straw to help reduce plastic waste.</li>
+                    <li><b>Choose Sustainable Packaging -</b> When shopping for coffee, look for brands that prioritize sustainable packaging, whether it's recyclable, compostable, or made from recycled materials. Supporting companies that are eco-conscious helps lessen the environmental impact of packaging waste.</li>
+                    <li><b>Repurpose Coffee Grounds -</b> Rather than tossing used coffee grounds, consider reusing them. They’re perfect for composting, can be used as a natural fertilizer for plants, or even as a scrub for cleaning. This gives coffee grounds a second life while helping to reduce waste.</li>
+                    <li><b>Support Eco-Conscious Coffee Brands -</b> Choose to buy coffee from brands committed to sustainability. Many companies are making efforts to reduce their environmental footprint by using fair-trade beans, organic farming methods, and compostable packaging. By supporting these businesses, you help drive the demand for more sustainable practices in the coffee industry.</li>
+                </ul>
+            </div>
+            <div class="conclu">
+
+                <p>Our love for coffee doesn’t need to come at the expense of the planet. By making mindful, eco-friendly choices, we can continue to enjoy coffee while minimizing waste. Whether it's switching to a reusable tumbler, supporting sustainable brands, or repurposing coffee grounds, every small change adds up to a bigger collective impact. Even small changes can lead to a significant collective impact. Each time you choose a reusable tumbler or opt for sustainable coffee products, you are conserving resources, reducing waste, and moving closer to a cleaner, greener future. The steps may be small, but they’re part of a much larger movement toward sustainability. <br><br>
+                Next time you go for your coffee fix, consider how you can make your daily ritual a little more eco-friendly. At <b>Bleu Bean Café</b>, we’re proud to promote our <b>Go Green Initiative</b>, encouraging our customers to embrace sustainability. By using our <b>reusable tumblers</b>, you’re not only reducing waste but also supporting a greener future. Plus, when you bring your own tumbler, you’ll enjoy a special discount on your coffee! Let’s enjoy coffee without the waste, because a cleaner, greener future is something we can all brew together!</p><br>
+                
+            </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

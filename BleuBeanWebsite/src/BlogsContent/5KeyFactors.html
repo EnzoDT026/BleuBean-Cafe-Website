@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>5 Key factors to consider when starting your own coffee shop.</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,415 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+    overflow-x:hidden
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p4{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p5{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p6{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            
+            .desc h3{
+                position:relative;
+                text-align: center;
+                top:px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .desc ol{
+                position:relative;
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .desc ol ul li{
+                position:relative;
+                left:-300px;
+                top:-60px;
+                width:1000px;
+
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>5 Key factors to consider when starting your own coffee shop.</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">Starting a coffee shop is an exciting venture, especially for those passionate about coffee and creating a cozy space for people to gather. However, turning your deam into a thriving business requires careful planning and informed decisions. Whether you’re planning to open a cafe in the heart of Manila or a quaint spot in the provinces, here are five key factors to consider for a successful coffee shop in the Philippines.</p>
+                <h3 class="th1">1. Choosing the Right Location </h3>
+                <p class="p2">The success of a coffee shop heavily depends on its location. High foor traffic areas like business districts, university hubs, and tourist spots tend to attract more customers. Accessibility and parking availability are also crucial factors. <br><br> 
+                            For instance, Bleu Bean Cafe strategically positions its branches in areas frequented by professionals and students seeking a relaxing ambiance. Understanding your target market and choosing a strategic location can set the foundation for your shop’s success. </p>     
+                <h3 class="th2">2. Crafting a Solid Business Plan</h3>     
+                <p class="p3">A well-structured business plan serces as the blueprint for your coffee shop. It should cover aspects such as startup costs, operational expenses, pricing strategy, and marketing plans. In the Philippines, securing the necessary permits, such as DTI registration, BIR tax identification, and local business permit, is also part of the process. <br><br>
+                            Startup costs can vary widely. According to Moneymax, opening a small 30-sqm coffee shop without a kitchen in a bustling district may require approximately ₱950,000 for setup, equipment, and permits, plus about ₱245,000 for monthly operational expenses. <br><br>
+                            Your business plan should also outline your unique selling proposition (USP). Will your cafe offer locally sourced beans? Do you plan to integrate sustainability into your operations? Defining these elements early on can help you stand out in the competitive coffee industry. </p>
+                <h3 class="th3">3. Offering Quality Coffee and Service </h3>
+                <p class="p4">In a country where coffee culture is growing rapidly, quality is non-negotiable. Investing in high-quality coffee beans, top-notch equipment, and skilled baristas will make a significant difference. Many Filipino customers appreciate well-crafted brews, whether it’s a simple Kapeng Barako or a trendy oat milk latte. <br><br>
+                            Additionally, customer service plays a huge role. The warmth and hospitality of your staff can turn first-time customers into regulars. Training your team to provide excellent service ensures a memorable experience for every visitor. </p>
+                <h3 class="th4">4. Building a Unique Brand and Atmosphere</h3>
+                <p class="p5">Your coffee shop should have a distinct identity that resonates with your target audience. Whether it’s minimalist interiors, Instagram-worthy aesthetics, or a strong sustainability message, creating a unique concept helps differentiate your business. <br><br> 
+                                For example, Bleu Bean Cafe capitalizes on a warm and inviting space where customers can unwind. Their social media presence on platforms like Instagram and TikTok helps reinforce their brand and attract coffee enthusiasts. </p>
+                <h3 class="th5">5. Financial Management and Sustainability</h3>
+                <p class="p6">Understanding the financial aspects of running a coffee shop is critical Startup costs in the Philippines can range significantly. Proper budgeting and pricing strategies ensure sustainability and profitability. <br><br>
+                    Additionally, many Filipino consumers are now supporting eco-friendly businesses. Consider reducing plastic waste by offering reusable cups, sourcing coffee beans from local farmers, and implementing energy-effecient practices. Not only is this good for the environment, but it also attracts conscious consumers who align with your values.</p>
+                </div>
+            <div class="conclu">
+                <p>Starting a coffee shop in the Philippines is a fulfilling yet challenging endeavor. By carefully considering your location, creating a solid business plan, prioritizing quality coffee and service, building a unique brand, and ensuring financial sustainability, you increase your chances of long-term success. <br><br>
+                    Entrepreneurs like those behind Bleu Bean Cafe have shown that with the right strategy and commitment to excellence, a coffee shop can become more than just a business, it can be a comforting space where people find solace, connection, and, of course, great coffee. If you’re ready to take the plunge, start planning today and bring your coffee dreams to life! </p>
+                
+            </div>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

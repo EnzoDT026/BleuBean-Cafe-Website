@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Refill and Reuse: How Your Tumbler Can Make a Difference</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,371 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+}#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .desc h3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1> Refill and Reuse: How Your Tumbler Can Make a Difference</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">The use of reusable containers is a positive step toward sustainability, but it prompts an important question: <b>ARE TUMBLERS TRULY AS ECO-FRIENDLY AS THEY SEEM?</b> <br><br>
+                To truly minimize environmental impact, the most sustainable approach is to invest in one or two high-quality, durable tumblers and use them extensively. Prolonged use helps counterbalance the environmental footprint of manufacturing, reducing the need for additional production and lowering greenhouse gas emissions. The production, use, and disposal of a single tumbler generate 671 grams of greenhouse gases, making it essential to maximize each tumbler’s lifespan. While reusable tumblers and bottles can significantly reduce waste, their benefits are only realized with consistent and responsible use. By choosing fewer but long-lasting reusable bottles, individuals can lessen reliance on disposable cups, cut down on waste pollution, and take a practical step toward a more sustainable lifestyle.</p>
+                <h3>What Makes a Tumbler Eco-Friendly?</h3>
+                <ul>
+                    <li><b>Sustainable Materials –</b> Choosing tumblers made from eco-friendly materials such as stainless steel, glass, bamboo, or recycled plastic helps minimize environmental impact.</li>
+                    <li><b>Durability –</b> A well-made eco-friendly tumbler is designed to last, making it a long-term investment that reduces the need for frequent replacements.</li>
+                    <li><b>Reusability –</b> By replacing disposable cups, reusable tumblers significantly decrease daily waste and encourage more sustainable consumption habits. </li>
+                    <li><b>Safety and Certifications –</b> Opting for products with sustainability or fair-trade certifications further supports ethical and eco-friendly choices.</li>
+                </ul>
+                <h3>Environmental Benefits of Using Eco-Friendly Tumblers</h3>
+                <ul>
+                    <li><b>Minimizing Waste –</b> By replacing disposable cups with a tumbler for your daily coffee, you can prevent hundreds of cups from being discarded each year. If more people adopted this habit, it would have a major impact on reducing landfill waste.</li>
+                    <li><b>Encouraging a Circular Economy –</b> Choosing brands that enhance sustainability by producing tumblers helps reduce waste, promote responsible manufacturing, and support a system where materials are continuously reused rather than thrown away.</li>
+                    <li><b>Reducing Carbon Footprint –</b> The production of single-use cups consumes a large amount of energy and natural resources. In contrast, reusable tumblers require an initial investment but quickly offset their environmental impact.</li>
+                </ul>
+            </div>
+            <div class="conclu">
+                <h2>How to Choose the Right Eco-Friendly Tumbler?</h2>
+                <p>As sustainability takes center stage, making eco-conscious choices, like selecting the right reusable tumbler, can make a meaningful difference in reducing waste. With countless options available, <b>Bleu Bean Tumbler</b> stands out as the ideal choice to complement your lifestyle!</p><br>
+                <p>The <b>Bleu Bean Tumbler</b> is made from premium, BPA-free stainless steel, offering both durability and an eco-friendly design. Its double-wall insulation ensures exceptional temperature retention, keeping drinks hot for up to 12 hours and cold for 24 hours—perfect for any season. For those with a busy lifestyle, a leak-proof and travel-friendly tumbler is a must. Designed with a secure lid and an ergonomic structure, Bleu Bean Tumbler prevents spills and provides effortless convenience wherever you go.</p><br>
+                <p>In conclusion sustainability and style go hand in hand. Your tumbler should reflect your personality, which is why the Bleu Bean Tumbler features a sleek, minimalist design with a modern finish—combining functionality with aesthetics. It’s the perfect companion for your daily hydration needs. Make the switch today and sip sustainably with Bleu Bean Café!</p><br>
+                
+            </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Brewing perfection: Tips and Tricks for the perfect cup</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,450 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            /* Base Styles */
+:root {
+    /* Color Palette */
+    --primary: #1A9CB7;
+    --primary-light: #5BBCD2;
+    --primary-dark: #0F4C5C;
+    --secondary: #0F4C5C;
+    --accent: #F9C846;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-muted: #888888;
+    --background-light: #FFFFFF;
+    --background-off: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+    
+    /* Spacing (8px system) */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+    overflow-x:hidden
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 80px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+#nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width var(--transition-medium);
+}
+
+#nav ul li a:hover::after,
+#nav ul li a.active::after {
+    width: 100%;
+}
+
+#nav ul li a.active {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    #nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md) 0;
+        clip-path: circle(0% at top right);
+        transition: clip-path var(--transition-medium);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    #nav.active {
+        clip-path: circle(150% at top right);
+    }
+    
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+    
+    #nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero .tagline {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-text, .about-img {
+        width: 100%;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: var(--spacing-md) auto 0;
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-bottom: var(--spacing-lg);
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links h3::after, .footer-hours h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+            .headertext {
+                text-align: center;
+                margin-top: 100px;
+                padding: 20px;
+            }
+            .headertext h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+            }
+            .p1{
+                position:relative;
+                text-align: center;
+                left:450px;
+                width:1000px;
+            }
+            .p2{
+                position:relative;
+                text-align: center;
+                width:1000px;
+            }
+            .p3{
+                position:relative;
+                text-align: center;
+                width:1000px;
+            }
+            .p4{
+                position:relative;
+                text-align: center;
+                width:1000px;
+            }
+            .p5{
+                position:relative;
+                text-align: center;
+
+                width:1000px;
+            }
+            .p6{
+                position:relative;
+                text-align: center;
+                width:1000px;
+            }
+            .p7{
+                position:relative;
+                text-align: center;
+                width:1000px;
+            }
+            .p8{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .p9{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:450px;
+                width:1000px;
+            }
+            .desc h3{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc h5{
+                position:relative;
+                text-align: center;
+                top:50px;
+                left:100px;
+                width:1000px;
+            }
+            .desc ul{
+                position:relative;
+
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .desc ol{
+                position:relative;
+                top:60px;
+                left:500px;
+                width:1400px;
+            }
+            .desc ol ul li{
+                position:relative;
+                left:-300px;
+                top:-60px;
+                width:1000px;
+
+            }
+            .conclu h2{
+                position:relative;
+                text-align: center;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+            .conclu p{
+                position:relative;
+                top:100px;
+                left:500px;
+                width:1000px;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <h1>Bleu Bean Cafe</h1>
+                    </div>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Products.html">Products</a></li>
+                            <li><a href="Services.html">Services</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="../Blogs.html" class="active">Blogs</a></li>
+                            <li><a href="Contact Us.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
         </header>
-        <main></main>
+        <main>
+            <div class="headertext">
+            <h1>Brewing perfection: Tips and Tricks for the perfect cup</h1>
+            </div>
+            <div><!-- Image--></div>
+            <div class="desc">
+                <p class="p1">Coffee is more than just a drink — it’s an experience, a ritual, and for many, a daily necessity. But crafting the perfect cup of coffee is an art that requires the right techniques, quality ingredients, and a touch of passion. Whether you’re an aspiring barista or cafe owner, mastering the fundamentals of coffee brewing can elevate your coffee experience. At Bleu Bean Cafe, we believe that great coffee starts with knowledge, which is why our barista training program is designed to teach enthusiasts and professionals alike the secrets to brewing perfection.</p>
+                <h3 class="th1">The Essentials of a Perfect Brew</h3>
+                <ol>
+                    <li>Start with Quality Beans</li>
+                    <p class="p2">The foundation of a great cup of coffee begins with selecting high-quality, freshly roasted beans. Choose beans that match your flavor preference — whether you enjoy a bright, fruity Ethiopian roast or a bold, chocolatey Colombian blend. Buying whole beans and grinding them just before brewing ensures maximum freshness and flavor retention.</p>
+                    <li>Grind Matters</li>
+                    <p class="p3">With a coffee cart on-site, attendees no longer need to step out for a caffeine fix. Freshly brewed coffee is right at their fingertips, allowing them to grab a cup without missing any part of the event. It’s like having a mini café within arm’s reach.</p>    
+                    <ul class="ul1">
+                        <li><b>Coarse Grind -</b> Ideal for French press and cold brew.</li>
+                        <li><b>Medium Grind -</b> Best for drip coffee makers and pour-over methods.</li>
+                        <li><b>Fine Grind -</b> Used for espresso machines and AeroPress.</li>
+                        <li><b>Extra Fine Grind -</b> Perfect for Turkish coffee. Using the wrong grind can lead to over-extration (bitter taste) or under-extraction (weak flavor), so it’s important to match your grinding size to your brewing method.</li>
+                    </ul>
+                    <li>Water Quality and Temperature </li>
+                    <p class="p4">Since coffee is over 98% water, the quality of your water significantly impacts the final taste. Use filtered water to avoid impurities that could alter the flavor. The ideal brewing temperature is between 195°F and 205°F (90°C - 96°C) — too hot, and you risk burning the coffee; too cold, and you won’t extract enough flavor.</p>
+                    <li>Master the Brew Ratio</li>
+                    <p class="p5">A common mistake among beginners is not using the right coffee-to-water ratio. A good starting point is the Golden Ratio: 1 gram of coffee per 16 grams of water (or about 1:16). Adjusting this ratio slightly allows you to customize the strength to your preference. </p>
+                    <li>Experiment with Brewing Methods</li>
+                    <p class="p6">Investing in a coffee cart for events is a smart move for businesses. Unlike a traditional coffee shop that requires a significant commitment, mobile coffee carts present a profitable alternative. They offer versatility, affordability, and significant growth potential compared to traditional cafes.</p>
+                    <ul>
+                        <li><b>Pour-Over (e.g., V60, Chemex) -</b> Highlights bright, clean flavors with precise control over extraction.</li>
+                        <li><b>French Press -</b> Creates a rich, full-bodied cup with natural coffee oils.</li>
+                        <li><b>Espresso Machine -</b> Produces a concentrated and intense coffee shot with a smooth crema. </li>
+                        <li><b>AeroPress -</b> Versatile and fast, ideal for experimenting with different brew times. </li>
+                    </ul>
+                    <li>Practice Milk Frothing & Latte Art</li>
+                    <p class="p7">Mobile coffee carts require a far smaller initial financial outlay, presenting a more cost-effective approach to entrepreneurship. The costs associated with operating from a physical building can be substantial. A mobile coffee cart allows businesses to expand without the considerable expense of leasing or purchasing a building, undertaking renovations, or employing a large workforce. The key benefit of a mobile coffee cart is its mobility, offering the freedom to operate from various locations. This flexibility allows for serving more people at festivals, markets, and celebrations, increasing visibility and ultimately boosting sales.</p>
+                </ol>                
+                <h3 class="th2">How Bleu Bean Cafe Can Help You Master Coffee Brewing</h3>     
+                <p class="p8">Brewing coffee to perfection requires practice, patience, and knowledge. At Bleu Bean Cafe, we are passionate about educating coffee lovers through our Barista Training Program, where we cover:</p> 
+                <ul>
+                    <li>Barista knowledge on seed to cup process</li>
+                    <li>Brewing method</li>
+                    <li>Espresso machine parts & maintenance</li>
+                    <li>Calibration</li>
+                    <li>Espresso recipe, making & building</li>
+                    <li>Latte Art</li>
+                </ul>
+                <p class="p9">Whether you’re looking to enhance your home brewing skills or pursue a career as a professional barista, our training program provides the expertise needed to elevate your coffee craft. </p>
+            </div>
+            <div class="conclu">
+                <p>Perfecting your coffee brewing technique is a journey, not a destination. With the right beans, grind, water, and method, you can unlock the full potential of your coffee. At Bleu Bean Cafe, we’re here to guide you every step of the way—whether you’re enjoying a freshly brewed cup at home or training to become a skilled barista. Join us in mastering the art of coffee, one brew at a time.</p>
+                
+            </div>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
